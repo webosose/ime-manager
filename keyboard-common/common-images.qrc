@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="arrow-left.png">images/arrow-left.png</file>
+        <file alias="arrow-left-dark.png">images/arrow-left-dark.png</file>
+        <file alias="arrow-right.png">images/arrow-right.png</file>
+        <file alias="arrow-right-dark.png">images/arrow-right-dark.png</file>
+        <file alias="clear.png">images/clear.png</file>
+        <file alias="clear-dark.png">images/clear-dark.png</file>
+        <file alias="move-left.png">images/move-left.png</file>
+        <file alias="move-left-dark.png">images/move-left-dark.png</file>
+        <file alias="move-right.png">images/move-right.png</file>
+        <file alias="move-right-dark.png">images/move-right-dark.png</file>
+        <file alias="shift.png">images/shift.png</file>
+        <file alias="shift-dark.png">images/shift-dark.png</file>
+        <file alias="shift-on.png">images/shift-on.png</file>
+        <file alias="shift-lock.png">images/shift-lock.png</file>
+        <file alias="shift-on-focused.png">images/shift-on-focused.png</file>
+        <file alias="spacebar.png">images/spacebar.png</file>
+        <file alias="spacebar-dark.png">images/spacebar-dark.png</file>
+        <file alias="voice.png">images/voice.png</file>
+        <file alias="voice-dark.png">images/voice-dark.png</file>
+    </qresource>
+</RCC>

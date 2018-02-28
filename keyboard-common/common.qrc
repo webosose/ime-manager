@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/common">
+        <file>commonvariables.js</file>
+        <file>ButtonBase.qml</file>
+        <file>LeftFunctionArea.qml</file>
+        <file>RightFunctionArea.qml</file>
+        <file>BottomArea.qml</file>
+        <file>Style.qml</file>
+        <file>StyleHd.qml</file>
+    </qresource>
+</RCC>

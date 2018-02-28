@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/stt">
+        <file>main.qml</file>
+        <file>ResultListButton.qml</file>
+        <file>SeperateLine.qml</file>
+        <file>SayAgainButton.qml</file>
+        <file>MicImage.qml</file>
+        <file>LocaleString.qml</file>
+        <file>WebOSKeyExtension.qml</file>
+        <file>Spinner.qml</file>
+	<file>TTSService.qml</file>
+	<file>SttStyle.qml</file>
+	<file>StringSet.qml</file>
+    </qresource>
+    <qresource prefix="/stt/images">
+	<file alias="stt_icon_keyhelp_red.png">images/stt_icon_keyhelp_red.png</file>
+	<file alias="stt_popup_scroll_arrow_down_f.png">images/stt_popup_scroll_arrow_down_f.png</file>
+	<file alias="stt_popup_scroll_arrow_down_n.png">images/stt_popup_scroll_arrow_down_n.png</file>
+	<file alias="stt_popup_scroll_arrow_up_f.png">images/stt_popup_scroll_arrow_up_f.png</file>
+	<file alias="stt_popup_scroll_arrow_up_n.png">images/stt_popup_scroll_arrow_up_n.png</file>
+	<file alias="stt_popup_scroll_bar_bottom.png">images/stt_popup_scroll_bar_bottom.png</file>
+	<file alias="stt_popup_scroll_bar_middle.png">images/stt_popup_scroll_bar_middle.png</file>
+	<file alias="stt_popup_scroll_bar_top.png">images/stt_popup_scroll_bar_top.png</file>
+	<file alias="stt_small_btn_f_l.png">images/stt_small_btn_f_l.png</file>
+	<file alias="stt_small_btn_f_m.png">images/stt_small_btn_f_m.png</file>
+	<file alias="stt_small_btn_f_r.png">images/stt_small_btn_f_r.png</file>
+	<file alias="stt_small_btn_n_l.png">images/stt_small_btn_n_l.png</file>
+	<file alias="stt_small_btn_n_m.png">images/stt_small_btn_n_m.png</file>
+	<file alias="stt_small_btn_n_r.png">images/stt_small_btn_n_r.png</file>
+	<file alias="nlp_sequence_error_dimmed.png">images/nlp_sequence_error_dimmed.png</file>
+	<file alias="nlp_sequence_on_blink.png">images/nlp_sequence_on_blink.png</file>
+	<file alias="nlp_sequence_progress.png">images/nlp_sequence_progress.png</file>
+	<file alias="nlp_sequence_ready.png">images/nlp_sequence_ready.png</file>
+	<file alias="stt_check.png">images/stt_check.png</file>
+	<file alias="small_btn_f_l.png">images/small_btn_f_l.png</file>
+	<file alias="small_btn_f_m.png">images/small_btn_f_m.png</file>
+	<file alias="small_btn_f_r.png">images/small_btn_f_r.png</file>
+	<file alias="small_btn_w_n_l.png">images/small_btn_w_n_l.png</file>
+	<file alias="small_btn_w_n_m.png">images/small_btn_w_n_m.png</file>
+	<file alias="small_btn_w_n_r.png">images/small_btn_w_n_r.png</file>
+	<file alias="nlp_sequence_error_icon.png">images/nlp_sequence_error_icon.png</file>
+	<file alias="small_spinner_bg.png">images/small_spinner_bg.png</file>
+	<file alias="nlp_sequence_on.png">images/nlp_sequence_on.png</file>
+    </qresource>
+</RCC>

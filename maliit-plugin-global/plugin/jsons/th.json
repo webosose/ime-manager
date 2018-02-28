@@ -1,0 +1,1670 @@
+{
+    "Normal_keys": {
+        "Row": "4",
+        "Col": "13",
+        "Key": [
+            {
+                "keysym": "0x005f",
+                "rawcode": "41",
+                "sw_keycode": "0",
+                "hw_keycode": "95",
+                "index": "0",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x31",
+                "rawcode": "2",
+                "sw_keycode": "3653",
+                "hw_keycode": "3653",
+                "index": "1",
+                "dead_key": "0",
+                "keylabel": "ๅ"
+            },
+            {
+                "keysym": "0x32",
+                "rawcode": "3",
+                "sw_keycode": "47",
+                "hw_keycode": "47",
+                "index": "2",
+                "dead_key": "0",
+                "keylabel": "/"
+            },
+            {
+                "keysym": "0x33",
+                "rawcode": "4",
+                "sw_keycode": "45",
+                "hw_keycode": "45",
+                "index": "3",
+                "dead_key": "0",
+                "keylabel": "-"
+            },
+            {
+                "keysym": "0x34",
+                "rawcode": "5",
+                "sw_keycode": "3616",
+                "hw_keycode": "3616",
+                "index": "4",
+                "dead_key": "0",
+                "keylabel": "ภ"
+            },
+            {
+                "keysym": "0x35",
+                "rawcode": "6",
+                "sw_keycode": "3606",
+                "hw_keycode": "3606",
+                "index": "5",
+                "dead_key": "0",
+                "keylabel": "ถ"
+            },
+            {
+                "keysym": "0x36",
+                "rawcode": "7",
+                "sw_keycode": "3640",
+                "hw_keycode": "3640",
+                "index": "6",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E38"
+            },
+            {
+                "keysym": "0x37",
+                "rawcode": "8",
+                "sw_keycode": "3638",
+                "hw_keycode": "3638",
+                "index": "7",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E36"
+            },
+            {
+                "keysym": "0x38",
+                "rawcode": "9",
+                "sw_keycode": "3588",
+                "hw_keycode": "3588",
+                "index": "8",
+                "dead_key": "0",
+                "keylabel": "ค"
+            },
+            {
+                "keysym": "0x39",
+                "rawcode": "10",
+                "sw_keycode": "3605",
+                "hw_keycode": "3605",
+                "index": "9",
+                "dead_key": "0",
+                "keylabel": "ต"
+            },
+            {
+                "keysym": "0x30",
+                "rawcode": "11",
+                "sw_keycode": "3592",
+                "hw_keycode": "3592",
+                "index": "10",
+                "dead_key": "0",
+                "keylabel": "จ"
+            },
+            {
+                "keysym": "0x2D",
+                "rawcode": "12",
+                "sw_keycode": "3586",
+                "hw_keycode": "3586",
+                "index": "11",
+                "dead_key": "0",
+                "keylabel": "ข"
+            },
+            {
+                "keysym": "0x3D",
+                "rawcode": "13",
+                "sw_keycode": "3594",
+                "hw_keycode": "3594",
+                "index": "12",
+                "dead_key": "0",
+                "keylabel": "ช"
+            },
+            {
+                "keysym": "0x71",
+                "rawcode": "16",
+                "sw_keycode": "3654",
+                "hw_keycode": "3654",
+                "index": "13",
+                "dead_key": "0",
+                "keylabel": "ๆ"
+            },
+            {
+                "keysym": "0x77",
+                "rawcode": "17",
+                "sw_keycode": "3652",
+                "hw_keycode": "3652",
+                "index": "14",
+                "dead_key": "0",
+                "keylabel": "ไ"
+            },
+            {
+                "keysym": "0x65",
+                "rawcode": "18",
+                "sw_keycode": "3635",
+                "hw_keycode": "3635",
+                "index": "15",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E33"
+            },
+            {
+                "keysym": "0x72",
+                "rawcode": "19",
+                "sw_keycode": "3614",
+                "hw_keycode": "3614",
+                "index": "16",
+                "dead_key": "0",
+                "keylabel": "พ"
+            },
+            {
+                "keysym": "0x74",
+                "rawcode": "20",
+                "sw_keycode": "3632",
+                "hw_keycode": "3632",
+                "index": "17",
+                "dead_key": "0",
+                "keylabel": "ะ"
+            },
+            {
+                "keysym": "0x79",
+                "rawcode": "21",
+                "sw_keycode": "3633",
+                "hw_keycode": "3633",
+                "index": "18",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E31"
+            },
+            {
+                "keysym": "0x75",
+                "rawcode": "22",
+                "sw_keycode": "3637",
+                "hw_keycode": "3637",
+                "index": "19",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E35"
+            },
+            {
+                "keysym": "0x69",
+                "rawcode": "23",
+                "sw_keycode": "3619",
+                "hw_keycode": "3619",
+                "index": "20",
+                "dead_key": "0",
+                "keylabel": "ร"
+            },
+            {
+                "keysym": "0x6F",
+                "rawcode": "24",
+                "sw_keycode": "3609",
+                "hw_keycode": "3609",
+                "index": "21",
+                "dead_key": "0",
+                "keylabel": "น"
+            },
+            {
+                "keysym": "0x70",
+                "rawcode": "25",
+                "sw_keycode": "3618",
+                "hw_keycode": "3618",
+                "index": "22",
+                "dead_key": "0",
+                "keylabel": "ย"
+            },
+            {
+                "keysym": "0x5B",
+                "rawcode": "26",
+                "sw_keycode": "3610",
+                "hw_keycode": "3610",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "บ"
+            },
+            {
+                "keysym": "0x5D",
+                "rawcode": "27",
+                "sw_keycode": "3621",
+                "hw_keycode": "3621",
+                "index": "24",
+                "dead_key": "0",
+                "keylabel": "ล"
+            },
+            {
+                "keysym": "0x5C",
+                "rawcode": "43",
+                "sw_keycode": "3587",
+                "hw_keycode": "3587",
+                "index": "25",
+                "dead_key": "0",
+                "keylabel": "ฃ"
+            },
+            {
+                "keysym": "0X61",
+                "rawcode": "30",
+                "sw_keycode": "3615",
+                "hw_keycode": "3615",
+                "index": "26",
+                "dead_key": "0",
+                "keylabel": "ฟ"
+            },
+            {
+                "keysym": "0x73",
+                "rawcode": "31",
+                "sw_keycode": "3627",
+                "hw_keycode": "3627",
+                "index": "27",
+                "dead_key": "0",
+                "keylabel": "ห"
+            },
+            {
+                "keysym": "0x64",
+                "rawcode": "32",
+                "sw_keycode": "3585",
+                "hw_keycode": "3585",
+                "index": "28",
+                "dead_key": "0",
+                "keylabel": "ก"
+            },
+            {
+                "keysym": "0x66",
+                "rawcode": "33",
+                "sw_keycode": "3604",
+                "hw_keycode": "3604",
+                "index": "29",
+                "dead_key": "0",
+                "keylabel": "ด"
+            },
+            {
+                "keysym": "0x67",
+                "rawcode": "34",
+                "sw_keycode": "3648",
+                "hw_keycode": "3648",
+                "index": "30",
+                "dead_key": "0",
+                "keylabel": "เ"
+            },
+            {
+                "keysym": "0x68",
+                "rawcode": "35",
+                "sw_keycode": "3657",
+                "hw_keycode": "3657",
+                "index": "31",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E49"
+            },
+            {
+                "keysym": "0x6A",
+                "rawcode": "36",
+                "sw_keycode": "3656",
+                "hw_keycode": "3656",
+                "index": "32",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E48"
+            },
+            {
+                "keysym": "0x6B",
+                "rawcode": "37",
+                "sw_keycode": "3634",
+                "hw_keycode": "3634",
+                "index": "33",
+                "dead_key": "0",
+                "keylabel": "า"
+            },
+            {
+                "keysym": "0x6C",
+                "rawcode": "38",
+                "sw_keycode": "3626",
+                "hw_keycode": "3626",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "ส"
+            },
+            {
+                "keysym": "0x3B",
+                "rawcode": "39",
+                "sw_keycode": "3623",
+                "hw_keycode": "3623",
+                "index": "35",
+                "dead_key": "0",
+                "keylabel": "ว"
+            },
+            {
+                "keysym": "0x27",
+                "rawcode": "40",
+                "sw_keycode": "3591",
+                "hw_keycode": "3591",
+                "index": "36",
+                "dead_key": "0",
+                "keylabel": "ง"
+            },
+            {
+                "keysym": "0x4D",
+                "rawcode": "256",
+                "sw_keycode": "63",
+                "hw_keycode": "46",
+                "index": "37",
+                "dead_key": "0",
+                "keylabel": "?"
+            },
+            {
+                "keysym": "0x0000",
+                "rawcode": "257",
+                "sw_keycode": "0",
+                "hw_keycode": "0",
+                "index": "38",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x401",
+                "rawcode": "258",
+                "sw_keycode": "64",
+                "hw_keycode": "64",
+                "index": "39",
+                "dead_key": "0",
+                "keylabel": "@"
+            },
+            {
+                "keysym": "0x7A",
+                "rawcode": "44",
+                "sw_keycode": "3612",
+                "hw_keycode": "3612",
+                "index": "40",
+                "dead_key": "0",
+                "keylabel": "ผ"
+            },
+            {
+                "keysym": "0x78",
+                "rawcode": "45",
+                "sw_keycode": "3611",
+                "hw_keycode": "3611",
+                "index": "41",
+                "dead_key": "0",
+                "keylabel": "ป"
+            },
+            {
+                "keysym": "0x63",
+                "rawcode": "46",
+                "sw_keycode": "3649",
+                "hw_keycode": "3649",
+                "index": "42",
+                "dead_key": "0",
+                "keylabel": "แ"
+            },
+            {
+                "keysym": "0x76",
+                "rawcode": "47",
+                "sw_keycode": "3629",
+                "hw_keycode": "3629",
+                "index": "43",
+                "dead_key": "0",
+                "keylabel": "อ"
+            },
+            {
+                "keysym": "0x62",
+                "rawcode": "48",
+                "sw_keycode": "3636",
+                "hw_keycode": "3636",
+                "index": "44",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E34"
+            },
+            {
+                "keysym": "0x6E",
+                "rawcode": "49",
+                "sw_keycode": "3639",
+                "hw_keycode": "3639",
+                "index": "45",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E37"
+            },
+            {
+                "keysym": "0x6D",
+                "rawcode": "50",
+                "sw_keycode": "3607",
+                "hw_keycode": "3607",
+                "index": "46",
+                "dead_key": "0",
+                "keylabel": "ท"
+            },
+            {
+                "keysym": "0x2C",
+                "rawcode": "51",
+                "sw_keycode": "3617",
+                "hw_keycode": "3617",
+                "index": "47",
+                "dead_key": "0",
+                "keylabel": "ม"
+            },
+            {
+                "keysym": "0x2E",
+                "rawcode": "52",
+                "sw_keycode": "3651",
+                "hw_keycode": "3651",
+                "index": "48",
+                "dead_key": "0",
+                "keylabel": "ใ"
+            },
+            {
+                "keysym": "0x2F",
+                "rawcode": "53",
+                "sw_keycode": "3613",
+                "hw_keycode": "3613",
+                "index": "49",
+                "dead_key": "0",
+                "keylabel": "ฝ"
+            },
+            {
+                "keysym": "0x7D",
+                "rawcode": "54",
+                "sw_keycode": "44",
+                "hw_keycode": "0",
+                "index": "50",
+                "dead_key": "0",
+                "keylabel": ","
+            },
+            {
+                "keysym": "0x22",
+                "rawcode": "55",
+                "sw_keycode": "46",
+                "hw_keycode": "0",
+                "index": "51",
+                "dead_key": "0",
+                "keylabel": "."
+            }
+        ]
+    },
+    "Shift_keys": {
+        "Row": "4",
+        "Col": "13",
+        "Key": [
+            {
+                "keysym": "0x0025",
+                "rawcode": "41",
+                "sw_keycode": "0",
+                "hw_keycode": "37",
+                "index": "0",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x82",
+                "rawcode": "2",
+                "sw_keycode": "48",
+                "hw_keycode": "43",
+                "index": "1",
+                "dead_key": "0",
+                "keylabel": "0"
+            },
+            {
+                "keysym": "0x85",
+                "rawcode": "3",
+                "sw_keycode": "49",
+                "hw_keycode": "3665",
+                "index": "2",
+                "dead_key": "0",
+                "keylabel": "1"
+            },
+            {
+                "keysym": "0x80",
+                "rawcode": "4",
+                "sw_keycode": "50",
+                "hw_keycode": "3666",
+                "index": "3",
+                "dead_key": "0",
+                "keylabel": "2"
+            },
+            {
+                "keysym": "0x81",
+                "rawcode": "5",
+                "sw_keycode": "51",
+                "hw_keycode": "3667",
+                "index": "4",
+                "dead_key": "0",
+                "keylabel": "3"
+            },
+            {
+                "keysym": "0x86",
+                "rawcode": "6",
+                "sw_keycode": "52",
+                "hw_keycode": "3668",
+                "index": "5",
+                "dead_key": "0",
+                "keylabel": "4"
+            },
+            {
+                "keysym": "0x5E",
+                "rawcode": "7",
+                "sw_keycode": "3641",
+                "hw_keycode": "3641",
+                "index": "6",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E39"
+            },
+            {
+                "keysym": "0x26",
+                "rawcode": "8",
+                "sw_keycode": "3647",
+                "hw_keycode": "3647",
+                "index": "7",
+                "dead_key": "0",
+                "keylabel": "฿"
+            },
+            {
+                "keysym": "0x87",
+                "rawcode": "9",
+                "sw_keycode": "53",
+                "hw_keycode": "3669",
+                "index": "8",
+                "dead_key": "0",
+                "keylabel": "5"
+            },
+            {
+                "keysym": "0x88",
+                "rawcode": "10",
+                "sw_keycode": "54",
+                "hw_keycode": "3670",
+                "index": "9",
+                "dead_key": "0",
+                "keylabel": "6"
+            },
+            {
+                "keysym": "0x89",
+                "rawcode": "11",
+                "sw_keycode": "55",
+                "hw_keycode": "3671",
+                "index": "10",
+                "dead_key": "0",
+                "keylabel": "7"
+            },
+            {
+                "keysym": "0x90",
+                "rawcode": "12",
+                "sw_keycode": "56",
+                "hw_keycode": "3672",
+                "index": "11",
+                "dead_key": "0",
+                "keylabel": "8"
+            },
+            {
+                "keysym": "0x91",
+                "rawcode": "13",
+                "sw_keycode": "57",
+                "hw_keycode": "3673",
+                "index": "12",
+                "dead_key": "0",
+                "keylabel": "9"
+            },
+            {
+                "keysym": "0x0df0",
+                "rawcode": "16",
+                "sw_keycode": "0",
+                "hw_keycode": "3664",
+                "index": "13",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x57",
+                "rawcode": "17",
+                "sw_keycode": "34",
+                "hw_keycode": "34",
+                "index": "14",
+                "dead_key": "0",
+                "keylabel": "\""
+            },
+            {
+                "keysym": "0x45",
+                "rawcode": "18",
+                "sw_keycode": "3598",
+                "hw_keycode": "3598",
+                "index": "15",
+                "dead_key": "0",
+                "keylabel": "ฎ"
+            },
+            {
+                "keysym": "0x52",
+                "rawcode": "19",
+                "sw_keycode": "3601",
+                "hw_keycode": "3601",
+                "index": "16",
+                "dead_key": "0",
+                "keylabel": "ฑ"
+            },
+            {
+                "keysym": "0x54",
+                "rawcode": "20",
+                "sw_keycode": "3608",
+                "hw_keycode": "3608",
+                "index": "17",
+                "dead_key": "0",
+                "keylabel": "ธ"
+            },
+            {
+                "keysym": "0x59",
+                "rawcode": "21",
+                "sw_keycode": "3661",
+                "hw_keycode": "3661",
+                "index": "18",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E4D"
+            },
+            {
+                "keysym": "0x55",
+                "rawcode": "22",
+                "sw_keycode": "3658",
+                "hw_keycode": "3658",
+                "index": "19",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E4A"
+            },
+            {
+                "keysym": "0x49",
+                "rawcode": "23",
+                "sw_keycode": "3603",
+                "hw_keycode": "3603",
+                "index": "20",
+                "dead_key": "0",
+                "keylabel": "ณ"
+            },
+            {
+                "keysym": "0x4F",
+                "rawcode": "24",
+                "sw_keycode": "3631",
+                "hw_keycode": "3631",
+                "index": "21",
+                "dead_key": "0",
+                "keylabel": "ฯ"
+            },
+            {
+                "keysym": "0x50",
+                "rawcode": "25",
+                "sw_keycode": "3597",
+                "hw_keycode": "3597",
+                "index": "22",
+                "dead_key": "0",
+                "keylabel": "ญ"
+            },
+            {
+                "keysym": "0x7B",
+                "rawcode": "26",
+                "sw_keycode": "3600",
+                "hw_keycode": "3600",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "ฐ"
+            },
+            {
+                "keysym": "0X0000",
+                "rawcode": "27",
+                "sw_keycode": "0",
+                "hw_keycode": "44",
+                "index": "24",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x7C",
+                "rawcode": "43",
+                "sw_keycode": "3589",
+                "hw_keycode": "3589",
+                "index": "25",
+                "dead_key": "0",
+                "keylabel": "ฅ"
+            },
+            {
+                "keysym": "0x41",
+                "rawcode": "30",
+                "sw_keycode": "3620",
+                "hw_keycode": "3620",
+                "index": "26",
+                "dead_key": "0",
+                "keylabel": "ฤ"
+            },
+            {
+                "keysym": "0x53",
+                "rawcode": "31",
+                "sw_keycode": "3590",
+                "hw_keycode": "3590",
+                "index": "27",
+                "dead_key": "0",
+                "keylabel": "ฆ"
+            },
+            {
+                "keysym": "0x44",
+                "rawcode": "32",
+                "sw_keycode": "3599",
+                "hw_keycode": "3599",
+                "index": "28",
+                "dead_key": "0",
+                "keylabel": "ฏ"
+            },
+            {
+                "keysym": "0x46",
+                "rawcode": "33",
+                "sw_keycode": "3650",
+                "hw_keycode": "3650",
+                "index": "29",
+                "dead_key": "0",
+                "keylabel": "โ"
+            },
+            {
+                "keysym": "0x47",
+                "rawcode": "34",
+                "sw_keycode": "3596",
+                "hw_keycode": "3596",
+                "index": "30",
+                "dead_key": "0",
+                "keylabel": "ฌ"
+            },
+            {
+                "keysym": "0x48",
+                "rawcode": "35",
+                "sw_keycode": "3655",
+                "hw_keycode": "3655",
+                "index": "31",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E47"
+            },
+            {
+                "keysym": "0x4A",
+                "rawcode": "36",
+                "sw_keycode": "3659",
+                "hw_keycode": "3659",
+                "index": "32",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E4B"
+            },
+            {
+                "keysym": "0x4B",
+                "rawcode": "37",
+                "sw_keycode": "3625",
+                "hw_keycode": "3625",
+                "index": "33",
+                "dead_key": "0",
+                "keylabel": "ษ"
+            },
+            {
+                "keysym": "0x4C",
+                "rawcode": "38",
+                "sw_keycode": "3624",
+                "hw_keycode": "3624",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "ศ"
+            },
+            {
+                "keysym": "0x3A",
+                "rawcode": "39",
+                "sw_keycode": "3595",
+                "hw_keycode": "3595",
+                "index": "35",
+                "dead_key": "0",
+                "keylabel": "ซ"
+            },
+            {
+                "keysym": "0x002e",
+                "rawcode": "40",
+                "sw_keycode": "0",
+                "hw_keycode": "46",
+                "index": "36",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x4D",
+                "rawcode": "256",
+                "sw_keycode": "63",
+                "hw_keycode": "46",
+                "index": "37",
+                "dead_key": "0",
+                "keylabel": "?"
+            },
+            {
+                "keysym": "0x0000",
+                "rawcode": "257",
+                "sw_keycode": "0",
+                "hw_keycode": "0",
+                "index": "38",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x401",
+                "rawcode": "258",
+                "sw_keycode": "64",
+                "hw_keycode": "64",
+                "index": "39",
+                "dead_key": "0",
+                "keylabel": "@"
+            },
+            {
+                "keysym": "0x5A",
+                "rawcode": "44",
+                "sw_keycode": "40",
+                "hw_keycode": "40",
+                "index": "40",
+                "dead_key": "0",
+                "keylabel": "("
+            },
+            {
+                "keysym": "0x58",
+                "rawcode": "45",
+                "sw_keycode": "41",
+                "hw_keycode": "41",
+                "index": "41",
+                "dead_key": "0",
+                "keylabel": ")"
+            },
+            {
+                "keysym": "0x43",
+                "rawcode": "46",
+                "sw_keycode": "3593",
+                "hw_keycode": "3593",
+                "index": "42",
+                "dead_key": "0",
+                "keylabel": "ฉ"
+            },
+            {
+                "keysym": "0x56",
+                "rawcode": "47",
+                "sw_keycode": "3630",
+                "hw_keycode": "3630",
+                "index": "43",
+                "dead_key": "0",
+                "keylabel": "ฮ"
+            },
+            {
+                "keysym": "0x42",
+                "rawcode": "48",
+                "sw_keycode": "3642",
+                "hw_keycode": "3642",
+                "index": "44",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E3A"
+            },
+            {
+                "keysym": "0x4E",
+                "rawcode": "49",
+                "sw_keycode": "3660",
+                "hw_keycode": "3660",
+                "index": "45",
+                "dead_key": "0",
+                "keylabel": "\u25CC\u0E4C"
+            },
+            {
+                "keysym": "0x4D",
+                "rawcode": "50",
+                "sw_keycode": "63",
+                "hw_keycode": "63",
+                "index": "46",
+                "dead_key": "0",
+                "keylabel": "?"
+            },
+            {
+                "keysym": "0x3C",
+                "rawcode": "51",
+                "sw_keycode": "3602",
+                "hw_keycode": "3602",
+                "index": "47",
+                "dead_key": "0",
+                "keylabel": "ฒ"
+            },
+            {
+                "keysym": "0x3E",
+                "rawcode": "52",
+                "sw_keycode": "3628",
+                "hw_keycode": "3628",
+                "index": "48",
+                "dead_key": "0",
+                "keylabel": "ฬ"
+            },
+            {
+                "keysym": "0x3F",
+                "rawcode": "53",
+                "sw_keycode": "3622",
+                "hw_keycode": "3622",
+                "index": "49",
+                "dead_key": "0",
+                "keylabel": "ฦ"
+            },
+            {
+                "keysym": "0x7D",
+                "rawcode": "54",
+                "sw_keycode": "44",
+                "hw_keycode": "0",
+                "index": "50",
+                "dead_key": "0",
+                "keylabel": ","
+            },
+            {
+                "keysym": "0x22",
+                "rawcode": "55",
+                "sw_keycode": "46",
+                "hw_keycode": "0",
+                "index": "51",
+                "dead_key": "0",
+                "keylabel": "."
+            }
+        ]
+    },
+    "Symbol_keys": {
+        "Row": "4",
+        "Col": "12",
+        "Key": [
+            {
+                "keysym": "0x0031",
+                "rawcode": "2",
+                "sw_keycode": "49",
+                "hw_keycode": "49",
+                "index": "0",
+                "dead_key": "0",
+                "keylabel": "1"
+            },
+            {
+                "keysym": "0x0032",
+                "rawcode": "3",
+                "sw_keycode": "50",
+                "hw_keycode": "50",
+                "index": "1",
+                "dead_key": "0",
+                "keylabel": "2"
+            },
+            {
+                "keysym": "0x0033",
+                "rawcode": "4",
+                "sw_keycode": "51",
+                "hw_keycode": "51",
+                "index": "2",
+                "dead_key": "0",
+                "keylabel": "3"
+            },
+            {
+                "keysym": "0x0034",
+                "rawcode": "5",
+                "sw_keycode": "52",
+                "hw_keycode": "52",
+                "index": "3",
+                "dead_key": "0",
+                "keylabel": "4"
+            },
+            {
+                "keysym": "0x0035",
+                "rawcode": "6",
+                "sw_keycode": "53",
+                "hw_keycode": "53",
+                "index": "4",
+                "dead_key": "0",
+                "keylabel": "5"
+            },
+            {
+                "keysym": "0x0036",
+                "rawcode": "7",
+                "sw_keycode": "54",
+                "hw_keycode": "54",
+                "index": "5",
+                "dead_key": "0",
+                "keylabel": "6"
+            },
+            {
+                "keysym": "0x0037",
+                "rawcode": "8",
+                "sw_keycode": "55",
+                "hw_keycode": "55",
+                "index": "6",
+                "dead_key": "0",
+                "keylabel": "7"
+            },
+            {
+                "keysym": "0x0038",
+                "rawcode": "9",
+                "sw_keycode": "56",
+                "hw_keycode": "56",
+                "index": "7",
+                "dead_key": "0",
+                "keylabel": "8"
+            },
+            {
+                "keysym": "0x0039",
+                "rawcode": "10",
+                "sw_keycode": "57",
+                "hw_keycode": "57",
+                "index": "8",
+                "dead_key": "0",
+                "keylabel": "9"
+            },
+            {
+                "keysym": "0x0030",
+                "rawcode": "11",
+                "sw_keycode": "48",
+                "hw_keycode": "48",
+                "index": "9",
+                "dead_key": "0",
+                "keylabel": "0"
+            },
+            {
+                "keysym": "0x0060",
+                "rawcode": "12",
+                "sw_keycode": "96",
+                "hw_keycode": "96",
+                "index": "10",
+                "dead_key": "0",
+                "keylabel": "`"
+            },
+            {
+                "keysym": "0x007E",
+                "rawcode": "13",
+                "sw_keycode": "126",
+                "hw_keycode": "126",
+                "index": "11",
+                "dead_key": "0",
+                "keylabel": "~"
+            },
+            {
+                "keysym": "0x0021",
+                "rawcode": "16",
+                "sw_keycode": "33",
+                "hw_keycode": "33",
+                "index": "12",
+                "dead_key": "0",
+                "keylabel": "!"
+            },
+            {
+                "keysym": "0x0040",
+                "rawcode": "17",
+                "sw_keycode": "64",
+                "hw_keycode": "64",
+                "index": "13",
+                "dead_key": "0",
+                "keylabel": "@"
+            },
+            {
+                "keysym": "0x0023",
+                "rawcode": "18",
+                "sw_keycode": "35",
+                "hw_keycode": "35",
+                "index": "14",
+                "dead_key": "0",
+                "keylabel": "#"
+            },
+            {
+                "keysym": "0x0024",
+                "rawcode": "19",
+                "sw_keycode": "36",
+                "hw_keycode": "36",
+                "index": "15",
+                "dead_key": "0",
+                "keylabel": "$"
+            },
+            {
+                "keysym": "0x0025",
+                "rawcode": "20",
+                "sw_keycode": "37",
+                "hw_keycode": "37",
+                "index": "16",
+                "dead_key": "0",
+                "keylabel": "%"
+            },
+            {
+                "keysym": "0x005E",
+                "rawcode": "21",
+                "sw_keycode": "94",
+                "hw_keycode": "94",
+                "index": "17",
+                "dead_key": "0",
+                "keylabel": "^"
+            },
+            {
+                "keysym": "0x0026",
+                "rawcode": "22",
+                "sw_keycode": "38",
+                "hw_keycode": "38",
+                "index": "18",
+                "dead_key": "0",
+                "keylabel": "&"
+            },
+            {
+                "keysym": "0x002A",
+                "rawcode": "23",
+                "sw_keycode": "42",
+                "hw_keycode": "42",
+                "index": "19",
+                "dead_key": "0",
+                "keylabel": "*"
+            },
+            {
+                "keysym": "0x0028",
+                "rawcode": "24",
+                "sw_keycode": "40",
+                "hw_keycode": "40",
+                "index": "20",
+                "dead_key": "0",
+                "keylabel": "("
+            },
+            {
+                "keysym": "0x0029",
+                "rawcode": "25",
+                "sw_keycode": "41",
+                "hw_keycode": "41",
+                "index": "21",
+                "dead_key": "0",
+                "keylabel": ")"
+            },
+            {
+                "keysym": "0x00A7",
+                "rawcode": "26",
+                "sw_keycode": "167",
+                "hw_keycode": "167",
+                "index": "22",
+                "dead_key": "0",
+                "keylabel": "§"
+            },
+            {
+                "keysym": "0x00BF",
+                "rawcode": "27",
+                "sw_keycode": "191",
+                "hw_keycode": "191",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "¿"
+            },
+            {
+                "keysym": "0x002D",
+                "rawcode": "43",
+                "sw_keycode": "45",
+                "hw_keycode": "45",
+                "index": "24",
+                "dead_key": "0",
+                "keylabel": "-"
+            },
+            {
+                "keysym": "0x005F",
+                "rawcode": "30",
+                "sw_keycode": "95",
+                "hw_keycode": "95",
+                "index": "25",
+                "dead_key": "0",
+                "keylabel": "_"
+            },
+            {
+                "keysym": "0x003D",
+                "rawcode": "31",
+                "sw_keycode": "61",
+                "hw_keycode": "61",
+                "index": "26",
+                "dead_key": "0",
+                "keylabel": "="
+            },
+            {
+                "keysym": "0x002B",
+                "rawcode": "32",
+                "sw_keycode": "43",
+                "hw_keycode": "43",
+                "index": "27",
+                "dead_key": "0",
+                "keylabel": "+"
+            },
+            {
+                "keysym": "0x005C",
+                "rawcode": "33",
+                "sw_keycode": "92",
+                "hw_keycode": "92",
+                "index": "28",
+                "dead_key": "0",
+                "keylabel": "\\"
+            },
+            {
+                "keysym": "0x007C",
+                "rawcode": "34",
+                "sw_keycode": "124",
+                "hw_keycode": "124",
+                "index": "29",
+                "dead_key": "0",
+                "keylabel": "|"
+            },
+            {
+                "keysym": "0x005B",
+                "rawcode": "35",
+                "sw_keycode": "91",
+                "hw_keycode": "91",
+                "index": "30",
+                "dead_key": "0",
+                "keylabel": "["
+            },
+            {
+                "keysym": "0x005D",
+                "rawcode": "36",
+                "sw_keycode": "93",
+                "hw_keycode": "93",
+                "index": "31",
+                "dead_key": "0",
+                "keylabel": "]"
+            },
+            {
+                "keysym": "0x007B",
+                "rawcode": "37",
+                "sw_keycode": "123",
+                "hw_keycode": "123",
+                "index": "32",
+                "dead_key": "0",
+                "keylabel": "{"
+            },
+            {
+                "keysym": "0x007D",
+                "rawcode": "38",
+                "sw_keycode": "125",
+                "hw_keycode": "125",
+                "index": "33",
+                "dead_key": "0",
+                "keylabel": "}"
+            },
+            {
+                "keysym": "0x100FFE6",
+                "rawcode": "39",
+                "sw_keycode": "65510",
+                "hw_keycode": "65510",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "￦"
+            },
+            {
+                "keysym": "0x20AC",
+                "rawcode": "40",
+                "sw_keycode": "8364",
+                "hw_keycode": "8364",
+                "index": "35",
+                "dead_key": "0",
+                "keylabel": "€"
+            },
+            {
+                "keysym": "0x003B",
+                "rawcode": "44",
+                "sw_keycode": "59",
+                "hw_keycode": "59",
+                "index": "36",
+                "dead_key": "0",
+                "keylabel": ";"
+            },
+            {
+                "keysym": "0x003A",
+                "rawcode": "45",
+                "sw_keycode": "58",
+                "hw_keycode": "58",
+                "index": "37",
+                "dead_key": "0",
+                "keylabel": ":"
+            },
+            {
+                "keysym": "0x0027",
+                "rawcode": "46",
+                "sw_keycode": "39",
+                "hw_keycode": "39",
+                "index": "38",
+                "dead_key": "0",
+                "keylabel": "'"
+            },
+            {
+                "keysym": "0x0022",
+                "rawcode": "47",
+                "sw_keycode": "34",
+                "hw_keycode": "34",
+                "index": "39",
+                "dead_key": "0",
+                "keylabel": "\""
+            },
+            {
+                "keysym": "0x002C",
+                "rawcode": "48",
+                "sw_keycode": "44",
+                "hw_keycode": "44",
+                "index": "40",
+                "dead_key": "0",
+                "keylabel": ","
+            },
+            {
+                "keysym": "0x002E",
+                "rawcode": "49",
+                "sw_keycode": "46",
+                "hw_keycode": "46",
+                "index": "41",
+                "dead_key": "0",
+                "keylabel": "."
+            },
+            {
+                "keysym": "0x003C",
+                "rawcode": "50",
+                "sw_keycode": "60",
+                "hw_keycode": "60",
+                "index": "42",
+                "dead_key": "0",
+                "keylabel": "<"
+            },
+            {
+                "keysym": "0x003E",
+                "rawcode": "51",
+                "sw_keycode": "62",
+                "hw_keycode": "62",
+                "index": "43",
+                "dead_key": "0",
+                "keylabel": ">"
+            },
+            {
+                "keysym": "0x002F",
+                "rawcode": "52",
+                "sw_keycode": "47",
+                "hw_keycode": "47",
+                "index": "44",
+                "dead_key": "0",
+                "keylabel": "/"
+            },
+            {
+                "keysym": "0x003F",
+                "rawcode": "53",
+                "sw_keycode": "63",
+                "hw_keycode": "63",
+                "index": "45",
+                "dead_key": "0",
+                "keylabel": "?"
+            },
+            {
+                "keysym": "0x00A3",
+                "rawcode": "54",
+                "sw_keycode": "163",
+                "hw_keycode": "163",
+                "index": "46",
+                "dead_key": "0",
+                "keylabel": "£"
+            },
+            {
+                "keysym": "0x00A5",
+                "rawcode": "55",
+                "sw_keycode": "165",
+                "hw_keycode": "165",
+                "index": "47",
+                "dead_key": "0",
+                "keylabel": "¥"
+            }
+        ]
+    },
+    "Altgr_keys": {
+        "Key": []
+    },
+    "Altgr_shift_keys": {
+        "Key": []
+    },
+    "Expand_keys": {
+        "Row": "4",
+        "Col": "13",
+        "Key": [
+            {
+                "keycode": "",
+                "index": "0",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "1",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "2",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "3",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "4",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "5",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "6",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "7",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "8",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "9",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "10",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "11",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "12",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "13",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "14",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "15",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "16",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "17",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "18",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "19",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "20",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "21",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "22",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "23",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "24",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "25",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "26",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "27",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "28",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "29",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "30",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "31",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "32",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "33",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "34",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "35",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "36",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "37",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "38",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "39",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "40",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "41",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "42",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "43",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "44",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "45",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "46",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "47",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "48",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "49",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "50",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "51",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "52",
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "53",
+                "keylabel": ""
+            }
+        ]
+    }
+}

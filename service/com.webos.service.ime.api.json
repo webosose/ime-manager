@@ -1,0 +1,8 @@
+{
+    "devices": [
+        "com.webos.service.ime/deleteCharacters",
+        "com.webos.service.ime/insertText",
+        "com.webos.service.ime/registerRemoteKeyboard",
+        "com.webos.service.ime/sendEnterKey"
+    ]
+}

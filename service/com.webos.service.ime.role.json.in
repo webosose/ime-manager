@@ -1,0 +1,25 @@
+{
+    \"exeName\":\"$$WEBOS_INSTALL_BINS/MaliitServer\",
+    \"type\":\"privileged\",
+    \"allowedNames\":[\"com.webos.service.ime\",\"com.webos.service.ime.stt\",\"com.webos.service.ime.globalplugin\",\"com.webos.service.ime.settings\"],
+    \"permissions\":[
+        {
+            \"service\":\"com.webos.service.ime\",
+            \"outbound\":[\"com.webos.notification\",\"com.webos.service.tts\",\"com.webos.settingsservice\",\"com.webos.service.config\"]
+        },
+        {
+            \"service\":\"com.webos.service.ime.settings\",
+            \"outbound\":[\"com.webos.notification\",\"com.webos.service.tts\",\"com.webos.settingsservice\",\"com.webos.service.config\"]
+        },
+        {
+             \"service\":\"com.webos.service.ime.globalplugin\",
+             \"outbound\":[\"com.webos.notification\",\"com.webos.service.tts\",\"com.webos.settingsservice\",\"com.webos.service.config\"]
+        },
+        {
+             \"service\":\"com.webos.service.ime.stt\",
+             \"outbound\":[\"com.webos.notification\",\"com.webos.service.tts\",\"com.webos.settingsservice\",\"com.webos.service.config\",
+             \"com.webos.service.nlp\",\"com.webos.audio\",\"com.webos.applicationManager\",\"com.webos.service.bluetooth\",
+             \"com.webos.service.mrcu\"]
+        }
+   ]
+}

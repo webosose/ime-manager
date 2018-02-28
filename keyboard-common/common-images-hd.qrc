@@ -1,0 +1,23 @@
+<RCC>
+     <qresource prefix="/images-hd">
+        <file alias="arrow-left.png">images-hd/arrow-left.png</file>
+        <file alias="arrow-left-dark.png">images-hd/arrow-left-dark.png</file>
+        <file alias="arrow-right.png">images-hd/arrow-right.png</file>
+        <file alias="arrow-right-dark.png">images-hd/arrow-right-dark.png</file>
+        <file alias="clear.png">images-hd/clear.png</file>
+        <file alias="clear-dark.png">images-hd/clear-dark.png</file>
+        <file alias="move-left.png">images-hd/move-left.png</file>
+        <file alias="move-left-dark.png">images-hd/move-left-dark.png</file>
+        <file alias="move-right.png">images-hd/move-right.png</file>
+        <file alias="move-right-dark.png">images-hd/move-right-dark.png</file>
+        <file alias="shift.png">images-hd/shift.png</file>
+        <file alias="shift-dark.png">images-hd/shift-dark.png</file>
+        <file alias="shift-on.png">images-hd/shift-on.png</file>
+        <file alias="shift-lock.png">images-hd/shift-lock.png</file>
+        <file alias="shift-on-focused.png">images-hd/shift-on-focused.png</file>
+        <file alias="spacebar.png">images-hd/spacebar.png</file>
+        <file alias="spacebar-dark.png">images-hd/spacebar-dark.png</file>
+        <file alias="voice.png">images-hd/voice.png</file>
+        <file alias="voice-dark.png">images-hd/voice-dark.png</file>
+    </qresource>
+</RCC>

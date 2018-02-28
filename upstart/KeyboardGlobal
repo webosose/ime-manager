@@ -1,0 +1,18 @@
+# -*- mode: conf; -*-
+
+start on started starfish-luna-surface-manager
+
+respawn
+
+# Needs better upstart trigger
+pre-start script
+  sleep 1
+end script
+
+script
+    export QT_IM_MODULE=none
+    export XDG_RUNTIME_DIR=/var/run/xdg
+    export QT_QPA_PLATFORM=wayland
+    export QT_QPA_FONTDIR=/usr/share/fonts
+    /usr/bin/KeyboardGlobal -platform wayland
+end script
