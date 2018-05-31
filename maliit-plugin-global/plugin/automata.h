@@ -54,7 +54,7 @@ public:
 
     virtual QStringList getPredictionList(const QString &language) = 0;
 
-    virtual void addWord(const QString &word) {}
+    virtual void addWord(const QString &word) { Q_UNUSED(word);}
 };
 
 #endif //AUTOMATA_H

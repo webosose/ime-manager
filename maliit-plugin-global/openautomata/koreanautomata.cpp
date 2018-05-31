@@ -41,7 +41,6 @@ void ucs4_to_utf8(char *buf, const ucschar *ucs4, size_t bufsize)
     size_t inbytesleft;
     char*  outbuf;
     size_t outbytesleft;
-    size_t ret;
     iconv_t cd;
 
     for (n = 0; ucs4[n] != 0; n++)
@@ -60,7 +59,7 @@ void ucs4_to_utf8(char *buf, const ucschar *ucs4, size_t bufsize)
     inbytesleft = n * 4;
     outbuf = buf;
     outbytesleft = bufsize;
-    ret = iconv(cd, &inbuf, &inbytesleft, &outbuf, &outbytesleft);
+    iconv(cd, &inbuf, &inbytesleft, &outbuf, &outbytesleft);
 
     iconv_close(cd);
 
@@ -171,6 +170,7 @@ KoreanAutomata::~KoreanAutomata()
 }
 
 void KoreanAutomata::setPreedit(const QString &preeditString, int cursorPos) {
+    Q_UNUSED(cursorPos);
     m_surroundingText = preeditString;
     m_predictonSeed = m_surroundingText + m_preedit;
 }

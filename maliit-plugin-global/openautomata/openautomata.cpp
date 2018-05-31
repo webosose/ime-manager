@@ -215,5 +215,6 @@ QString OpenAutomata::getWordForPrediction()
 
 QStringList OpenAutomata::getPredictionList(const QString &language)
 {
+    Q_UNUSED(language);
     return QStringList();
 }
