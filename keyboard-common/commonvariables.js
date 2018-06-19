@@ -13,6 +13,9 @@
 // limitations under the License.
 //
 // SPDX-License-Identifier: Apache-2.0
+
+.pragma library
+
 var defaultFocusItem = undefined;
 
 // This will save the previous focused item. we can use it

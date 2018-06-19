@@ -38,6 +38,7 @@ public:
     }
     void setPreedit(const QString &preeditString, int cursorPos)
     {
+        Q_UNUSED(cursorPos);
         m_surroundingText = preeditString;
     }
 
@@ -64,6 +65,7 @@ public:
         m_keymap.insert(0x99,QString(0x40));
         m_keymap.insert(0x2C,QString(0x431));
         m_keymap.insert(0x2E,QString(0x44E));
+        m_keymap.insert(0x2F,QString(0x2F));
     }
 
     void addNumberKeys()

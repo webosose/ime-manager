@@ -833,8 +833,8 @@ void GlobalInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
         } else if (m_keyboard->isVisible()
             && (keyCode == Qt::Key_Escape || keyCode == Qt::Key_Cancel || keyCode == Qt::Key_Back || nativeScanCode == SCANCODE_BACK)) {
             m_keyboard->onHideRequested(false);
-        } else if (d->pressedScanCode != SCANCODE_UNKNOWN && d->pressedScanCode == nativeScanCode ||
-                    keyCode == Qt::Key_Control) {
+        } else if (((d->pressedScanCode != SCANCODE_UNKNOWN) && (d->pressedScanCode == nativeScanCode)) ||
+                    (keyCode == Qt::Key_Control)) {
             MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
                 text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
             if (d->pressedScanCode == SCANCODE_BACKSPACE)

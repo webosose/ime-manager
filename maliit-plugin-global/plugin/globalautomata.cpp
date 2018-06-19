@@ -132,6 +132,7 @@ QString GlobalAutomata::getWordForPrediction()
 
 QStringList GlobalAutomata::getPredictionList(const QString &language)
 {
+    Q_UNUSED(language);
     Q_D(GlobalAutomata);
     switch (d->predictionMethod) {
     case PREDICTION_METHOD_FREQUENCY:

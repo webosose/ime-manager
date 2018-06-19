@@ -49,6 +49,7 @@ public:
 
     void setPreedit(const QString &preeditString, int cursorPos)
     {
+        Q_UNUSED(cursorPos);
         m_surroundingText = preeditString;
     }
 
