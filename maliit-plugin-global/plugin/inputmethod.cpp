@@ -412,7 +412,7 @@ void GlobalInputMethod::show()
     if (!INDEX_IS_VALID(currentLanguageIndex, enabledLanguages))
         switchContext(Maliit::SwitchUndefined, false);
 
-    m_keyboard->setInputSource(Keyboard::InputSourceVirtual);
+    m_keyboard->setInputSource(Keyboard::InputSourceHardware);
 
     // check the content-type
     bool valid;
@@ -434,14 +434,13 @@ void GlobalInputMethod::show()
         Q_EMIT hiddenTextChanged(hiddenText);
     }
 
-    m_keyboard->show();
+   // m_keyboard->show();
 
     // set the initial mouse pointer to visible.
     d->pressedScanCode = SCANCODE_INIT;
 
     d->sendEnterKey = false;
     d->activateStt  = false;
-    appendPredictionSeed();
 }
 
 void GlobalInputMethod::hide()
@@ -838,6 +837,8 @@ void GlobalInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
                     (keyCode == Qt::Key_Control)) {
             MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
                 text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
+            if (d->pressedScanCode == SCANCODE_BACKSPACE)
+                appendPredictionSeed();
         }
 
         d->pressedScanCode = SCANCODE_UNKNOWN;
@@ -998,7 +999,7 @@ bool GlobalInputMethod::processRemoteKeyEvent(Qt::Key keyCode, quint32 nativeSca
     quint32 keysym = getRemoteNumericKeysym(nativeScanCode - EVDEV_OFFSET);
     if (keysym != KEYSYM_VOIDSYMBOL) {
         releaseKeyLock();
-        onTextKeyPressed(QString::number(keysym-KEYSYM_0));
+        onKeysymPressed(keysym);
 
         // Move the focus to "Enter" button of the VKB: Requirement from HQ QE
         if (m_keyboard->inputSource() == Keyboard::InputSourceVirtual) {
@@ -1114,6 +1115,8 @@ void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::Keyboard
              */
             d->sendEnterKey = true;
         }
+        if (keyCode == Qt::Key_Backspace)
+            appendPredictionSeed();
     }
     d->pressedScanCode = SCANCODE_UNKNOWN;
 }
