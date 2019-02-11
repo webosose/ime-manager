@@ -56,10 +56,10 @@ static const quint32 EVDEV_OFFSET   = 8;
 
 static const quint32 SCANCODE_INIT       = 0xfffffffe;
 static const quint32 SCANCODE_UNKNOWN    = 0xffffffff;
-static const quint32 SCANCODE_OK         = 0;    // from TV: "OK" button of Magic-remote
-static const quint32 SCANCODE_BACK       = 420;  // from TV: "Back" button of Magic-remote
-static const quint32 SCANCODE_POINTERON  = 1206; // from TV: TV sends the keycode when the pointer appears
-static const quint32 SCANCODE_POINTEROFF = 1207; // from TV: TV sends the keycode when the pointer disappears
+static const quint32 SCANCODE_OK         = 0;    // "OK" button of Magic-remote
+static const quint32 SCANCODE_BACK       = 420;  // "Back" button of Magic-remote
+static const quint32 SCANCODE_POINTERON  = 1206; // Device sends the keycode when the pointer appears
+static const quint32 SCANCODE_POINTEROFF = 1207; // Device sends the keycode when the pointer disappears
 static const quint32 SCANCODE_BACKSPACE  = 22;   // from VKB
 static const quint32 SCANCODE_RETURN     = 36;   // from VKB
 static const quint32 SCANCODE_TAB        = 23;   // from VKB
@@ -412,7 +412,7 @@ void GlobalInputMethod::show()
     if (!INDEX_IS_VALID(currentLanguageIndex, enabledLanguages))
         switchContext(Maliit::SwitchUndefined, false);
 
-    m_keyboard->setInputSource(Keyboard::InputSourceHardware);
+    m_keyboard->setInputSource(Keyboard::InputSourceVirtual);
 
     // check the content-type
     bool valid;
@@ -434,13 +434,14 @@ void GlobalInputMethod::show()
         Q_EMIT hiddenTextChanged(hiddenText);
     }
 
-   // m_keyboard->show();
+    m_keyboard->show();
 
     // set the initial mouse pointer to visible.
     d->pressedScanCode = SCANCODE_INIT;
 
     d->sendEnterKey = false;
     d->activateStt  = false;
+    appendPredictionSeed();
 }
 
 void GlobalInputMethod::hide()
@@ -837,8 +838,6 @@ void GlobalInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
                     (keyCode == Qt::Key_Control)) {
             MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
                 text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
-            if (d->pressedScanCode == SCANCODE_BACKSPACE)
-                appendPredictionSeed();
         }
 
         d->pressedScanCode = SCANCODE_UNKNOWN;
@@ -999,7 +998,7 @@ bool GlobalInputMethod::processRemoteKeyEvent(Qt::Key keyCode, quint32 nativeSca
     quint32 keysym = getRemoteNumericKeysym(nativeScanCode - EVDEV_OFFSET);
     if (keysym != KEYSYM_VOIDSYMBOL) {
         releaseKeyLock();
-        onKeysymPressed(keysym);
+        onTextKeyPressed(QString::number(keysym-KEYSYM_0));
 
         // Move the focus to "Enter" button of the VKB: Requirement from HQ QE
         if (m_keyboard->inputSource() == Keyboard::InputSourceVirtual) {
@@ -1115,8 +1114,6 @@ void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::Keyboard
              */
             d->sendEnterKey = true;
         }
-        if (keyCode == Qt::Key_Backspace)
-            appendPredictionSeed();
     }
     d->pressedScanCode = SCANCODE_UNKNOWN;
 }
@@ -1440,7 +1437,7 @@ void GlobalInputMethod::onDelaySwitchingLanguage()
     case QLocale::HongKong:
     case QLocale::Taiwan:
     case QLocale::Japan:
-        // UX decides that the TV for these countries doesn't show the notification because of plugin structure
+        // UX decides that the Device for these countries doesn't show the notification because of plugin structure
         break;
     default:
         if (d->focusIn
