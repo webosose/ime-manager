@@ -122,7 +122,6 @@ public:
     quint32 pressedScanCode;
     bool sendEnterKey;
     int dirCursorMoveKey;
-    bool activateStt;
 
     GlobalInputMethodPrivate(GlobalInputMethod *im)
         : q_ptr(im)
@@ -138,7 +137,6 @@ public:
         , pressedScanCode(SCANCODE_UNKNOWN)
         , sendEnterKey(false)
         , dirCursorMoveKey(-1)
-        , activateStt(false)
     {}
 
     quint32 convertToKeysym(quint32 scanCode)
@@ -277,9 +275,6 @@ GlobalInputMethod::GlobalInputMethod(MAbstractInputMethodHost *host)
     connect(m_keyboard.data(),      SIGNAL(switchContext(Maliit::SwitchDirection)),
             this,                   SLOT  (onSwitchContext(Maliit::SwitchDirection)));
 
-    connect(m_keyboard.data(),      SIGNAL(activateSTT()),
-            this,                   SLOT  (onActivateSTT()));
-
     connect(m_keyboard.data(),      SIGNAL(clearAllPressed()),
             this,                   SLOT  (onClearAllPressed()));
 
@@ -348,9 +343,6 @@ GlobalInputMethod::GlobalInputMethod(MAbstractInputMethodHost *host)
     // country info
     currentCountry.reset(inputMethodHost()->registerPluginSetting("country", QT_TR_NOOP("country info"), Maliit::StringType, attributes));
     connect(currentCountry.data(), SIGNAL(valueChanged()), this, SLOT(onCountryChanged()));
-
-    // Flag to enable STT
-    enableStt.reset(inputMethodHost()->registerPluginSetting("accessoryenabled", QT_TR_NOOP("Flag to enable STT"), Maliit::BoolType, attributes));
 
     d->language = getMenuLanguageString(QLocale(currentLanguage->value().toString()), currentLanguage->value().toString());
     if (d->language.length() == 0 || !m_automata->isSupportedLanguage(d->language))
@@ -440,7 +432,6 @@ void GlobalInputMethod::show()
     d->pressedScanCode = SCANCODE_INIT;
 
     d->sendEnterKey = false;
-    d->activateStt  = false;
     appendPredictionSeed();
 }
 
@@ -822,9 +813,6 @@ void GlobalInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
             m_keyboard->onKeyReleased(keyCode, modifiers, true);
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyPress,   Qt::Key_Return, Qt::NoModifier, "", false, 0));
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyRelease, Qt::Key_Return, Qt::NoModifier, "", false, 0));
-        } else if (d->activateStt && (keyCode == Qt::Key_Return || keyCode == Qt::Key_Enter)) {
-            d->activateStt = false;
-            enableStt->set(true);
         } else if (!d->sendEnterKey
                    && (keyCode == Qt::Key_Return || keyCode == Qt::Key_Enter
                        || nativeScanCode == SCANCODE_OK || nativeScanCode == SCANCODE_RETURN)) {
@@ -1116,19 +1104,6 @@ void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::Keyboard
         }
     }
     d->pressedScanCode = SCANCODE_UNKNOWN;
-}
-
-void GlobalInputMethod::onActivateSTT()
-{
-    qDebug() << __PRETTY_FUNCTION__;
-    Q_D(GlobalInputMethod);
-
-    if (m_keyboard->cursorVisible()) {
-        d->activateStt = false;
-        enableStt->set(true);
-    } else {
-        d->activateStt = true;
-    }
 }
 
 void GlobalInputMethod::onClearAllPressed()

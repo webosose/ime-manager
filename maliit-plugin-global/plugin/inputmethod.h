@@ -109,7 +109,6 @@ private:
 private Q_SLOTS:
     void onPredictionSelected(QString selectedString, bool replace);
     void onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
-    void onActivateSTT();
     void onClearAllPressed();
     void onTextKeyPressed(QString text);
     void onVisibleChanged(bool visible, bool reset);
@@ -136,7 +135,6 @@ protected:
     QScopedPointer<Maliit::Plugins::AbstractPluginSetting> currentLanguage;
     QScopedPointer<Maliit::Plugins::AbstractPluginSetting> defaultLanguage;
     QScopedPointer<Maliit::Plugins::AbstractPluginSetting> currentCountry;
-    QScopedPointer<Maliit::Plugins::AbstractPluginSetting> enableStt;
 
     QStringList enabledLanguages;
     int currentLanguageIndex;

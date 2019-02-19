@@ -81,7 +81,6 @@ Q_SIGNALS:
     void forceFocusTo(QString label);
     void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
     void switchContext(Maliit::SwitchDirection direction);
-    void activateSTT();
     void clearAllPressed();
     void textKeyPressed(QString text);
     void languageChanged(QString language, QString label, QString langCode, QVariant data);

@@ -17,7 +17,5 @@
         <file alias="shift-on-focused.png">images-hd/shift-on-focused.png</file>
         <file alias="spacebar.png">images-hd/spacebar.png</file>
         <file alias="spacebar-dark.png">images-hd/spacebar-dark.png</file>
-        <file alias="voice.png">images-hd/voice.png</file>
-        <file alias="voice-dark.png">images-hd/voice-dark.png</file>
     </qresource>
 </RCC>

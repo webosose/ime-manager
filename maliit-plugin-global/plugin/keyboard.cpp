@@ -79,9 +79,6 @@ void Keyboard::load()
     QObject::connect(rootObj, SIGNAL (switchContext()),
             this, SLOT(onSwitchContext()));
 
-    QObject::connect(rootObj, SIGNAL (activateSTT()),
-            this, SIGNAL(activateSTT()));
-
     QObject::connect(rootObj, SIGNAL (clearAllPressed()),
             this, SIGNAL(clearAllPressed()));
 
