@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/jsons">
+        <file>zh-Hans.json</file>
+        <file>zh-Hant.json</file>
+        <file>zh-Hant-tw.json</file>
+    </qresource>
+</RCC>

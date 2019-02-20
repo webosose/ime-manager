@@ -1,0 +1,596 @@
+{
+    "Normal_keys": {
+        "Row": "4",
+        "Col": "12",
+        "Key": [
+            {
+                "rawcode": "0x0031",
+                "keylabel": "1"
+            },
+            {
+                "rawcode": "0x0032",
+                "keylabel": "2"
+            },
+            {
+                "rawcode": "0x0033",
+                "keylabel": "3"
+            },
+            {
+                "rawcode": "0x0034",
+                "keylabel": "4"
+            },
+            {
+                "rawcode": "0x0035",
+                "keylabel": "5"
+            },
+            {
+                "rawcode": "0x0036",
+                "keylabel": "6"
+            },
+            {
+                "rawcode": "0x0037",
+                "keylabel": "7"
+            },
+            {
+                "rawcode": "0x0038",
+                "keylabel": "8"
+            },
+            {
+                "rawcode": "0x0039",
+                "keylabel": "9"
+            },
+            {
+                "rawcode": "0x0030",
+                "keylabel": "0"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "0x0051",
+                "keylabel": "手"
+            },
+            {
+                "rawcode": "0x0057",
+                "keylabel": "田"
+            },
+            {
+                "rawcode": "0x0045",
+                "keylabel": "水"
+            },
+            {
+                "rawcode": "0x0052",
+                "keylabel": "口"
+            },
+            {
+                "rawcode": "0x0054",
+                "keylabel": "廿"
+            },
+            {
+                "rawcode": "0x0059",
+                "keylabel": "卜"
+            },
+            {
+                "rawcode": "0x0055",
+                "keylabel": "山"
+            },
+            {
+                "rawcode": "0x0049",
+                "keylabel": "戈"
+            },
+            {
+                "rawcode": "0x004F",
+                "keylabel": "人"
+            },
+            {
+                "rawcode": "0x0050",
+                "keylabel": "心"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "0x0041",
+                "keylabel": "日"
+            },
+            {
+                "rawcode": "0x0053",
+                "keylabel": "尸"
+            },
+            {
+                "rawcode": "0x0044",
+                "keylabel": "木"
+            },
+            {
+                "rawcode": "0x0046",
+                "keylabel": "火"
+            },
+            {
+                "rawcode": "0x0047",
+                "keylabel": "土"
+            },
+            {
+                "rawcode": "0x0048",
+                "keylabel": "竹"
+            },
+            {
+                "rawcode": "0x004A",
+                "keylabel": "十"
+            },
+            {
+                "rawcode": "0x004B",
+                "keylabel": "大"
+            },
+            {
+                "rawcode": "0x004C",
+                "keylabel": "中"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0x0058",
+                "keylabel": "難"
+            },
+            {
+                "rawcode": "0x0043",
+                "keylabel": "金"
+            },
+            {
+                "rawcode": "0x0056",
+                "keylabel": "女"
+            },
+            {
+                "rawcode": "0x0042",
+                "keylabel": "月"
+            },
+            {
+                "rawcode": "0x004E",
+                "keylabel": "弓"
+            },
+            {
+                "rawcode": "0x004D",
+                "keylabel": "一"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            }
+        ]
+    },
+    "Shift_keys": {
+        "Row": "4",
+        "Col": "12",
+        "Key": [
+            {
+                "rawcode": "0x0031",
+                "keylabel": "ㄅ"
+            },
+            {
+                "rawcode": "0x0032",
+                "keylabel": "ㄉ"
+            },
+            {
+                "rawcode": "0x0033",
+                "keylabel": "ˇ"
+            },
+            {
+                "rawcode": "0x0034",
+                "keylabel": "ˋ"
+            },
+            {
+                "rawcode": "0x0035",
+                "keylabel": "ㄓ"
+            },
+            {
+                "rawcode": "0x0036",
+                "keylabel": "ˊ"
+            },
+            {
+                "rawcode": "0x0037",
+                "keylabel": "˙"
+            },
+            {
+                "rawcode": "0x0038",
+                "keylabel": "ㄚ"
+            },
+            {
+                "rawcode": "0x0039",
+                "keylabel": "ㄞ"
+            },
+            {
+                "rawcode": "0x0030",
+                "keylabel": "ㄢ"
+            },
+            {
+                "rawcode": "0x002D",
+                "keylabel": "ㄦ"
+            },
+            {
+                "rawcode": "0xFF5E",
+                "keylabel": "～"
+            },
+            {
+                "rawcode": "0x0051",
+                "keylabel": "ㄆ"
+            },
+            {
+                "rawcode": "0x0057",
+                "keylabel": "ㄊ"
+            },
+            {
+                "rawcode": "0x0045",
+                "keylabel": "ㄍ"
+            },
+            {
+                "rawcode": "0x0052",
+                "keylabel": "ㄐ"
+            },
+            {
+                "rawcode": "0x0054",
+                "keylabel": "ㄔ"
+            },
+            {
+                "rawcode": "0x0059",
+                "keylabel": "ㄗ"
+            },
+            {
+                "rawcode": "0x0055",
+                "keylabel": "ㄧ"
+            },
+            {
+                "rawcode": "0x0049",
+                "keylabel": "ㄛ"
+            },
+            {
+                "rawcode": "0x004F",
+                "keylabel": "ㄟ"
+            },
+            {
+                "rawcode": "0x0050",
+                "keylabel": "ㄣ"
+            },
+            {
+                "rawcode": "0x005B",
+                "keylabel": "["
+            },
+            {
+                "rawcode": "0x005D",
+                "keylabel": "]"
+            },
+            {
+                "rawcode": "0x0041",
+                "keylabel": "ㄇ"
+            },
+            {
+                "rawcode": "0x0053",
+                "keylabel": "ㄋ"
+            },
+            {
+                "rawcode": "0x0044",
+                "keylabel": "ㄎ"
+            },
+            {
+                "rawcode": "0x0046",
+                "keylabel": "ㄑ"
+            },
+            {
+                "rawcode": "0x0047",
+                "keylabel": "ㄕ"
+            },
+            {
+                "rawcode": "0x0048",
+                "keylabel": "ㄘ"
+            },
+            {
+                "rawcode": "0x004A",
+                "keylabel": "ㄨ"
+            },
+            {
+                "rawcode": "0x004B",
+                "keylabel": "ㄜ"
+            },
+            {
+                "rawcode": "0x004C",
+                "keylabel": "ㄠ"
+            },
+            {
+                "rawcode": "0x003B",
+                "keylabel": "ㄤ"
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            },
+            {
+                "rawcode": "0x005A",
+                "keylabel": "ㄈ"
+            },
+            {
+                "rawcode": "0x0058",
+                "keylabel": "ㄌ"
+            },
+            {
+                "rawcode": "0x0043",
+                "keylabel": "ㄏ"
+            },
+            {
+                "rawcode": "0x0056",
+                "keylabel": "ㄒ"
+            },
+            {
+                "rawcode": "0x0042",
+                "keylabel": "ㄖ"
+            },
+            {
+                "rawcode": "0x004E",
+                "keylabel": "ㄙ"
+            },
+            {
+                "rawcode": "0x004D",
+                "keylabel": "ㄩ"
+            },
+            {
+                "rawcode": "0x002C",
+                "keylabel": "ㄝ"
+            },
+            {
+                "rawcode": "0x002E",
+                "keylabel": "ㄡ"
+            },
+            {
+                "rawcode": "0x002F",
+                "keylabel": "ㄥ"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            }
+        ]
+    },
+    "Symbol_keys": {
+        "Row": "4",
+        "Col": "12",
+        "Key": [
+            {
+                "rawcode": "0x0031",
+                "keylabel": "1"
+            },
+            {
+                "rawcode": "0x0032",
+                "keylabel": "2"
+            },
+            {
+                "rawcode": "0x0033",
+                "keylabel": "3"
+            },
+            {
+                "rawcode": "0x0034",
+                "keylabel": "4"
+            },
+            {
+                "rawcode": "0x0035",
+                "keylabel": "5"
+            },
+            {
+                "rawcode": "0x0036",
+                "keylabel": "6"
+            },
+            {
+                "rawcode": "0x0037",
+                "keylabel": "7"
+            },
+            {
+                "rawcode": "0x0038",
+                "keylabel": "8"
+            },
+            {
+                "rawcode": "0x0039",
+                "keylabel": "9"
+            },
+            {
+                "rawcode": "0x0030",
+                "keylabel": "0"
+            },
+            {
+                "rawcode": "0x00B7",
+                "keylabel": "·"
+            },
+            {
+                "rawcode": "0xFF5E",
+                "keylabel": "～"
+            },
+            {
+                "rawcode": "0xFF01",
+                "keylabel": "！"
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0x0023",
+                "keylabel": "#"
+            },
+            {
+                "rawcode": "0x0024",
+                "keylabel": "$"
+            },
+            {
+                "rawcode": "0x0025",
+                "keylabel": "%"
+            },
+            {
+                "rawcode": "0x2026",
+                "keylabel": "…"
+            },
+            {
+                "rawcode": "0x0026",
+                "keylabel": "&"
+            },
+            {
+                "rawcode": "0x002A",
+                "keylabel": "*"
+            },
+            {
+                "rawcode": "0xFF08",
+                "keylabel": "（"
+            },
+            {
+                "rawcode": "0xFF09",
+                "keylabel": "）"
+            },
+            {
+                "rawcode": "0x2018",
+                "keylabel": "‘"
+            },
+            {
+                "rawcode": "0x2019",
+                "keylabel": "’"
+            },
+            {
+                "rawcode": "0x002D",
+                "keylabel": "-"
+            },
+            {
+                "rawcode": "0x005F",
+                "keylabel": "_"
+            },
+            {
+                "rawcode": "0x003D",
+                "keylabel": "="
+            },
+            {
+                "rawcode": "0x002B",
+                "keylabel": "+"
+            },
+            {
+                "rawcode": "0x005C",
+                "keylabel": "\\"
+            },
+            {
+                "rawcode": "0x007C",
+                "keylabel": "|"
+            },
+            {
+                "rawcode": "0x3010",
+                "keylabel": "【"
+            },
+            {
+                "rawcode": "0x3011",
+                "keylabel": "】"
+            },
+            {
+                "rawcode": "0x007B",
+                "keylabel": "{"
+            },
+            {
+                "rawcode": "0x007D",
+                "keylabel": "}"
+            },
+            {
+                "rawcode": "0x002F",
+                "keylabel": "/"
+            },
+            {
+                "rawcode": "0xFFE5",
+                "keylabel": "￥"
+            },
+            {
+                "rawcode": "0xFF1B",
+                "keylabel": "；"
+            },
+            {
+                "rawcode": "0xFF1A",
+                "keylabel": "："
+            },
+            {
+                "rawcode": "0x201C",
+                "keylabel": "“"
+            },
+            {
+                "rawcode": "0x201D",
+                "keylabel": "”"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            },
+            {
+                "rawcode": "0x300A",
+                "keylabel": "《"
+            },
+            {
+                "rawcode": "0x300B",
+                "keylabel": "》"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            },
+            {
+                "rawcode": "0x3001",
+                "keylabel": "、"
+            },
+            {
+                "rawcode": "0xFFE1",
+                "keylabel": "￡"
+            },
+            {
+                "rawcode": "0x20AC",
+                "keylabel": "€"
+            }
+        ]
+    }
+}
