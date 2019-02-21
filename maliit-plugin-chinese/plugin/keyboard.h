@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2017-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,10 +24,13 @@
 #include "windowinformation.h"
 #include <webosplatform.h>
 #include <webosinputmanager.h>
+#include <qpa/qplatformnativeinterface.h>
 #include <QObject>
 
-class Prediction;
-class GlobalInputMethod;
+class Suggestion;
+class StrokeComponent;
+
+static const QString SHIFTED = "Normal-Shift";
 
 class Keyboard : public QQuickView
 {
@@ -35,12 +38,15 @@ class Keyboard : public QQuickView
 
     Q_ENUMS(InputSource)
 
-    Q_PROPERTY(int contentType READ contentType NOTIFY contentTypeChanged)
-    Q_PROPERTY(int enterKeyType READ enterKeyType NOTIFY enterKeyTypeChanged)
-    Q_PROPERTY(int hiddenText READ hiddenText NOTIFY hiddenTextChanged)
+    Q_PROPERTY(int contentType READ getContentType NOTIFY contentTypeChanged)
+    Q_PROPERTY(int enterKeyType READ getEnterKeyType NOTIFY enterKeyTypeChanged)
+    Q_PROPERTY(int hiddenText READ isHiddenText NOTIFY hiddenTextChanged)
     Q_PROPERTY(int inputSource READ inputSource NOTIFY inputSourceChanged)
+    Q_PROPERTY(bool shifted READ isShifted NOTIFY shiftKeyPressed)
+    Q_PROPERTY(QString languageLabel READ getLanguageLabel NOTIFY languageLabelChanged)
+    Q_PROPERTY(QString shiftLabel READ getShiftLabel NOTIFY shiftLabelChanged)
     Q_PROPERTY(QString emptyString READ emptyString NOTIFY translatorChanged)
-    Q_PROPERTY(QString translatorLocale READ translatorLocale)
+    Q_PROPERTY(QString numKeyEnterLabel READ getNumKeyEnterLabel NOTIFY numKeyEnterLabelChanged)
     Q_PROPERTY(bool isReleased NOTIFY keyReleased)
     Q_PROPERTY(bool cursorVisible READ cursorVisible NOTIFY cursorVisibleChanged)
 
@@ -51,68 +57,81 @@ public:
         InputSourceNone
     };
 
-    Keyboard(GlobalInputMethod* im, Prediction* prediction);
-    virtual ~Keyboard() {}
+    Keyboard(MAbstractInputMethodHost* host, Suggestion* suggestion, StrokeComponent* strokeComponent);
 
-    int contentType();
-    int enterKeyType();
-    bool hiddenText();
+    int getContentType();
+    int getEnterKeyType();
+    bool isHiddenText();
     InputSource inputSource();
     void setInputSource(InputSource source);
-    bool isPointerVisible();
     bool cursorVisible();
-    QString emptyString();
-    QString translatorLocale() {return translatorLangCode;}
     bool hidKeyPressEvent(Qt::Key keyCode, Qt::KeyboardModifiers modifiers);
-    void setTranslator(QString locale, bool speakLanguage);
+    bool isShifted() {return m_shifted;}
+    bool isNumberMode();
+    void setShift(bool shift);
+    void setLanguage(QString language, QVariant data);
+    void setTranslator();
+    void setContentType(int contentType);
+    void setEnterKeyType(int enterKeyType);
+    void setHiddenText(bool hidenText);
     void removeTranslator();
-    void load();
+    void setNumKeyEnterLabel(QString language);
     void onKeyReleased(Qt::Key keyCode, Qt::KeyboardModifiers modifiers, bool isReleased);
+    QString getNumKeyEnterLabel() { return m_numKeyEnter;}
+    QString getLanguageLabel();
+    QString getShiftLabel();
+    QString emptyString();
 
     Q_INVOKABLE void setPanelHeight(int height);
     Q_INVOKABLE void resetPanelHeight();
 
 Q_SIGNALS:
-    void contentTypeChanged(int type); // FIXME type should be MaliitEnums::ContentType type
-    void enterKeyTypeChanged(int enterKeyType); // FIXME type should be MaliitEnums::EnterKeyType type
-    void hiddenTextChanged(bool hidden);
     void inputSourceChanged(InputSource source);
-    void translatorChanged(bool speakLanguage);
-    void forceFocusTo(QString label);
     void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
+    void shiftKeyPressed();
+    void symbolKeyPressed(QString state);
     void switchContext(Maliit::SwitchDirection direction);
     void clearAllPressed();
     void textKeyPressed(QString text);
-    void languageChanged(QString language, QString label, QString langCode, QVariant data);
-    void countryChanged(QString country);
-    void visibleChanged(bool visible, bool reset);
-    void keysymPressed(quint32);
-    void languageCountChanged(int languageCount);
-    void showLanguageNotification(QString label);
-    void resetRequested();
+    void languageChanged(QString language, QVariant data);
+    void visibleChanged(bool visible,bool reset);
+    void languageLabelChanged();
+    void shiftLabelChanged();
+    void translatorChanged();
+    void contentTypeChanged(int contentType);
+    void enterKeyTypeChanged(int enterKeyType);
+    void numKeyEnterLabelChanged();
+    void hiddenTextChanged(bool isHidden);
+    void forceFocusTo(QString label);
     void keyReleased(bool isReleased);
     void cursorVisibleChanged(bool cursorVisible);
-    void moveCursorPosition(int direction);
-
-//#IF_COMMERCIAL
-    void setDefaultFocus();
-//#ELSE
-//#END
+    void moveCursorPosition(int);
 
 public Q_SLOTS:
     void onKeyPressed(QString nativeScanCode, bool shift);
     void onSwitchContext();
     void onShowRequested(bool reset);
     void onHideRequested(bool reset);
-    void onKeysymPressed(QString keysym);
+    void onShiftPressed(QString state);
+
+//#IF_COMMERCIAL
+protected:
+    void initializeHashTable();
+//#ELSE
+//#END
 
 private:
-    GlobalInputMethod* m_im;
+    MAbstractInputMethodHost* m_host;
     WebOSInputManager* m_ime;
     QScopedPointer<WindowInformation> m_winInfo;
     InputSource m_inputSource;
+    bool m_shifted;
+    QString m_language;
+    QString m_numKeyEnter;
     QScopedPointer<QTranslator> translator;
-    QString translatorLangCode;
+    int m_contentType;
+    int m_enterKeyType;
+    bool m_hiddenText;
 };
 
 #endif //KEYBOARD_H

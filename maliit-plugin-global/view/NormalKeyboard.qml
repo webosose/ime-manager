@@ -37,7 +37,6 @@ Rectangle {
     property alias supportPageButton: leftFunctionArea.supportPageButton
     property int contentType: 0
     property int enterKeyType: 0
-    property alias enableVoiceButton: rightFunctionArea.enableVoiceButton
     property bool showScreenKeyboard: true
     property bool activateLanguageButton : false
 
@@ -46,7 +45,6 @@ Rectangle {
     signal keysymPressed(string keysym)
     signal textKeyPressed(string text)
     signal changeLanguage()
-    signal activateSTT()
     signal clearAllPressed()
     signal meetTopBoundary()
 
@@ -134,7 +132,6 @@ Rectangle {
 
         onTtsService: root.ttsService(text)
         Component.onCompleted: {
-            clickVoiceButton.connect(activateSTT);
             clickClearAllButton.connect(clearAllPressed);
             sendKey.connect(keyPressed);
         }

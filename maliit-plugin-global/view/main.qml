@@ -39,7 +39,6 @@ Rectangle {
     property string label    : ""
     property string langCode : ""
     property string audioGuidance: "off"
-    property bool supportVoiceRecognition : false
     property bool pointerVisible : false
     property bool setFocusFirstAfterEnabled : false
     property int contentType: PluginProxy.contentType
@@ -53,7 +52,6 @@ Rectangle {
     signal keyPressed(string rawcode, bool shift)
     signal textKeyPressed(string text)
     signal switchContext()
-    signal activateSTT()
     signal clearAllPressed()
     signal moveCursorPosition(int direction)
     signal showRequested(bool reset)
@@ -84,7 +82,6 @@ Rectangle {
 
     Component.onCompleted: {
         audioService.getAudioGuidance();
-        voiceService.getVoiceRecognition();
     }
 
     onStateChanged: root.reset()
@@ -124,7 +121,6 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         enabled: false
         y: windowHeight
-        enableVoiceButton: (hiddenText || !supportVoiceRecognition) ? false : true
 
         // slots
         onKeyPressed: root.keyPressed(rawcode, shift)
@@ -133,7 +129,6 @@ Rectangle {
         onChangeLanguage: {
             root.switchContext()
         }
-        onActivateSTT: root.activateSTT()
         onClearAllPressed: root.clearAllPressed()
         onTtsService: ttsService.speakButton(text)
 
@@ -226,29 +221,6 @@ Rectangle {
         }
     }
 
-    /* Service : Voice Recognition */
-    Service {
-        id: voiceService
-        appId: "com.webos.service.ime.stt"
-        service: "com.webos.service.config"
-        method: "getConfigs"
-        onResponse: {
-            var jsonObject
-            if (method.toString() && method.toString() === "getConfigs") {
-                jsonObject = JSON.parse(payload);
-                console.warn("= = = = = = = = = = = = voice config : " + jsonObject.configs["system.supportVoiceRecognition"])
-                if (jsonObject && typeof jsonObject.configs !== 'undefined') {
-                    root.supportVoiceRecognition = jsonObject.configs["system.supportVoiceRecognition"]
-                } else {
-                    root.supportVoiceRecognition = false
-                }
-            }
-        }
-        function getVoiceRecognition() {
-            callService({"subscribe" : true, "configNames" : ["system.supportVoiceRecognition"]})
-        }
-    }
-
     Keys.onPressed: {
         if (CommonVariables.savedFocusItem && CommonVariables.savedFocusItem.visible) {
             CommonVariables.savedFocusItem.focus = true;
@@ -321,7 +293,6 @@ Rectangle {
         }
     ]
 
-
     Connections {
         target: PluginProxy
         onLanguageChanged: {
@@ -349,20 +320,6 @@ Rectangle {
             }
         }
 
-//#IF_COMMERCIAL
-//        onSetDefaultFocus: {
-//            console.warn("onSetDefaultFocus");
-//            if (CommonVariables.savedFocusItem && CommonVariables.savedFocusItem.visible) {
-//                CommonVariables.savedFocusItem.focus = true;
-//                CommonVariables.savedFocusItem.releaseButton();
-//            }
-//            else if (state === "Normal-Keyboard")
-//                normalKeyboard.setDefaultFocus();
-//            else if (state === "Number-Keyboard")
-//                numberKeyboard.setDefaultFocus();
-//        }
-//#ELSE
-//#END
         onLanguageCountChanged: {
             normalKeyboard.activateLanguageButton = (languageCount > 1) ? true : false
         }

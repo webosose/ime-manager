@@ -1,0 +1,460 @@
+{
+    "Normal_keys": {
+        "Row": "4",
+        "Col": "10",
+        "Key": [
+            {
+                "rawcode": "0x0031",
+                "keylabel": "1"
+            },
+            {
+                "rawcode": "0x0032",
+                "keylabel": "2"
+            },
+            {
+                "rawcode": "0x0033",
+                "keylabel": "3"
+            },
+            {
+                "rawcode": "0x0034",
+                "keylabel": "4"
+            },
+            {
+                "rawcode": "0x0035",
+                "keylabel": "5"
+            },
+            {
+                "rawcode": "0x0036",
+                "keylabel": "6"
+            },
+            {
+                "rawcode": "0x0037",
+                "keylabel": "7"
+            },
+            {
+                "rawcode": "0x0038",
+                "keylabel": "8"
+            },
+            {
+                "rawcode": "0x0039",
+                "keylabel": "9"
+            },
+            {
+                "rawcode": "0x0030",
+                "keylabel": "0"
+            },
+            {
+                "rawcode": "0x0051",
+                "keylabel": "q"
+            },
+            {
+                "rawcode": "0x0057",
+                "keylabel": "w"
+            },
+            {
+                "rawcode": "0x0045",
+                "keylabel": "e"
+            },
+            {
+                "rawcode": "0x0052",
+                "keylabel": "r"
+            },
+            {
+                "rawcode": "0x0054",
+                "keylabel": "t"
+            },
+            {
+                "rawcode": "0x0059",
+                "keylabel": "y"
+            },
+            {
+                "rawcode": "0x0055",
+                "keylabel": "u"
+            },
+            {
+                "rawcode": "0x0049",
+                "keylabel": "i"
+            },
+            {
+                "rawcode": "0x004F",
+                "keylabel": "o"
+            },
+            {
+                "rawcode": "0x0050",
+                "keylabel": "p"
+            },
+            {
+                "rawcode": "0x0041",
+                "keylabel": "a"
+            },
+            {
+                "rawcode": "0x0053",
+                "keylabel": "s"
+            },
+            {
+                "rawcode": "0x0044",
+                "keylabel": "d"
+            },
+            {
+                "rawcode": "0x0046",
+                "keylabel": "f"
+            },
+            {
+                "rawcode": "0x0047",
+                "keylabel": "g"
+            },
+            {
+                "rawcode": "0x0048",
+                "keylabel": "h"
+            },
+            {
+                "rawcode": "0x004A",
+                "keylabel": "j"
+            },
+            {
+                "rawcode": "0x004B",
+                "keylabel": "k"
+            },
+            {
+                "rawcode": "0x004C",
+                "keylabel": "l"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0x005A",
+                "keylabel": "z"
+            },
+            {
+                "rawcode": "0x0058",
+                "keylabel": "x"
+            },
+            {
+                "rawcode": "0x0043",
+                "keylabel": "c"
+            },
+            {
+                "rawcode": "0x0056",
+                "keylabel": "v"
+            },
+            {
+                "rawcode": "0x0042",
+                "keylabel": "b"
+            },
+            {
+                "rawcode": "0x004E",
+                "keylabel": "n"
+            },
+            {
+                "rawcode": "0x004D",
+                "keylabel": "m"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            }
+        ]
+    },
+    "Shift_keys": {
+        "Row": "3",
+        "Col": "10",
+        "Key": [
+            {
+                "rawcode": "0x0031",
+                "keylabel": "1"
+            },
+            {
+                "rawcode": "0x0032",
+                "keylabel": "2"
+            },
+            {
+                "rawcode": "0x0033",
+                "keylabel": "3"
+            },
+            {
+                "rawcode": "0x0034",
+                "keylabel": "4"
+            },
+            {
+                "rawcode": "0x0035",
+                "keylabel": "5"
+            },
+            {
+                "rawcode": "0x0036",
+                "keylabel": "6"
+            },
+            {
+                "rawcode": "0x0037",
+                "keylabel": "7"
+            },
+            {
+                "rawcode": "0x0038",
+                "keylabel": "8"
+            },
+            {
+                "rawcode": "0x0039",
+                "keylabel": "9"
+            },
+            {
+                "rawcode": "0x0030",
+                "keylabel": "0"
+            },
+            {
+                "rawcode": "0x4E00",
+                "keylabel": "一"
+            },
+            {
+                "rawcode": "0x4E28",
+                "keylabel": "丨"
+            },
+            {
+                "rawcode": "0x4E3F",
+                "keylabel": "丿"
+            },
+            {
+                "rawcode": "0x4E36",
+                "keylabel": "丶"
+            },
+            {
+                "rawcode": "0x4E5B",
+                "keylabel": "乛"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0xFF01",
+                "keylabel": "！"
+            },
+            {
+                "rawcode": "0xFF1A",
+                "keylabel": "："
+            },
+            {
+                "rawcode": "0x3001",
+                "keylabel": "、"
+            },
+            {
+                "rawcode": "0x2026",
+                "keylabel": "…"
+            },
+            {
+                "rawcode": "0xFF08",
+                "keylabel": "（"
+            },
+            {
+                "rawcode": "0xFF09",
+                "keylabel": "）"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            }
+        ]
+    },
+    "Symbol_keys": {
+        "Row": "4",
+        "Col": "10",
+        "Key": [
+            {
+                "rawcode": "0xFF01",
+                "keylabel": "！"
+            },
+            {
+                "rawcode": "0x0040",
+                "keylabel": "@"
+            },
+            {
+                "rawcode": "0x0023",
+                "keylabel": "#"
+            },
+            {
+                "rawcode": "0x0024",
+                "keylabel": "$"
+            },
+            {
+                "rawcode": "0x0025",
+                "keylabel": "%"
+            },
+            {
+                "rawcode": "0x2026",
+                "keylabel": "…"
+            },
+            {
+                "rawcode": "0x0026",
+                "keylabel": "&"
+            },
+            {
+                "rawcode": "0x002A",
+                "keylabel": "*"
+            },
+            {
+                "rawcode": "0xFF08",
+                "keylabel": "（"
+            },
+            {
+                "rawcode": "0xFF09",
+                "keylabel": "）"
+            },
+            {
+                "rawcode": "0x002D",
+                "keylabel": "-"
+            },
+            {
+                "rawcode": "0x005F",
+                "keylabel": "_"
+            },
+            {
+                "rawcode": "0x003D",
+                "keylabel": "="
+            },
+            {
+                "rawcode": "0x002B",
+                "keylabel": "+"
+            },
+            {
+                "rawcode": "0x005C",
+                "keylabel": "\\"
+            },
+            {
+                "rawcode": "0x007C",
+                "keylabel": "|"
+            },
+            {
+                "rawcode": "0x3010",
+                "keylabel": "【"
+            },
+            {
+                "rawcode": "0x3011",
+                "keylabel": "】"
+            },
+            {
+                "rawcode": "0x007B",
+                "keylabel": "{"
+            },
+            {
+                "rawcode": "0x007D",
+                "keylabel": "}"
+            },
+            {
+                "rawcode": "0xFF1B",
+                "keylabel": "；"
+            },
+            {
+                "rawcode": "0xFF1A",
+                "keylabel": "："
+            },
+            {
+                "rawcode": "0x201C",
+                "keylabel": "“"
+            },
+            {
+                "rawcode": "0x201D",
+                "keylabel": "”"
+            },
+            {
+                "rawcode": "0xFF0C",
+                "keylabel": "，"
+            },
+            {
+                "rawcode": "0x3002",
+                "keylabel": "。"
+            },
+            {
+                "rawcode": "0x300A",
+                "keylabel": "《"
+            },
+            {
+                "rawcode": "0x300B",
+                "keylabel": "》"
+            },
+            {
+                "rawcode": "0xFF1F",
+                "keylabel": "？"
+            },
+            {
+                "rawcode": "0x3001",
+                "keylabel": "、"
+            },
+            {
+                "rawcode": "0x002F",
+                "keylabel": "/"
+            },
+            {
+                "rawcode": "0xFFE5",
+                "keylabel": "￥"
+            },
+            {
+                "rawcode": "0x20AC",
+                "keylabel": "€"
+            },
+            {
+                "rawcode": "0xFFE1",
+                "keylabel": "￡"
+            },
+            {
+                "rawcode": "0x00B7",
+                "keylabel": "·"
+            },
+            {
+                "rawcode": "0xFF5E",
+                "keylabel": "～"
+            },
+            {
+                "rawcode": "0x2018",
+                "keylabel": "‘"
+            },
+            {
+                "rawcode": "0x2019",
+                "keylabel": "’"
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            },
+            {
+                "rawcode": "-1",
+                "keylabel": ""
+            }
+        ]
+    }
+}

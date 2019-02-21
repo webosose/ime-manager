@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018 LG Electronics, Inc.
+# Copyright (c) 2013-2019 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,12 +23,11 @@ include(bno-resources/bno-resources.pri)
         Recognised CONFIG flags: \
         \\n\\t disable-maliit-plugin-global: Do not build the maliit-plugin-global \
         \\n\\t disable-tests: Do not build the tests \
-        \\n\\t enable-maliit-plugin-stt: Build the maliit-plugin-stt \
-        \\n\\t enable-frequency-word-list: Enable the suggestion based on the frequency lists \
+        \\n\\t enable-maliit-plugin-chinese: Build the maliit-plugin-chinese \
         \\nExamples: \
         \\n\\t qmake \
         \\n\\t qmake CONFIG+=disable-maliit-plugin-global \
-        \\n\\t qmake CONFIG+=enable-maliit-plugin-stt
+        \\n\\t qmake CONFIG+=enable-maliit-plugin-chinese
 
     !build_pass:system(echo \"$$help_string\")
 } else {
@@ -41,7 +40,7 @@ CONFIG += ordered
 TEMPLATE = subdirs
 
 !disable-maliit-plugin-global:SUBDIRS += maliit-plugin-global
-enable-maliit-plugin-stt:SUBDIRS += maliit-plugin-stt
+enable-maliit-plugin-chinese:SUBDIRS += maliit-plugin-chinese
 
 CONFIG += webos-service
 WEBOS_SYSBUS_DIR = service

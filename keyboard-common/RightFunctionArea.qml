@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,27 +22,15 @@ Item {
     id: root
 
     property alias enterText: enterButton.text
-    property bool enableVoiceButton: true
     property int idxLastFocusOnCursorBtn: CommonVariables.left
     property var lastFocusOnCursorBtn: idxLastFocusOnCursorBtn == CommonVariables.left ? moveCursorLeftButton : moveCursorRightButton
     signal ttsService(string text)
     signal clickClearAllButton()
-    signal clickVoiceButton()
     signal sendKey(int keycode, bool shift)
     signal meetLeftBoundary(int row)
     signal meetRightBoundary(int row)
     signal meetTopBoundary(int column)
     signal meetBottomBoundary(int column)
-
-    onEnableVoiceButtonChanged: {
-        if (!enableVoiceButton) {
-            voiceButton.state = "Disable";
-            voiceButton.visible = false;
-        } else {
-            voiceButton.state = "Normal";
-            voiceButton.visible = true;
-        }
-    }
 
     Column {
         spacing: style.right.cellSpace
@@ -92,10 +80,7 @@ Item {
             onReleased: sendKey(28, false)
 
             width: root.width
-            height: {
-                (voiceButton.state !== "Disable") ? (style.right.cellHeight * 1)
-                                                  : (style.right.cellHeight * 2 + style.right.cellSpace * 1)
-            }
+            height: style.right.cellHeight * 2 + style.right.cellSpace * 1
             allowRepeat: false
 
             property int row: 1
@@ -113,7 +98,7 @@ Item {
             ButtonBase {
                 id: moveCursorLeftButton
                 objectName: "moveCursorLeftButton"
-                property int row: voiceButton.state === "Disable" ? 3 : 2
+                property int row: 3
                 text: "\ufe64"
                 onTtsService: root.ttsService(qsTr("Left"))
                 height: style.right.cellHeight
@@ -129,13 +114,13 @@ Item {
                     }
                 }
                 KeyNavigation.right: moveCursorRightButton
-                KeyNavigation.down: (voiceButton.state !== "Disable") ? voiceButton : clearAllButton
+                KeyNavigation.down: clearAllButton
             }
 
             ButtonBase {
                 id: moveCursorRightButton
                 objectName: "moveCursorRightButton"
-                property int row: voiceButton.state === "Enable" ? 2 : 3
+                property int row: 3
                 text: "\ufe65"
                 onTtsService: root.ttsService(qsTr("Right"))
                 height: style.right.cellHeight
@@ -150,40 +135,8 @@ Item {
                         root.idxLastFocusOnCursorBtn = CommonVariables.right
                     }
                 }
-                KeyNavigation.down: (voiceButton.state !== "Disable") ? voiceButton : clearAllButton
+                KeyNavigation.down: clearAllButton
             }
-        }
-
-        /* Voice button */
-        ButtonBase {
-            id: voiceButton
-            objectName: "voiceButton"
-            image: {
-                if (style.keyboardDefaultWidth === 1920) {
-                    if (state == "Select") {
-                        return "qrc:///images/voice-dark.png"
-                    } else {
-                        return "qrc:///images/voice.png"
-                    }
-                } else {
-                    if (state == "Select") {
-                        return "qrc:///images-hd/voice-dark.png"
-                    } else {
-                        return "qrc:///images-hd/voice.png"
-                    }
-                }
-            }
-            fontSizeMode: Text.Fit
-            onTtsService: root.ttsService(ttsStringVoice)
-            onReleased: clickVoiceButton()
-
-            width: root.width
-            height: style.right.cellHeight
-
-            property int row: 3
-            property string ttsStringVoice: qsTr("Speech to text") + (PluginProxy.emptyString !== undefined ? PluginProxy.emptyString : "")
-            KeyNavigation.down: clearAllButton
-            KeyNavigation.up: lastFocusOnCursorBtn
         }
 
         /* Clear-All button */
@@ -199,7 +152,7 @@ Item {
             height: style.right.cellHeight
 
             property int row: 4
-            KeyNavigation.up: (voiceButton.state !== "Disable") ? voiceButton : lastFocusOnCursorBtn
+            KeyNavigation.up: lastFocusOnCursorBtn
         }
     }
 
@@ -227,8 +180,6 @@ Item {
                 deleteButton.state = "Focus";
             else if (isReleased && (enterButton.state === "Select"))
                 enterButton.state = "Focus";
-            else if (isReleased && (voiceButton.state === "Select"))
-                voiceButton.state = "Focus";
             else if (isReleased && (clearAllButton.state === "Select"))
                 clearAllButton.state = "Focus";
             else if (isReleased && (moveCursorLeftButton.state === "Select"))
@@ -245,18 +196,10 @@ Item {
             enterButton.focus = true;
             enterButton.row = row;
         } else if (row === 2) {
-            if (voiceButton.state === "Disable") {
-                enterButton.focus = true;
-                enterButton.row = row;
-            } else {
-                moveCursorLeftButton.focus = true;
-            }
+            enterButton.focus = true;
+            enterButton.row = row;
         } else if (row === 3) {
-            if (voiceButton.state === "Disable") {
-                moveCursorLeftButton.focus = true;
-            } else {
-                voiceButton.focus = true;
-            }
+            moveCursorLeftButton.focus = true;
         } else if (row === 4 || row === -1) {
             clearAllButton.focus = true;
         }

@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018 LG Electronics, Inc.
+# Copyright (c) 2013-2019 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@
 DESKTOP_CONFIG=""
 DESKTOP_CONFIG+="CONFIG+=ubuntu-desktop-build "
 #DESKTOP_CONFIG+="CONFIG+=disable-maliit-plugin-global "
+#DESKTOP_CONFIG+="CONFIG+=enable-maliit-plugin-chinese "
 DESKTOP_CONFIG+="CONFIG+=disable-tests "
-#DESKTOP_CONFIG+="CONFIG+=enable-auto-completion "
 DESKTOP_CONFIG+="CONFIG+=debug "
 
 qmake PREFIX=$HOME/maliit ${DESKTOP_CONFIG}
@@ -28,7 +28,7 @@ MALIIT_CONFIG_DIR="${HOME}/.config/maliit.org"
 MALIIT_CONFIG_FILE="${MALIIT_CONFIG_DIR}/server.conf"
 mkdir -p ${MALIIT_CONFIG_DIR}
 echo "[maliit]" > ${MALIIT_CONFIG_FILE}
-echo "onscreen\\enabled=libplugin-global.so:" >> ${MALIIT_CONFIG_FILE}
+echo "onscreen\\enabled=libplugin-global.so:, libplugin-chinese.so:chinese" >> ${MALIIT_CONFIG_FILE}
 echo "onscreen\\active=libplugin-global.so:" >> ${MALIIT_CONFIG_FILE}
 echo "onscreen\\currentlanguage=en" >> ${MALIIT_CONFIG_FILE}
 
