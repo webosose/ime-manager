@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,6 +43,8 @@ class Keyboard : public QQuickView
     Q_PROPERTY(QString translatorLocale READ translatorLocale)
     Q_PROPERTY(bool isReleased NOTIFY keyReleased)
     Q_PROPERTY(bool cursorVisible READ cursorVisible NOTIFY cursorVisibleChanged)
+    Q_PROPERTY(QString maliitServiceId READ maliitServiceId CONSTANT)
+
 
 public:
     enum InputSource {
@@ -68,6 +70,8 @@ public:
     void removeTranslator();
     void load();
     void onKeyReleased(Qt::Key keyCode, Qt::KeyboardModifiers modifiers, bool isReleased);
+    int instanceId();
+    QString maliitServiceId();
 
     Q_INVOKABLE void setPanelHeight(int height);
     Q_INVOKABLE void resetPanelHeight();

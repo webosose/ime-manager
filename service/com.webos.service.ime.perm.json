@@ -1,5 +1,5 @@
 {
-    "com.webos.service.ime": [
+    "com.webos.service.ime*": [
         "notifications.manage",
         "notifications",
         "media",
@@ -10,41 +10,5 @@
         "applications.internal",
         "bluetooth.manage",
         "all"
-    ],
-    "com.webos.service.ime.stt":[
-        "notifications.manage",
-        "notifications",
-        "media",
-        "settings.read",
-        "settings",
-        "services",
-        "applications.launch",
-        "applications.internal",
-        "bluetooth.manage",
-        "all"
-   ],
-    "com.webos.service.ime.globalplugin":[
-        "notifications.manage",
-        "notifications",
-        "media",
-        "settings.read",
-        "settings",
-        "services",
-        "applications.launch",
-        "applications.internal",
-        "bluetooth.manage",
-        "all"
-   ],
-   "com.webos.service.ime.settings":[
-        "notifications.manage",
-        "notifications",
-        "media",
-        "settings.read",
-        "settings",
-        "services",
-        "applications.launch",
-        "applications.internal",
-        "bluetooth.manage",
-        "all"
-   ]
+    ]
 }

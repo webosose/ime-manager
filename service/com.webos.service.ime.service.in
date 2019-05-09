@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018 LG Electronics, Inc.
+# Copyright (c) 2013-2019 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +15,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 [D-BUS Service]
-Name=com.webos.service.ime;com.webos.service.ime.stt;com.webos.service.ime.globalplugin;com.webos.service.ime.settings
+Name=com.webos.service.ime
 Exec=$$WEBOS_INSTALL_BINS/MaliitServer
 Type=static

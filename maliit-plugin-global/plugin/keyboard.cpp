@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -247,4 +247,17 @@ void Keyboard::resetPanelHeight()
 {
     resize(m_winInfo->windowWidth(), m_winInfo->windowHeight());
     update();
+}
+
+int Keyboard::instanceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    return m_im->inputMethodHost()->instanceId();
+}
+
+QString Keyboard::maliitServiceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+
+    return m_im->inputMethodHost()->serviceName();
 }

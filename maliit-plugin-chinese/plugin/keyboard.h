@@ -49,6 +49,8 @@ class Keyboard : public QQuickView
     Q_PROPERTY(QString numKeyEnterLabel READ getNumKeyEnterLabel NOTIFY numKeyEnterLabelChanged)
     Q_PROPERTY(bool isReleased NOTIFY keyReleased)
     Q_PROPERTY(bool cursorVisible READ cursorVisible NOTIFY cursorVisibleChanged)
+    Q_PROPERTY(QString maliitServiceId READ maliitServiceId CONSTANT)
+
 
 public:
     enum InputSource {
@@ -81,6 +83,8 @@ public:
     QString getLanguageLabel();
     QString getShiftLabel();
     QString emptyString();
+    int instanceId();
+    QString maliitServiceId();
 
     Q_INVOKABLE void setPanelHeight(int height);
     Q_INVOKABLE void resetPanelHeight();

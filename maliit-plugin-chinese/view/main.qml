@@ -29,6 +29,10 @@ Item {
     objectName: "mainCnPlugin"
     enabled: false
     y: screenHeight + 1000
+
+    // Keyboard App Id for Luna Service
+    property string appId: PluginProxy.maliitServiceId + ".chinese"
+
     property QtObject style: Style {id: commonStyle}
     property QtObject styleFhd: Style {id: commonStyleFhd}
     property QtObject styleHd: StyleHd {id: commonStyleHd}

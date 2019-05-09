@@ -372,3 +372,16 @@ void Keyboard::initializeHashTable()
 }
 //#ELSE
 //#END
+
+int Keyboard::instanceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    return m_host->instanceId();
+}
+
+QString Keyboard::maliitServiceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+
+    return m_host->serviceName();
+}
