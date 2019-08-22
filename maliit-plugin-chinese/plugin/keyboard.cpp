@@ -21,6 +21,8 @@
 
 #include <maliit/plugins/abstractinputmethodhost.h>
 #include "maliitenums.h"
+#include <webosshell.h>
+#include <webosshellsurface.h>
 
 //#IF_COMMERCIAL
 static QHash<QString, QString> s_languageHash;
@@ -57,6 +59,11 @@ Keyboard::Keyboard(MAbstractInputMethodHost* host, Suggestion* suggestion, Strok
     setFormat(f);
 
     create();
+
+    WebOSShell *shell = WebOSPlatform::instance()->shell();
+    WebOSShellSurface* shellSurface = shell ? shell->shellSurfaceFor(this) : nullptr;
+    if (shellSurface)
+        shellSurface->setProperty(QStringLiteral("displayAffinity"), QString("%1").arg(instanceId()));
 
     setY(m_winInfo->screenHeight() - m_winInfo->windowHeight());
     resize(m_winInfo->windowWidth(), m_winInfo->windowHeight());
@@ -372,3 +379,16 @@ void Keyboard::initializeHashTable()
 }
 //#ELSE
 //#END
+
+int Keyboard::instanceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    return m_host->instanceId();
+}
+
+QString Keyboard::maliitServiceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+
+    return m_host->serviceName();
+}

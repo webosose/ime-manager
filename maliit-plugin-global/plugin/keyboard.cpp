@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,8 @@
 #include "dummyservice.h"
 #endif
 #include <qpa/qplatformnativeinterface.h>
+#include <webosshell.h>
+#include <webosshellsurface.h>
 
 Keyboard::Keyboard(GlobalInputMethod* im, Prediction* prediction)
     : QQuickView()
@@ -54,6 +56,11 @@ Keyboard::Keyboard(GlobalInputMethod* im, Prediction* prediction)
     setFormat(f);
 
     create();
+
+    WebOSShell *shell = WebOSPlatform::instance()->shell();
+    WebOSShellSurface* shellSurface = shell ? shell->shellSurfaceFor(this) : nullptr;
+    if (shellSurface)
+        shellSurface->setProperty(QStringLiteral("displayAffinity"), QString("%1").arg(instanceId()));
 
     setY(m_winInfo->screenHeight() - m_winInfo->windowHeight());
     resize(m_winInfo->windowWidth(), m_winInfo->windowHeight());
@@ -247,4 +254,17 @@ void Keyboard::resetPanelHeight()
 {
     resize(m_winInfo->windowWidth(), m_winInfo->windowHeight());
     update();
+}
+
+int Keyboard::instanceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    return m_im->inputMethodHost()->instanceId();
+}
+
+QString Keyboard::maliitServiceId()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+
+    return m_im->inputMethodHost()->serviceName();
 }

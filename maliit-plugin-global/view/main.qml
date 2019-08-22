@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2019 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,6 +29,10 @@ Rectangle {
     objectName: "main"
     enabled: false
     y: screenHeight + 1000;
+
+    // Keyboard App Id for Luna Service
+    property string appId: PluginProxy.maliitServiceId + ".globalPlugin"
+
     property QtObject style: Style {id: commonStyle}
     property QtObject styleFhd: Style {id: commonStyleFhd}
     property QtObject styleHd: StyleHd {id: commonStyleHd}
@@ -166,7 +170,7 @@ Rectangle {
 
     Service {
         id: lunaService
-        appId: "com.webos.service.ime.globalplugin"
+        appId: root.appId
 
         function showLanguageNotification(language) {
             var param = "";
@@ -181,7 +185,7 @@ Rectangle {
         id: ttsService
         property bool visible : PluginProxy.visible
 
-        appId: "com.webos.service.ime.globalplugin"
+        appId: root.appId
         service: "com.webos.service.tts"
         method: "speak"
         onResponse: console.warn("@@@ VKB TTS onResponse @@@")
@@ -203,7 +207,7 @@ Rectangle {
     /* Service : Audio Guidance Control */
     Service {
         id: audioService
-        appId: "com.webos.service.ime.globalplugin"
+        appId: root.appId
         service: "com.webos.settingsservice"
         method: "getSystemSettings"
         onResponse: {
