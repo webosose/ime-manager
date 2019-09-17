@@ -82,6 +82,10 @@ static const quint32 SCANCODE_RIGHT_SHIFT     = 62;
 static const quint32 DIRECTION_LEFT    = 0;
 static const quint32 DIRECTION_RIGHT   = 1;
 
+static const quint32 MOUSE_EVENT    = 1;
+static const quint32 KEYBOARD_EVENT = 2;
+static const quint32 TOUCH_EVENT    = 3;
+
 enum {
     KEYSYM_ASTERISK = 0x002a,
     KEYSYM_PLUS,
@@ -266,11 +270,11 @@ GlobalInputMethod::GlobalInputMethod(MAbstractInputMethodHost *host)
     connect(m_prediction.data(),    SIGNAL(predictionSelected(QString, bool)),
             this,                   SLOT  (onPredictionSelected(QString, bool)));
 
-    connect(m_keyboard.data(),      SIGNAL(keyPressed(quint32, Qt::KeyboardModifiers)),
-            this,                   SLOT  (onVirtualKeyPressed(quint32, Qt::KeyboardModifiers)));
+    connect(m_keyboard.data(),      SIGNAL(keyPressed(quint32, Qt::KeyboardModifiers, int)),
+            this,                   SLOT  (onVirtualKeyPressed(quint32, Qt::KeyboardModifiers, int)));
 
-    connect(m_keyboard.data(),      SIGNAL(keysymPressed(quint32)),
-            this,                   SLOT  (onKeysymPressed(quint32)));
+    connect(m_keyboard.data(),      SIGNAL(keysymPressed(quint32, int)),
+            this,                   SLOT  (onKeysymPressed(quint32, int)));
 
     connect(m_keyboard.data(),      SIGNAL(switchContext(Maliit::SwitchDirection)),
             this,                   SLOT  (onSwitchContext(Maliit::SwitchDirection)));
@@ -284,8 +288,8 @@ GlobalInputMethod::GlobalInputMethod(MAbstractInputMethodHost *host)
     connect(m_keyboard.data(),      SIGNAL(textKeyPressed(QString)),
             this,                   SLOT  (onTextKeyPressed(QString)));
 
-    connect(m_keyboard.data(),      SIGNAL(moveCursorPosition(int)),
-            this,                   SLOT  (onMoveCursorPosition(int)));
+    connect(m_keyboard.data(),      SIGNAL(moveCursorPosition(int, int)),
+            this,                   SLOT  (onMoveCursorPosition(int, int)));
 
     // connect update signal
     connect(this,                   SIGNAL(hiddenTextChanged(bool)),
@@ -572,6 +576,13 @@ void GlobalInputMethod::switchContext(Maliit::SwitchDirection direction, bool en
 
     LanguageInfoTable *langInfo = LanguageInfoTable::getInstance();
 
+    QString preedit(m_automata->getPreedit());
+    if (preedit.length() > 0) {
+        qWarning() << "When language is changed, Preedit String : " << preedit;
+        inputMethodHost()->sendCommitString(preedit);
+        reset();
+    }
+
     if (!INDEX_IS_VALID(currentLanguageIndex, enabledLanguages)) {
         currentLanguageIndex = -1;
         d->language = enabledLanguages.isEmpty() ? GLOBAL_INPUT_METHOD_DEFAULT_LANGUAGE : enabledLanguages.at(0);
@@ -582,10 +593,6 @@ void GlobalInputMethod::switchContext(Maliit::SwitchDirection direction, bool en
         m_stopHidCharInput = false;
         return;
     }
-
-    QString preedit(m_automata->getPreedit());
-    if (0 < preedit.length())
-        inputMethodHost()->sendCommitString(preedit);
 
     d->language = enabledLanguages.at(currentLanguageIndex);
     m_automata->setLanguage(d->language);
@@ -823,7 +830,7 @@ void GlobalInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
             && (keyCode == Qt::Key_Escape || keyCode == Qt::Key_Cancel || keyCode == Qt::Key_Back || nativeScanCode == SCANCODE_BACK)) {
             m_keyboard->onHideRequested(false);
         } else if (((d->pressedScanCode != SCANCODE_UNKNOWN) && (d->pressedScanCode == nativeScanCode)) ||
-                    (keyCode == Qt::Key_Control)) {
+                    (keyCode == Qt::Key_Control || keyCode == Qt::Key_Shift || keyCode == Qt::Key_Alt)) {
             MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
                 text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
         }
@@ -923,7 +930,7 @@ bool GlobalInputMethod::processHidKeyEvent(QEvent::Type keyType, Qt::Key keyCode
     // check if it should be handled by using keysym
     quint32 keysym = d->convertToKeysym(nativeScanCode);
     if (keysym != KEYSYM_VOIDSYMBOL) {
-        onKeysymPressed(keysym);
+        onKeysymPressed(keysym, KEYBOARD_EVENT);
         return true;
     }
 
@@ -1062,7 +1069,7 @@ void GlobalInputMethod::handleMouseClickOnPreedit(const QPoint &pos, const QRect
     MAbstractInputMethod::handleMouseClickOnPreedit(pos, preeditRect);
 }
 
-void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers modifiers)
+void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers modifiers, int eventType)
 {
     qWarning() << "naviveScanCode: " << nativeScanCode;
     Q_D(GlobalInputMethod);
@@ -1084,7 +1091,7 @@ void GlobalInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::Keyboard
     m_keyboard->setInputSource(Keyboard::InputSourceVirtual);
 
     if (!processKeyEventCommon(keyCode, nativeScanCode, modifiers)) {
-        if (m_keyboard->cursorVisible() || keyCode != Qt::Key_Return) {
+        if (eventType == MOUSE_EVENT || eventType == TOUCH_EVENT || keyCode != Qt::Key_Return) {
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyPress,   keyCode, modifiers, "", false, 0));
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyRelease, keyCode, modifiers, "", false, 0));
         } else {
@@ -1116,11 +1123,11 @@ void GlobalInputMethod::onClearAllPressed()
     clear();
 }
 
-void GlobalInputMethod::onMoveCursorPosition(int direction)
+void GlobalInputMethod::onMoveCursorPosition(int direction, int eventType)
 {
     qWarning() << __PRETTY_FUNCTION__;
     Q_D(GlobalInputMethod);
-    if (m_keyboard->cursorVisible()) {
+    if (eventType == MOUSE_EVENT || eventType == TOUCH_EVENT) {
         doMoveCursorPosition(direction);
         return;
     }
@@ -1265,7 +1272,7 @@ void GlobalInputMethod::onCountryChanged()
 }
 
 // This will most likely process letter keys only
-void GlobalInputMethod::onKeysymPressed(quint32 keysym)
+void GlobalInputMethod::onKeysymPressed(quint32 keysym, int eventType)
 {
     if (!m_automata->processKeysym(keysym))
         return;

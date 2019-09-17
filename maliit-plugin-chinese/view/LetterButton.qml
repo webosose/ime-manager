@@ -26,7 +26,7 @@ ButtonBase {
     property string symbolChar
     property string rawcode        /* code sening to engine */
     property string shiftRawcode
-    signal sendKey(string rawcode, bool shift)
+    signal sendKey(string rawcode, bool shift, int eventType)
     signal sendText(string text)
 
     function checkState(text) {
@@ -40,10 +40,10 @@ ButtonBase {
     onReleased: {
         switch (mode) {
         case "Normal":
-            sendKey(rawcode, false);
+            sendKey(rawcode, false, eventType);
             break;
         case "Normal-Shift":
-            sendKey(shiftRawcode, true);
+            sendKey(shiftRawcode, true, eventType);
             break;
         case "Symbol":
             sendText(text);

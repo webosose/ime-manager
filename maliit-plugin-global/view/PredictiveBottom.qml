@@ -28,7 +28,7 @@ Item {
     property bool showMoreButton
     property bool showBackButton
     signal ttsService(string text)
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal selectPredictionWord(string word)
     signal pressMore()
     signal pressBack()
@@ -42,7 +42,7 @@ Item {
 
     onFocusMonitorChanged: {
         if (focusMonitor) focusCheckedByWords = Qt.binding(function(){
-            return words.length <=0;
+            return words == undefined || words.length <=0;
         })
     }
 
@@ -237,7 +237,7 @@ Item {
 
                 return root.width - sumWidth - space;
             }
-            onSendKey: root.sendKey(keycode, shift)
+            onSendKey: root.sendKey(keycode, shift, eventType)
             onTtsService: root.ttsService(ttsStringSpacebar)
 
             Keys.onPressed: {

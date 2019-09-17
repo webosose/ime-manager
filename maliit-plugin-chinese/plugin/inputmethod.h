@@ -84,7 +84,7 @@ private:
 private Q_SLOTS:
     void onSuggestionSelected(int index);
     void onStrokeComponentSelected(int index);
-    void onVirtualKeyPressed(quint32, Qt::KeyboardModifiers);
+    void onVirtualKeyPressed(quint32, Qt::KeyboardModifiers, int);
     void onNextSuggestions();
     void onPreviousSuggestions();
     void onSwitchContext(Maliit::SwitchDirection);
@@ -97,7 +97,7 @@ private Q_SLOTS:
     void releaseKeyLock();
     void onClearAllPressed();
     void onToggleModeButton();
-    void onMoveCursorPosition(int direction);
+    void onMoveCursorPosition(int direction, int eventType);
 
 protected:
     QScopedPointer<Maliit::Plugins::AbstractPluginSetting> systemLocale;

@@ -27,7 +27,7 @@ Rectangle {
     property string mode: "Normal"
 
     signal ttsService(string text)
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal sendText(string text)
 
     onFocusChanged: {
@@ -174,7 +174,7 @@ Rectangle {
                         }
                     }
                 }
-                onReleased: sendKey(14, false)
+                onReleased: sendKey(14, false, eventType)
                 onTtsService: numberKeyboard.ttsService(ttsString)
 
                 width: style.numberKeyboard.funcButtonWidth
@@ -195,7 +195,7 @@ Rectangle {
                 objectName: "enterButton"
                 buttonStyle: style.numericEnterButton
                 text: qsTr("Enter") + (PluginProxy.emptyString !== undefined ? PluginProxy.emptyString : "")
-                onReleased: sendKey(28, false)
+                onReleased: sendKey(28, false, eventType)
                 onTtsService: numberKeyboard.ttsService(text)
 
                 width: style.numberKeyboard.enterButtonWidth

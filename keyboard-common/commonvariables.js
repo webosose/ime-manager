@@ -16,6 +16,7 @@
 
 .pragma library
 
+// set this as a default focus for 5-way remote
 var defaultFocusItem = undefined;
 
 // This will save the previous focused item. we can use it
@@ -24,3 +25,7 @@ var savedFocusItem = undefined;
 var left = 0;
 
 var right = 1;
+
+var MouseEvent = 1
+var KeyBoardEvent = 2
+var TouchEvent = 3

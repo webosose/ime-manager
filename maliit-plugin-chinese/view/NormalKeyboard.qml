@@ -29,7 +29,7 @@ Rectangle {
     property int enterKeyType: 0
     property QtObject chineseStyle: []
 
-    signal keyPressed(string rawcode, bool shift)
+    signal keyPressed(string rawcode, bool shift, int eventType)
     signal switchContext()
     signal shiftPressed(string state)
     signal textKeyPressed(string text)
@@ -83,7 +83,7 @@ Rectangle {
         height: style.middle.height
         enabled: true
         z:1
-        onSendKey: main.keyPressed(rawcode, shift)
+        onSendKey: main.keyPressed(rawcode, shift, eventType)
         onSendText: main.textKeyPressed(text)
         onMeetLeftBoundary: leftFunctionArea.setKeyNavigation(row)
         onMeetRightBoundary: rightFunctionArea.setKeyNavigation(row)
@@ -102,7 +102,7 @@ Rectangle {
         width: style.middle.width + style.middle.cellSpace
         height: style.middle.height
         enabled: false
-        onSendKey: main.keyPressed(rawcode, shift)
+        onSendKey: main.keyPressed(rawcode, shift, eventType)
         onSendText: main.textKeyPressed(text)
         onMeetLeftBoundary: leftFunctionArea.setKeyNavigation(row)
         onMeetRightBoundary: {

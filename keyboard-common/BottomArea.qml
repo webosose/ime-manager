@@ -18,7 +18,7 @@ import "commonvariables.js" as CommonVariables
 
 Item {
     id: root
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal ttsService(string text)
 
     /* Spacebar Button */
@@ -42,7 +42,7 @@ Item {
         }
 
         onReleased: {
-            sendKey(57, false);
+            sendKey(57, false, eventType);
         }
         onFocusChanged: if (focus) root.ttsService("Space")
         width: root.width

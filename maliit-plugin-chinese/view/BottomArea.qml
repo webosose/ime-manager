@@ -26,7 +26,7 @@ Item {
     property bool previous: Suggestion.previous
     property string preedit: Suggestion.preedit
 
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal meetLeftBoundary()
     signal meetRightBoundary()
     signal meetTopBoundary(int column)
@@ -253,7 +253,7 @@ Item {
                 return root.width - sumWidth;
             }
             height: style.bottom.height
-            onSendKey: root.sendKey(89,false)
+            onSendKey: root.sendKey(89,false,eventType)
             Keys.onPressed: {
                 if (event.key === Qt.Key_Left) {
                     if (componentBar.enabled)

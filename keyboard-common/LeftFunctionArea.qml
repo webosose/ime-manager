@@ -112,14 +112,7 @@ Item {
             fontSizeMode: Text.Fit
             allowRepeat: false
 
-            onClicked: {
-                console.warn("onClicked")
-                shiftButton.state = "Normal";
-                clickLanguageButton();
-            }
-
-            Keys.onReleased: {
-                console.warn("onReleased")
+            onReleased: {
                 shiftButton.state = "Normal";
                 clickLanguageButton();
             }

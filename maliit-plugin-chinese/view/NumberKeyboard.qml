@@ -26,7 +26,7 @@ Rectangle {
 
     property string mode: "Normal"
 
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal sendText(string text)
 
     onFocusChanged: {
@@ -158,7 +158,7 @@ Rectangle {
                         }
                     }
                 }
-                onReleased: sendKey(14, false)
+                onReleased: sendKey(14, false, eventType)
 
                 width: style.numberKeyboard.funcButtonWidth
                 height: style.numberKeyboard.cellHeight
@@ -176,7 +176,7 @@ Rectangle {
             ButtonBase {
                 id: enterButton
                 text: Keyboard.numKeyEnterLabel
-                onReleased: sendKey(28, false)
+                onReleased: sendKey(28, false, eventType)
 
                 width: style.numberKeyboard.enterButtonWidth
                 height: style.numberKeyboard.cellHeight
