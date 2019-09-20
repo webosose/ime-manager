@@ -24,10 +24,12 @@ include(bno-resources/bno-resources.pri)
         \\n\\t disable-maliit-plugin-global: Do not build the maliit-plugin-global \
         \\n\\t disable-tests: Do not build the tests \
         \\n\\t enable-maliit-plugin-chinese: Build the maliit-plugin-chinese \
+        \\n\\t enable-maliit-plugin-japanese: Build the maliit-plugin-japanese \
         \\nExamples: \
         \\n\\t qmake \
         \\n\\t qmake CONFIG+=disable-maliit-plugin-global \
-        \\n\\t qmake CONFIG+=enable-maliit-plugin-chinese
+        \\n\\t qmake CONFIG+=enable-maliit-plugin-chinese \
+        \\n\\t qmake CONFIG+=enable-maliit-plugin-japanese
 
     !build_pass:system(echo \"$$help_string\")
 } else {
@@ -41,6 +43,7 @@ TEMPLATE = subdirs
 
 !disable-maliit-plugin-global:SUBDIRS += maliit-plugin-global
 enable-maliit-plugin-chinese:SUBDIRS += maliit-plugin-chinese
+enable-maliit-plugin-japanese:SUBDIRS += maliit-plugin-japanese
 
 CONFIG += webos-service
 WEBOS_SYSBUS_DIR = service

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/japanese/images">
+        <file alias="arrow-left.png">images/arrow-left.png</file>
+        <file alias="arrow-left-dark.png">images/arrow-left-dark.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/japanese">
+        <file>main.qml</file>
+        <file>NormalKeyboard.qml</file>
+        <file>MiddleLayout.qml</file>
+        <file>LetterButton.qml</file>
+        <file>HidPredictionWidget.qml</file>
+        <file>HidPredictionItem.qml</file>
+        <file>variables.js</file>
+        <file>japanesestyle.js</file>
+        <file>LeftFunctionAreaJapanese.qml</file>
+        <file>PredictiveBottom.qml</file>
+        <file>NextAndPreviousButton.qml</file>
+        <file>NumberButton.qml</file>
+        <file>NumberKeyboard.qml</file>
+    </qresource>
+</RCC>
