@@ -80,8 +80,8 @@ void Keyboard::load()
     setSource(mainPath);
 
     QQuickItem *rootObj = rootObject();
-    QObject::connect(rootObj, SIGNAL (keyPressed(QString, bool)),
-            this, SLOT(onKeyPressed(QString, bool)));
+    QObject::connect(rootObj, SIGNAL (keyPressed(QString, bool, int)),
+            this, SLOT(onKeyPressed(QString, bool, int)));
 
     QObject::connect(rootObj, SIGNAL (switchContext()),
             this, SLOT(onSwitchContext()));
@@ -98,14 +98,14 @@ void Keyboard::load()
     QObject::connect(rootObj, SIGNAL (hideRequested(bool)),
             this, SLOT(onHideRequested(bool)));
 
-    QObject::connect(rootObj, SIGNAL (keysymPressed(QString)),
-            this, SLOT(onKeysymPressed(QString)));
+    QObject::connect(rootObj, SIGNAL (keysymPressed(QString, int)),
+            this, SLOT(onKeysymPressed(QString, int)));
 
     QObject::connect(rootObj, SIGNAL (keyReleased(bool)),
             this, SLOT(onKeyReleased(bool)));
 
-    QObject::connect(rootObj, SIGNAL (moveCursorPosition(int)),
-            this, SIGNAL(moveCursorPosition(int)));
+    QObject::connect(rootObj, SIGNAL (moveCursorPosition(int, int)),
+            this, SIGNAL(moveCursorPosition(int, int)));
 
     m_im->inputMethodHost()->registerWindow(this, Maliit::PositionCenterBottom);
 }
@@ -140,7 +140,7 @@ void Keyboard::onHideRequested(bool reset)
     Q_EMIT visibleChanged(false, reset);
 }
 
-void Keyboard::onKeyPressed(QString nativeScanCode, bool shift)
+void Keyboard::onKeyPressed(QString nativeScanCode, bool shift, int eventType)
 {
     qDebug() << __PRETTY_FUNCTION__;
     Qt::KeyboardModifiers modifiers = Qt::NoModifier;
@@ -153,7 +153,7 @@ void Keyboard::onKeyPressed(QString nativeScanCode, bool shift)
         return;
     }
 
-    Q_EMIT keyPressed(keyCode, modifiers);
+    Q_EMIT keyPressed(keyCode, modifiers, eventType);
 }
 
 void Keyboard::onSwitchContext()
@@ -237,11 +237,11 @@ QString Keyboard::emptyString()
     return "";
 }
 
-void Keyboard::onKeysymPressed(QString keysym)
+void Keyboard::onKeysymPressed(QString keysym, int eventType)
 {
     // convert to quint32 and signal
     bool ok = false;
-    Q_EMIT keysymPressed(keysym.toInt(&ok, 16));
+    Q_EMIT keysymPressed(keysym.toInt(&ok, 16),eventType);
 }
 
 void Keyboard::setPanelHeight(int height)

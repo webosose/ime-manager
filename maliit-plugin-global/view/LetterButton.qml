@@ -35,8 +35,8 @@ ButtonBase {
     property string expandKeysym: (keyData && keyData.expandKeysym) ? keyData.expandKeysym : "-1"
     property string expandShiftKeysym: (keyData && keyData.expandShiftKeysym) ? keyData.expandShiftKeysym : "-1"
     property bool forceText : (keyData && keyData.forceText) ? keyData.forceText : false
-    signal sendKey(string rawcode, bool shift)
-    signal sendKeysym(string keysym)
+    signal sendKey(string rawcode, bool shift, int eventType)
+    signal sendKeysym(string keysym,int eventType)
     signal sendText(string text)
 
     function updateState(text) {
@@ -71,39 +71,39 @@ ButtonBase {
         switch (mode) {
         case "Normal":
             if (normalKeysym !== "-1")
-                sendKeysym(normalKeysym);
+                sendKeysym(normalKeysym, eventType);
             else
-                sendKey(rawcode, false);
+                sendKey(rawcode, false, eventType);
             break;
         case "Normal-Shift":
             if (shiftKeysym !== "-1")
-                sendKeysym(shiftKeysym);
+                sendKeysym(shiftKeysym, eventType);
             else
-                sendKey(shiftRawcode, true);
+                sendKey(shiftRawcode, true, eventType);
             break;
         case "Normal-Shift-Lock":
             if (shiftKeysym !== "-1")
-                sendKeysym(shiftKeysym);
+                sendKeysym(shiftKeysym, eventType);
             else
-                sendKey(shiftRawcode, true);
+                sendKey(shiftRawcode, true, eventType);
             break;
         case "Expand":
             if (expandKeysym !== "-1")
-                sendKeysym(expandKeysym);
+                sendKeysym(expandKeysym, eventType);
             else
-                sendKey(expandRawcode, false);
+                sendKey(expandRawcode, false, eventType);
             break;
         case "Expand-Shift":
             if (expandShiftKeysym !== "-1")
-                sendKeysym(expandShiftKeysym);
+                sendKeysym(expandShiftKeysym, eventType);
             else
-                sendKey(expandRawcode, false);
+                sendKey(expandRawcode, false, eventType);
             break;
         case "Expand-Shift-Lock":
             if (expandShiftKeysym !== "-1")
-                sendKeysym(expandShiftKeysym);
+                sendKeysym(expandShiftKeysym, eventType);
             else
-                sendKey(expandRawcode, false);
+                sendKey(expandRawcode, false, eventType);
             break;
         case "Symbol":
             sendText(text);

@@ -35,8 +35,8 @@ Item {
     property bool changeColumn: false
 
     signal ttsService(string text)
-    signal sendKey(string rawcode, bool shift)
-    signal sendKeysym(string keysym)
+    signal sendKey(string rawcode, bool shift, int eventType)
+    signal sendKeysym(string keysym, int eventType)
     signal sendText(string text)
     signal pressNextPrediction()
     signal meetLeftBoundary(int row)
@@ -292,9 +292,9 @@ Item {
                 keyData: letterModel[index]
                 visible: keyData ? true : false
 
-                onSendKey: middle.sendKey(rawcode, shift)
+                onSendKey: middle.sendKey(rawcode, shift, eventType)
                 onSendText: middle.sendText(text)
-                onSendKeysym: middle.sendKeysym(keysym)
+                onSendKeysym: middle.sendKeysym(keysym, eventType)
                 onTtsService: {
                     if (inputSource == 0 && changeColumn) changeColumn = false
                     else middle.ttsService(text)

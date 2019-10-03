@@ -75,8 +75,8 @@ Keyboard::Keyboard(MAbstractInputMethodHost* host, Suggestion* suggestion, Strok
     setSource(mainPath);
 
     QQuickItem *rootObj = rootObject();
-    QObject::connect(rootObj, SIGNAL (keyPressed(QString, bool)),
-            this, SLOT(onKeyPressed(QString, bool)));
+    QObject::connect(rootObj, SIGNAL (keyPressed(QString, bool, int)),
+            this, SLOT(onKeyPressed(QString, bool, int)));
 
     QObject::connect(rootObj, SIGNAL (switchContext()),
             this, SLOT(onSwitchContext()));
@@ -102,8 +102,8 @@ Keyboard::Keyboard(MAbstractInputMethodHost* host, Suggestion* suggestion, Strok
     QObject::connect(rootObj, SIGNAL (keyReleased(bool)),
             this, SLOT(onKeyReleased(bool)));
 
-    QObject::connect(rootObj, SIGNAL (moveCursorPosition(int)),
-            this, SIGNAL(moveCursorPosition(int)));
+    QObject::connect(rootObj, SIGNAL (moveCursorPosition(int,int)),
+            this, SIGNAL(moveCursorPosition(int,int)));
 
     //#IF_COMMERCIAL
     initializeHashTable();
@@ -141,7 +141,7 @@ void Keyboard::onHideRequested(bool reset)
     Q_EMIT visibleChanged(false, reset);
 }
 
-void Keyboard::onKeyPressed(QString nativeScanCode, bool shift)
+void Keyboard::onKeyPressed(QString nativeScanCode, bool shift, int eventType)
 {
     qDebug() << __PRETTY_FUNCTION__;
 
@@ -155,7 +155,7 @@ void Keyboard::onKeyPressed(QString nativeScanCode, bool shift)
         return;
     }
 
-    Q_EMIT keyPressed(keyCode, modifiers);
+    Q_EMIT keyPressed(keyCode, modifiers, eventType);
 }
 
 void Keyboard::onSwitchContext()

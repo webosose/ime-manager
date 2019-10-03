@@ -66,11 +66,8 @@ Item {
             objectName: "languageChangeButton"
             property int row: 0
             text: Keyboard.languageLabel
-            onClicked: {
-                languageButtonPressed();
-            }
 
-            Keys.onReleased: {
+            onReleased: {
                 languageButtonPressed();
             }
 

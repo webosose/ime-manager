@@ -26,7 +26,7 @@ Rectangle {
     property string mode: "Normal"
     property Grid currGrid: middleGrid
     property Repeater currRepeater: letterRepeater
-    signal sendKey(string rawcode, bool shift)
+    signal sendKey(string rawcode, bool shift, int eventType)
     signal sendText(string text)
     signal meetLeftBoundary(int row)
     signal meetRightBoundary(int row)
@@ -146,7 +146,7 @@ Rectangle {
                 symbolChar: modelData.symbolChar ? modelData.symbolChar : ""
                 rawcode: modelData.rawcode ? modelData.rawcode : "-1"
                 shiftRawcode: modelData.shiftRawcode ? modelData.shiftRawcode : "-1"
-                onSendKey: middle.sendKey(rawcode, shift)
+                onSendKey: middle.sendKey(rawcode, shift, eventType)
                 onSendText: middle.sendText(text)
 
                 KeyNavigation.down:  letterRepeater.itemAt(index + middleGrid.columns)

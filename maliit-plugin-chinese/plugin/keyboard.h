@@ -91,7 +91,7 @@ public:
 
 Q_SIGNALS:
     void inputSourceChanged(InputSource source);
-    void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
+    void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers, int eventType);
     void shiftKeyPressed();
     void symbolKeyPressed(QString state);
     void switchContext(Maliit::SwitchDirection direction);
@@ -109,10 +109,10 @@ Q_SIGNALS:
     void forceFocusTo(QString label);
     void keyReleased(bool isReleased);
     void cursorVisibleChanged(bool cursorVisible);
-    void moveCursorPosition(int);
+    void moveCursorPosition(int,int);
 
 public Q_SLOTS:
-    void onKeyPressed(QString nativeScanCode, bool shift);
+    void onKeyPressed(QString nativeScanCode, bool shift, int eventType);
     void onSwitchContext();
     void onShowRequested(bool reset);
     void onHideRequested(bool reset);

@@ -26,7 +26,7 @@ Item {
     property var lastFocusOnCursorBtn: idxLastFocusOnCursorBtn == CommonVariables.left ? moveCursorLeftButton : moveCursorRightButton
     signal ttsService(string text)
     signal clickClearAllButton()
-    signal sendKey(int keycode, bool shift)
+    signal sendKey(int keycode, bool shift, int eventType)
     signal meetLeftBoundary(int row)
     signal meetRightBoundary(int row)
     signal meetTopBoundary(int column)
@@ -56,7 +56,7 @@ Item {
             width: root.width
             height: style.right.cellHeight
             onTtsService: root.ttsService(ttsStringBackspace)
-            onReleased: sendKey(14, false)
+            onReleased: sendKey(14, false, eventType)
 
             property int row: 0
             property string ttsStringBackspace: qsTr("Back Space") + (PluginProxy.emptyString !== undefined ? PluginProxy.emptyString : "")
@@ -77,7 +77,7 @@ Item {
             }
             fontSizeMode: Text.Fit
             onTtsService: root.ttsService(text)
-            onReleased: sendKey(28, false)
+            onReleased: sendKey(28, false, eventType)
 
             width: root.width
             height: style.right.cellHeight * 2 + style.right.cellSpace * 1
@@ -106,7 +106,7 @@ Item {
                 fontSizeMode: Text.Fit
                 onReleased: {
                     console.warn("@@@ click cursor left");
-                    moveCursorPosition(CommonVariables.left);
+                    moveCursorPosition(CommonVariables.left,eventType);
                 }
                 onFocusChanged : {
                     if (focus) {
@@ -128,7 +128,7 @@ Item {
                 fontSizeMode: Text.Fit
                 onReleased: {
                     console.warn("@@@ click cursor right");
-                    moveCursorPosition(CommonVariables.right);
+                    moveCursorPosition(CommonVariables.right,eventType);
                 }
                 onFocusChanged : {
                     if (focus) {

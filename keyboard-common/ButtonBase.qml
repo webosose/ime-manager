@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 
-import "commonvariables.js" as CommonVariables
+import "commonvariables.js" as CV
 
 Rectangle {
     id: btn     // id on the first line makes it easy to find an object
@@ -37,13 +37,15 @@ Rectangle {
     readonly property int releaseBeforeExecute: 1
 
     // signal declarations
-    signal pressed()
-    signal released()
+    signal pressed(int eventType)
+    signal released(int eventType)
     signal clicked()
     signal entered()
     signal exited()
     signal executed()   // signal for Ok button of the Remote
     signal ttsService(string text)
+
+    property int currentEvent: CV.MouseEvent
 
     onFocusChanged: {
         if (focus) btn.ttsService(text);
@@ -64,13 +66,14 @@ Rectangle {
 
     Keys.onPressed: {
         if (event.key === Qt.Key_Execute) {
+            btn.currentEvent = CV.KeyBoardEvent;
             if (enterPriority === releaseBeforeExecute) {
-                btn.released();
+                btn.released(btn.currentEvent);
                 btn.executed();
             } else {
                 btn.executed();
                 btn.state = "Select"
-                btn.released();
+                btn.released(btn.currentEvent);
             }
             event.accepted = true;
         }
@@ -101,12 +104,15 @@ Rectangle {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
+
         onReleased: {
             starter.stop();
             ticker.stop();
 
             if (!btn.focus) return;
-            btn.released();
+            btn.currentEvent = CV.MouseEvent;
+            btn.released(btn.currentEvent);
+
             if (removed) return;
             if (btn.state === "Disable") return;
             btn.focus = mouseArea.containsMouse;
@@ -118,8 +124,10 @@ Rectangle {
                 btn.image = "qrc:///images/spacebar.png";
             }
         }
+
         onPressed: {
-            btn.pressed();
+            btn.currentEvent = CV.MouseEvent;
+            btn.pressed(btn.currentEvent);
             if (allowRepeat)
                 starter.restart();
             if (removed) return;
@@ -133,12 +141,14 @@ Rectangle {
                 btn.image = "qrc:///images/spacebar-dark.png";
             }
         }
+
         onEntered: {
             if (btn.state === "Disable") return;
             if (mouseArea.pressed) return;
             btn.focus = true;
             btn.entered();
         }
+
         onExited: {
             starter.stop();
             ticker.stop();
@@ -148,8 +158,53 @@ Rectangle {
             btn.state = "Normal";
             btn.exited();
         }
+
         onClicked:{
             btn.clicked();
+        }
+    }
+
+    MultiPointTouchArea {
+        id: touchArea
+        anchors.fill: parent
+        mouseEnabled : false
+        minimumTouchPoints: 1
+        maximumTouchPoints: 1
+
+        onPressed: {
+            btn.currentEvent = CV.TouchEvent;
+            btn.pressed(btn.currentEvent);
+            if (allowRepeat)
+                starter.restart();
+            if (removed) return;
+            if (btn.state === "Disable") return;
+            btn.focus = true;
+            if (!btn.focus)
+                btn.state = "Normal";
+
+            // Check and change the JP PlugIn "space"button image
+            if (btn.text === " ") {
+                btn.image = "qrc:///images/spacebar-dark.png";
+            }
+        }
+
+        onReleased: {
+            starter.stop();
+            ticker.stop();
+
+            if (!btn.focus) return;
+            btn.currentEvent = CV.TouchEvent;
+            btn.released(btn.currentEvent);
+            if (removed) return;
+            if (btn.state === "Disable") return;
+            btn.focus = false;
+            if (!btn.focus)
+                btn.state = "Normal";
+
+            // Check and change the JP PlugIn "space"button image
+            if (btn.text === " ") {
+                btn.image = "qrc:///images/spacebar.png";
+            }
         }
     }
 
@@ -177,7 +232,7 @@ Rectangle {
                 ticker.stop();
                 return;
             }
-            btn.released();
+            btn.released(btn.currentEvent);
         }
     }
 
@@ -205,7 +260,7 @@ Rectangle {
             }
             StateChangeScript {
                 script: {
-                    CommonVariables.savedFocusItem = btn;
+                    CV.savedFocusItem = btn;
                 }
             }
         },

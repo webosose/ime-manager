@@ -49,11 +49,11 @@ namespace {
 }
 
 static const quint32 EVDEV_OFFSET   = 8;
-static const quint32 MAGIC_SCANCODE_OK   = 0;    // from TV: "OK" button of Magic-remote
-static const quint32 REMOTE_SCANCODE_OK  = 36;   // from TV: "OK" button of Normal-remote
-static const quint32 SCANCODE_BACK       = 420;  // from TV: "Back" button of Magic-remote
-static const quint32 SCANCODE_POINTERON  = 1206; // from TV: TV sends the keycode when the pointer appears
-static const quint32 SCANCODE_POINTEROFF = 1207; // from TV: TV sends the keycode when the pointer disappears
+static const quint32 MAGIC_SCANCODE_OK   = 0;    // from Device: "OK" button of Magic-remote
+static const quint32 REMOTE_SCANCODE_OK  = 36;   // from Device: "OK" button of Normal-remote
+static const quint32 SCANCODE_BACK       = 420;  // from Device: "Back" button of Magic-remote
+static const quint32 SCANCODE_POINTERON  = 1206; // from Device: Device sends the keycode when the pointer appears
+static const quint32 SCANCODE_POINTEROFF = 1207; // from Device: Device sends the keycode when the pointer disappears
 static const quint32 SCANCODE_RALT       = 108;  // from HID: Right Alt changes the language of the VKB
 static const quint32 SCANCODE_PLAY       = 0xD7;  // from Remote
 static const quint32 SCANCODE_PAUSE      = 0x7F;  // from Remote
@@ -73,9 +73,15 @@ static const unsigned int KEY_TAB_VKB = 21;
 static const quint32 CHINESE_SPACE_KEYCODE = 0x3000;
 static const QString SHIFTED_STATE = "Normal-Shift";
 static const QString NORMAL_STATE = "Normal";
+static const quint32 SCANCODE_LEFT_SHIFT   = 50;
+static const quint32 SCANCODE_RIGHT_SHIFT  = 62;
 
 static const quint32 DIRECTION_LEFT    = 0;
 static const quint32 DIRECTION_RIGHT   = 1;
+
+static const quint32 MOUSE_EVENT    = 1;
+static const quint32 KEYBOARD_EVENT = 2;
+static const quint32 TOUCH_EVENT    = 3;
 
 enum {
     KEYSYM_ASTERISK = 0x002a,
@@ -153,8 +159,8 @@ ChineseInputMethod::ChineseInputMethod(MAbstractInputMethodHost *host)
     connect(m_strokeComponent.data(), SIGNAL (strokeComponentSelected(int)),
             this, SLOT (onStrokeComponentSelected(int)));
 
-    connect(m_keyboard.data(), SIGNAL (keyPressed(quint32, Qt::KeyboardModifiers)),
-            this, SLOT (onVirtualKeyPressed(quint32, Qt::KeyboardModifiers)));
+    connect(m_keyboard.data(), SIGNAL (keyPressed(quint32, Qt::KeyboardModifiers, int)),
+            this, SLOT (onVirtualKeyPressed(quint32, Qt::KeyboardModifiers, int)));
 
     connect(m_keyboard.data(), SIGNAL (switchContext(Maliit::SwitchDirection)),
             this, SLOT (onSwitchContext(Maliit::SwitchDirection)));
@@ -173,15 +179,15 @@ ChineseInputMethod::ChineseInputMethod(MAbstractInputMethodHost *host)
 
     connect(m_keyboard.data(), SIGNAL (textKeyPressed(QString)),
             this, SLOT (onTextKeyPressed(QString)));
-    
+
     connect(m_keyboard.data(), SIGNAL (clearAllPressed()),
             this, SLOT (onClearAllPressed()));
 
     connect(m_keyboard.data(), SIGNAL(visibleChanged(bool, bool)),
             this, SLOT  (onVisibleChanged(bool, bool)));
 
-    connect(m_keyboard.data(),      SIGNAL(moveCursorPosition(int)),
-            this, SLOT  (onMoveCursorPosition(int)));
+    connect(m_keyboard.data(),      SIGNAL(moveCursorPosition(int, int)),
+            this, SLOT  (onMoveCursorPosition(int, int)));
 
     connect(m_suggestion.data(), SIGNAL (virtualModeButtonPressed()),
             this, SLOT (onToggleModeButton()));
@@ -322,10 +328,10 @@ void ChineseInputMethod::onClearAllPressed()
     clear();
 }
 
-void ChineseInputMethod::onMoveCursorPosition(int direction)
+void ChineseInputMethod::onMoveCursorPosition(int direction,int eventType)
 {
     qWarning() << __PRETTY_FUNCTION__;
-    if (m_keyboard->cursorVisible()) {
+    if (eventType == MOUSE_EVENT || eventType == TOUCH_EVENT) {
         doMoveCursorPosition(direction);
         return;
     }
@@ -604,7 +610,7 @@ bool ChineseInputMethod::processKeyEventCommon(Qt::Key keyCode, Qt::KeyboardModi
 
     QString preedit = m_automata->getPreedit();
 
-    if (keyCode == Qt::Key_Return && preedit.length() > 0) {
+    if ((keyCode == Qt::Key_Return ||  keyCode == Qt::Key_Enter) && preedit.length() > 0) {
         onPreeditCommit(preedit);
         return true;
     }
@@ -670,7 +676,11 @@ void ChineseInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
 
     if (keyType == QEvent::KeyRelease) {
         dirCursorMoveKey = -1;
-        // Keys to change language in hardware keyboard
+        if (nativeScanCode == SCANCODE_LEFT_SHIFT || nativeScanCode == SCANCODE_RIGHT_SHIFT) {
+            // Sending Long shift key release event back to Maliit
+            MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
+                text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
+        } else // Keys to change language in hardware keyboard
         if ((keyCode == Qt::Key_Hangul && modifiers == Qt::NoModifier)
                 || (nativeScanCode == SCANCODE_RALT && nativeModifiers == 0)
                 || (modifiers == Qt::ControlModifier && keyCode == Qt::Key_Space)) {
@@ -689,7 +699,8 @@ void ChineseInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
             if (!m_keyboard->isVisible())
                 MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers, text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
             m_keyboard->onKeyReleased(keyCode, modifiers, true);
-        } else if (pressedScancode != SCANCODE_UNKNOWN && pressedScancode == SCANCODE_BACK){
+        } else if (pressedScancode != SCANCODE_UNKNOWN &&
+                        (pressedScancode == nativeScanCode || pressedScancode == SCANCODE_BACK)) {
             MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
             text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
         }
@@ -742,7 +753,7 @@ void ChineseInputMethod::processKeyEvent(QEvent::Type keyType, Qt::Key keyCode,
             m_sendEnterKey = true;
 */
 //#END
-
+        pressedScancode = nativeScanCode;
         MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
             text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
     }
@@ -812,6 +823,7 @@ bool ChineseInputMethod::processHidKeyEvent(QEvent::Type keyType, Qt::Key keyCod
     if (processKeyEventCommon(keyCode, modifiers))
         return true;
 
+    pressedScancode = nativeScanCode;
     MAbstractInputMethod::processKeyEvent(keyType, keyCode, modifiers,
         text, autoRepeat, count, nativeScanCode, nativeModifiers, time);
 
@@ -943,7 +955,7 @@ void ChineseInputMethod::handleMouseClickOnPreedit(const QPoint &pos, const QRec
     qDebug() << __PRETTY_FUNCTION__;
 }
 
-void ChineseInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers modifiers)
+void ChineseInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers modifiers, int eventType)
 {
     qDebug() << __PRETTY_FUNCTION__;
 
@@ -968,7 +980,7 @@ void ChineseInputMethod::onVirtualKeyPressed(quint32 nativeScanCode, Qt::Keyboar
 
     m_keyboard->setInputSource(Keyboard::InputSourceVirtual);
     if (!processKeyEventCommon(keyCode, modifiers)) {
-        if (m_keyboard->cursorVisible() || keyCode != Qt::Key_Return) {
+        if (eventType == MOUSE_EVENT || eventType == TOUCH_EVENT || keyCode != Qt::Key_Return) {
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyPress, keyCode, modifiers, "", false, 0));
             inputMethodHost()->sendKeyEvent(QKeyEvent(QEvent::KeyRelease, keyCode, modifiers, "", false, 0));
         } else {

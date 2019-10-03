@@ -21,7 +21,7 @@ Rectangle {
     objectName: "stroke"
     color: style.bgColor
     property string mode: "Normal-Shift"
-    signal sendKey(string rawcode, bool shift)
+    signal sendKey(string rawcode, bool shift, int eventType)
     signal sendText(string text)
     signal meetLeftBoundary(int row)
     signal meetRightBoundary(int row)
@@ -46,7 +46,7 @@ Rectangle {
                 height: style.middle.cellHeight
                 shiftedChar: modelData.shiftedChar ? modelData.shiftedChar : ""
                 shiftRawcode: modelData.shiftRawcode ? modelData.shiftRawcode : "-1"
-                onSendKey: stroke.sendKey(rawcode, shift)
+                onSendKey: stroke.sendKey(rawcode, shift, eventType)
                 onSendText: stroke.sendText(text)
                 KeyNavigation.left: numberRowRepeater.itemAt(index - 1)
                 KeyNavigation.right: numberRowRepeater.itemAt(index + 1)
@@ -85,7 +85,7 @@ Rectangle {
                 height: (style.middle.cellHeight * 2) + strokeGrid.spacing
                 shiftedChar: modelData.shiftedChar ? modelData.shiftedChar : ""
                 shiftRawcode: modelData.shiftRawcode ? modelData.shiftRawcode : "-1"
-                onSendKey: stroke.sendKey(rawcode, shift)
+                onSendKey: stroke.sendKey(rawcode, shift, eventType)
                 onSendText: stroke.sendText(text)
                 KeyNavigation.up:    numberRowRepeater.itemAt(index * 2)
                 KeyNavigation.left:  strokeRowRepeater.itemAt(index - 1)
@@ -126,7 +126,7 @@ Rectangle {
                 height: style.middle.cellHeight
                 shiftedChar: modelData.shiftedChar ? modelData.shiftedChar : ""
                 shiftRawcode: modelData.shiftRawcode ? modelData.shiftRawcode : "-1"
-                onSendKey: stroke.sendKey(rawcode, shift)
+                onSendKey: stroke.sendKey(rawcode, shift, eventType)
                 onSendText: stroke.sendText(text)
                 KeyNavigation.left:  xcharRowRepeater.itemAt(index - 1)
                 KeyNavigation.right: xcharRowRepeater.itemAt(index + 1)

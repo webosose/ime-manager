@@ -108,13 +108,13 @@ private:
 
 private Q_SLOTS:
     void onPredictionSelected(QString selectedString, bool replace);
-    void onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
+    void onVirtualKeyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers, int eventType);
     void onClearAllPressed();
     void onTextKeyPressed(QString text);
     void onVisibleChanged(bool visible, bool reset);
     void onSystemLocaleChanged();
     void onCountryChanged();
-    void onKeysymPressed(quint32 keysym);
+    void onKeysymPressed(quint32 keysym, int eventType);
     void releaseKeyLock();
     void onSurroundingTextChanged();
     void onCursorPositionChanged();
@@ -122,7 +122,7 @@ private Q_SLOTS:
     void onEnterKeyTypeChanged(int enterKeyType);
     void onDelayPredictionUpdate();
     void onDelaySwitchingLanguage();
-    void onMoveCursorPosition(int direction);
+    void onMoveCursorPosition(int direction, int eventType);
     void onSwitchContext(Maliit::SwitchDirection direction);
 
 protected:

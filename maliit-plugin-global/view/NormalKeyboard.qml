@@ -41,8 +41,8 @@ Rectangle {
     property bool activateLanguageButton : false
 
     signal ttsService(string text)
-    signal keyPressed(string rawcode, bool shift)
-    signal keysymPressed(string keysym)
+    signal keyPressed(string rawcode, bool shift, int eventType)
+    signal keysymPressed(string keysym, int eventType)
     signal textKeyPressed(string text)
     signal changeLanguage()
     signal clearAllPressed()
@@ -95,17 +95,17 @@ Rectangle {
         onModelChanged: CommonVariables.savedFocusItem = middleLayoutArea.getMiddleItem()
 
         onSendKey: {
-            root.keyPressed(rawcode, shift);
+            root.keyPressed(rawcode, shift, eventType);
             root.mode = checkShift(root.mode);
         }
 
         onSendKeysym: {
-            root.keysymPressed(keysym);
+            root.keysymPressed(keysym, eventType);
             root.mode = checkShift(root.mode);
         }
 
         onSendText: {
-            root.textKeyPressed(text)
+            root.textKeyPressed(text);
             root.mode = checkShift(root.mode);
         }
         onPressNextPrediction: {
@@ -160,7 +160,7 @@ Rectangle {
         words: !predictionMode ? Prediction.list.slice(0, bottom.maxLength) : undefined
         showMoreButton: (!predictionMode) && (maxLength < Prediction.list.length)
         showBackButton: predictionMode
-        onSendKey: root.keyPressed(keycode, shift)
+        onSendKey: root.keyPressed(keycode, shift, eventType)
         onSelectPredictionWord: {
             Prediction.onSelected(word);
             predictionMode = false;

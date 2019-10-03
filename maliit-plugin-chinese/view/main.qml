@@ -49,7 +49,7 @@ Item {
     property int windowHeight: ((Screen.width >= 1920 && Screen.height >= 1080) || (Screen.width >= 1080 && Screen.height >= 1920))? 324 : 217
     property int screenHeight: Screen.height
     property string resolution: (windowHeight > 242) ? "fhd" : "hd"
-    signal keyPressed(string rawcode, bool shift)
+    signal keyPressed(string rawcode, bool shift, int eventType)
     signal textKeyPressed(string text)
     signal switchContext()
     signal clearAllPressed()
@@ -59,7 +59,7 @@ Item {
     signal symbolPressed(string state)
     signal meetTopBoundary()
     signal meetBottomBoundary()
-    signal moveCursorPosition(int direction)
+    signal moveCursorPosition(int direction, int eventType)
 
     property real xScale: Screen.width/style.keyboardDefaultWidth
     transform: Scale {xScale: root.xScale; origin.x: root.width/2;} //TODO: Simple decision for now
@@ -109,7 +109,7 @@ Item {
         y: windowHeight
 
         // slots
-        onKeyPressed: root.keyPressed(rawcode, shift)
+        onKeyPressed: root.keyPressed(rawcode, shift, eventType)
         onTextKeyPressed: root.textKeyPressed(text)
         onSwitchContext: root.switchContext()
         onClearAllPressed: root.clearAllPressed()
@@ -128,7 +128,7 @@ Item {
         y: windowHeight
 
         // slots
-        onSendKey: root.keyPressed(keycode, shift)
+        onSendKey: root.keyPressed(keycode, shift, eventType)
         onSendText: root.textKeyPressed(text)
     }
 

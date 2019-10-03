@@ -26,7 +26,7 @@ import "StringResource"
 
 Rectangle {
     id: root
-    objectName: "main"
+    objectName: "mainGlPlugin"
     enabled: false
     y: screenHeight + 1000;
 
@@ -53,14 +53,14 @@ Rectangle {
     property int windowHeight: ((Screen.width >= 1920 && Screen.height >= 1080) || (Screen.width >= 1080 && Screen.height >= 1920))? 324 : 217
     property int screenHeight: Screen.height
     property string resolution: (windowHeight > 242) ? "fhd" : "hd"
-    signal keyPressed(string rawcode, bool shift)
+    signal keyPressed(string rawcode, bool shift, int eventType)
     signal textKeyPressed(string text)
     signal switchContext()
     signal clearAllPressed()
-    signal moveCursorPosition(int direction)
+    signal moveCursorPosition(int direction,int eventType)
     signal showRequested(bool reset)
     signal hideRequested(bool reset)
-    signal keysymPressed(string keysym)
+    signal keysymPressed(string keysym, int eventType)
     signal meetTopBoundary()
 
     color: style.bgColor
@@ -127,8 +127,8 @@ Rectangle {
         y: windowHeight
 
         // slots
-        onKeyPressed: root.keyPressed(rawcode, shift)
-        onKeysymPressed: root.keysymPressed(keysym)
+        onKeyPressed: root.keyPressed(rawcode, shift, eventType)
+        onKeysymPressed: root.keysymPressed(keysym, eventType)
         onTextKeyPressed: root.textKeyPressed(text)
         onChangeLanguage: {
             root.switchContext()
@@ -150,7 +150,7 @@ Rectangle {
         y: windowHeight
 
         // slots
-        onSendKey: root.keyPressed(keycode, shift)
+        onSendKey: root.keyPressed(keycode, shift, eventType)
         onSendText: root.textKeyPressed(text)
         onTtsService: ttsService.speakButton(text)
     }

@@ -83,20 +83,20 @@ Q_SIGNALS:
     void inputSourceChanged(InputSource source);
     void translatorChanged(bool speakLanguage);
     void forceFocusTo(QString label);
-    void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers);
+    void keyPressed(quint32 nativeScanCode, Qt::KeyboardModifiers, int eventType);
     void switchContext(Maliit::SwitchDirection direction);
     void clearAllPressed();
     void textKeyPressed(QString text);
     void languageChanged(QString language, QString label, QString langCode, QVariant data);
     void countryChanged(QString country);
     void visibleChanged(bool visible, bool reset);
-    void keysymPressed(quint32);
+    void keysymPressed(quint32, int);
     void languageCountChanged(int languageCount);
     void showLanguageNotification(QString label);
     void resetRequested();
     void keyReleased(bool isReleased);
     void cursorVisibleChanged(bool cursorVisible);
-    void moveCursorPosition(int direction);
+    void moveCursorPosition(int direction, int eventType);
 
 //#IF_COMMERCIAL
     void setDefaultFocus();
@@ -104,11 +104,11 @@ Q_SIGNALS:
 //#END
 
 public Q_SLOTS:
-    void onKeyPressed(QString nativeScanCode, bool shift);
+    void onKeyPressed(QString nativeScanCode, bool shift, int eventType);
     void onSwitchContext();
     void onShowRequested(bool reset);
     void onHideRequested(bool reset);
-    void onKeysymPressed(QString keysym);
+    void onKeysymPressed(QString keysym, int eventType);
 
 private:
     GlobalInputMethod* m_im;
