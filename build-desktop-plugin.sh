@@ -17,6 +17,7 @@
 DESKTOP_CONFIG=""
 DESKTOP_CONFIG+="CONFIG+=ubuntu-desktop-build "
 #DESKTOP_CONFIG+="CONFIG+=disable-maliit-plugin-global "
+#DESKTOP_CONFIG+="CONFIG+=enable-maliit-plugin-japanese "
 #DESKTOP_CONFIG+="CONFIG+=enable-maliit-plugin-chinese "
 DESKTOP_CONFIG+="CONFIG+=disable-tests "
 DESKTOP_CONFIG+="CONFIG+=debug "
@@ -28,7 +29,7 @@ MALIIT_CONFIG_DIR="${HOME}/.config/maliit.org"
 MALIIT_CONFIG_FILE="${MALIIT_CONFIG_DIR}/server.conf"
 mkdir -p ${MALIIT_CONFIG_DIR}
 echo "[maliit]" > ${MALIIT_CONFIG_FILE}
-echo "onscreen\\enabled=libplugin-global.so:, libplugin-chinese.so:chinese" >> ${MALIIT_CONFIG_FILE}
+echo "onscreen\\enabled=libplugin-global.so:, libplugin-japanese.so:japanese, libplugin-chinese.so:chinese" >> ${MALIIT_CONFIG_FILE}
 echo "onscreen\\active=libplugin-global.so:" >> ${MALIIT_CONFIG_FILE}
 echo "onscreen\\currentlanguage=en" >> ${MALIIT_CONFIG_FILE}
 
