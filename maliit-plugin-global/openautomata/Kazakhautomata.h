@@ -121,8 +121,8 @@ public:
         m_keymap.insert(0x23,QString(0x406));
         m_keymap.insert(0x24,QString(0x4A2));
         m_keymap.insert(0x25,QString(0x492));
-        m_keymap.insert(0x5E,QString(0x3A));
-        m_keymap.insert(0x26,QString(0x3B));
+        m_keymap.insert(0x5E,QString(0x3B));
+        m_keymap.insert(0x26,QString(0x3A));
         m_keymap.insert(0x2A,QString(0x4AE));
         m_keymap.insert(0x28,QString(0x4B0));
         m_keymap.insert(0x29,QString(0x49A));
