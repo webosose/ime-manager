@@ -134,7 +134,7 @@ QString LanguageInfoTable::getOwnLanguage(QString language)
 void LanguageInfoTable::initializeHashTable()
 {
     // initialize table
-    s_languageHash.reserve(50);
+    s_languageHash.reserve(100);
 
     s_languageHash.insert(QLocale::languageToString(QLocale::Albanian),
                           LanguageInfoElement(QString("sqi"), QString("sq"),   QLocale::LatinScript,   QString("shqipe")));
@@ -182,6 +182,8 @@ void LanguageInfoTable::initializeHashTable()
                           LanguageInfoElement(QString("kaz"), QString("kk"),   QLocale::CyrillicScript,QString("қазақ тілі")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Korean),
                           LanguageInfoElement(QString("kor"), QString("ko"),   QLocale::KoreanScript,  QString("한국어")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Khmer),
+                          LanguageInfoElement(QString("khm"), QString("km"), QLocale::KhmerScript, QString("ខ្មែរ")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Kurdish),
                           LanguageInfoElement(QString("kur"), QString("ku"),   QLocale::ArabicScript,  QString("کوردی")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Latvian),
@@ -232,8 +234,6 @@ void LanguageInfoTable::initializeHashTable()
                           LanguageInfoElement(QString("uzb"), QString("uz_Latn"),   QLocale::LatinScript,   QString("Oʻzbek")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Vietnamese),
                           LanguageInfoElement(QString("vie"), QString("vi"),   QLocale::LatinScript,   QString("Tiếng Việt")));
-    s_languageHash.insert(QLocale::languageToString(QLocale::Cambodian),
-                          LanguageInfoElement(QString("khm"), QString("km"),   QLocale::KhmerScript,   QString("ភាសាខ្មែរ")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Kannada),
                           LanguageInfoElement(QString("kan"), QString("kn"),   QLocale::KannadaScript, QString("ಕನ್ನಡ")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Bengali),
@@ -264,12 +264,58 @@ void LanguageInfoTable::initializeHashTable()
                           LanguageInfoElement(QString("aze"), QString("az"),   QLocale::LatinScript, QString("Azerbaijani")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Afrikaans),
                           LanguageInfoElement(QString("afr"), QString("af"),   QLocale::LatinScript, QString("Afrikaans")));
-    s_languageHash.insert(QLocale::languageToString(QLocale::Amharic),
-                          LanguageInfoElement(QString("amr"), QString("am"),   QLocale::EthiopicScript, QString("አማርኛ")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Japanese),
                           LanguageInfoElement(QString("jpn"), QString("ja"),   QLocale::JapaneseScript,QString("日本語")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Chinese) + "-" + QLocale::scriptToString(QLocale::SimplifiedChineseScript),
                           LanguageInfoElement(QString("zho"), QString("zh_Hans"), QLocale::SimplifiedChineseScript, QString("中文")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Chinese) + "-" + QLocale::scriptToString(QLocale::TraditionalChineseScript),
                           LanguageInfoElement(QString("zho"), QString("zh_Hant"), QLocale::TraditionalChineseScript, QString("中文")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Armenian),
+                          LanguageInfoElement(QString("hye"), QString("hy"),   QLocale::ArmenianScript, QString("հայերեն")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Bashkir),
+                          LanguageInfoElement(QString("bak"), QString("ba"),   QLocale::CyrillicScript,QString("Башҡорттар")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Icelandic),
+                          LanguageInfoElement(QString("isl"), QString("is"),   QLocale::LatinScript,   QString("Icelandic")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Belarusian),
+                          LanguageInfoElement(QString("bel"), QString("be"),   QLocale::CyrillicScript,   QString("беларускі")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Catalan),
+                          LanguageInfoElement(QString("cat"), QString("ca"),   QLocale::LatinScript,   QString("Català")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Igbo),
+                          LanguageInfoElement(QString("ibo"), QString("ig"),   QLocale::LatinScript,   QString("Igbo")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Kirghiz),
+                          LanguageInfoElement(QString("kir"), QString("ky"),   QLocale::CyrillicScript,   QString("Кыргызча")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Luxembourgish),
+                          LanguageInfoElement(QString("ltz"), QString("lb"),   QLocale::LatinScript,   QString("Lëtzebuergesch")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Maltese),
+                          LanguageInfoElement(QString("mlt"), QString("mt"),   QLocale::LatinScript,   QString("Malti")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Nepali),
+                          LanguageInfoElement(QString("nep"), QString("ne"),   QLocale::DevanagariScript,   QString("नेपाली")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::NorthernSotho),
+                          LanguageInfoElement(QString("nso"), QString("nso"),   QLocale::LatinScript,   QString("Sesotho sa Leboa")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Tajik),
+                          LanguageInfoElement(QString("tgk"), QString("tg"),   QLocale::CyrillicScript,   QString("тоҷикӣ")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Pashto),
+                          LanguageInfoElement(QString("pus"), QString("ps"),   QLocale::ArabicScript,   QString("پښتو")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Tatar),
+                          LanguageInfoElement(QString("tat"), QString("tt"),   QLocale::CyrillicScript,   QString("татар теле")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Turkmen),
+                          LanguageInfoElement(QString("tuk"), QString("tk"),   QLocale::LatinScript,   QString("Türkmen")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Uighur),
+                          LanguageInfoElement(QString("uig"), QString("ug"),   QLocale::ArabicScript,   QString("ئۇيغۇرچە")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Wolof),
+                          LanguageInfoElement(QString("wol"), QString("wo"),   QLocale::LatinScript,   QString("Wollof")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Yoruba),
+                          LanguageInfoElement(QString("yor"), QString("yo"),   QLocale::LatinScript,   QString("Yorùbá")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Lao),
+                          LanguageInfoElement(QString("lao"), QString("lo"),   QLocale::LaoScript,   QString("ພາສາລາວ")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Georgian),
+                          LanguageInfoElement(QString("kat"), QString("ka"),   QLocale::GeorgianScript,   QString("ქართული")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Burmese),
+                          LanguageInfoElement(QString("mya"), QString("my"),   QLocale::LaoScript,   QString("ဗမာစာ")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Welsh),
+                          LanguageInfoElement(QString("cym"), QString("cy"),   QLocale::LatinScript,   QString("Cymraeg")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Zulu),
+                          LanguageInfoElement(QString("zul"), QString("zu"),   QLocale::LatinScript,   QString("isiZulu")));
+    s_languageHash.insert(QLocale::languageToString(QLocale::Somali),
+                          LanguageInfoElement(QString("som"), QString("so"),   QLocale::CyrillicScript,   QString("af Soomaali")));
 }

@@ -63,6 +63,30 @@
         <file>ha.json</file>
         <file>az.json</file>
         <file>af.json</file>
-        <file>am.json</file>
+        <file>be.json</file>
+        <file>bs.json</file>
+        <file>ca.json</file>
+        <file>cy.json</file>
+        <file>hi.json</file>
+        <file>ig.json</file>
+        <file>is.json</file>
+        <file>ka.json</file>
+        <file>ky.json</file>
+        <file>lb.json</file>
+        <file>lo.json</file>
+        <file>mt.json</file>
+        <file>my.json</file>
+        <file>ne.json</file>
+        <file>nso.json</file>
+        <file>ps.json</file>
+        <file>so.json</file>
+        <file>tg.json</file>
+        <file>tk.json</file>
+        <file>tt.json</file>
+        <file>ug.json</file>
+        <file>wo.json</file>
+        <file>yo.json</file>
+        <file>zu.json</file>
+        <file>hy.json</file>
     </qresource>
 </RCC>

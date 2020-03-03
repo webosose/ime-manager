@@ -4,892 +4,874 @@
         "Col": "12",
         "Key": [
             {
-                "keysym": "0x31",
-                "rawcode": "2",
-                "sw_keycode": "3653",
-                "hw_keycode": "3653",
-                "index": "1",
-                "dead_key": "0",
-                "keylabel": "១"
-            },
-            {
-                "keysym": "0x32",
-                "rawcode": "3",
-                "sw_keycode": "47",
-                "hw_keycode": "47",
-                "index": "2",
-                "dead_key": "0",
-                "keylabel": "២"
-            },
-            {
-                "keysym": "0x33",
-                "rawcode": "4",
-                "sw_keycode": "45",
-                "hw_keycode": "45",
-                "index": "3",
-                "dead_key": "0",
-                "keylabel": "៣"
-            },
-            {
-                "keysym": "0x34",
-                "rawcode": "5",
-                "sw_keycode": "3616",
-                "hw_keycode": "3616",
-                "index": "4",
-                "dead_key": "0",
-                "keylabel": "៤"
-            },
-            {
-                "keysym": "0x35",
-                "rawcode": "6",
-                "sw_keycode": "3606",
-                "hw_keycode": "3606",
-                "index": "5",
-                "dead_key": "0",
-                "keylabel": "៥"
-            },
-            {
-                "keysym": "0x36",
-                "rawcode": "7",
-                "sw_keycode": "3640",
-                "hw_keycode": "3640",
-                "index": "6",
-                "dead_key": "0",
-                "keylabel": "៦"
-            },
-            {
-                "keysym": "0x37",
-                "rawcode": "8",
-                "sw_keycode": "3638",
-                "hw_keycode": "3638",
-                "index": "7",
-                "dead_key": "0",
-                "keylabel": "៧"
-            },
-            {
-                "keysym": "0x38",
-                "rawcode": "9",
-                "sw_keycode": "3588",
-                "hw_keycode": "3588",
-                "index": "8",
-                "dead_key": "0",
-                "keylabel": "៨"
-            },
-            {
-                "keysym": "0x39",
-                "rawcode": "10",
-                "sw_keycode": "3605",
-                "hw_keycode": "3605",
-                "index": "9",
-                "dead_key": "0",
-                "keylabel": "៩"
-            },
-            {
-                "keysym": "0x30",
-                "rawcode": "11",
-                "sw_keycode": "3592",
-                "hw_keycode": "3592",
-                "index": "10",
-                "dead_key": "0",
-                "keylabel": "០"
-            },
-            {
-                "keysym": "0x2D",
-                "rawcode": "12",
-                "sw_keycode": "3586",
-                "hw_keycode": "3586",
-                "index": "11",
-                "dead_key": "0",
-                "keylabel": "ឥ"
-            },
-            {
-                "keysym": "0x3D",
-                "rawcode": "13",
-                "sw_keycode": "3594",
-                "hw_keycode": "3594",
-                "index": "12",
-                "dead_key": "0",
-                "keylabel": "ឲ"
-            },
-            {
-                "keysym": "0x71",
-                "rawcode": "16",
-                "sw_keycode": "3654",
-                "hw_keycode": "3654",
-                "index": "13",
-                "dead_key": "0",
-                "keylabel": "ឆ"
-            },
-            {
-                "keysym": "0x77",
-                "rawcode": "17",
-                "sw_keycode": "3652",
-                "hw_keycode": "3652",
-                "index": "14",
-                "dead_key": "0",
-                "keylabel": "ឹ"
-            },
-            {
-                "keysym": "0x65",
-                "rawcode": "18",
-                "sw_keycode": "3635",
-                "hw_keycode": "3635",
-                "index": "15",
-                "dead_key": "0",
-                "keylabel": "េ"
-            },
-            {
-                "keysym": "0x72",
-                "rawcode": "19",
-                "sw_keycode": "3614",
-                "hw_keycode": "3614",
-                "index": "16",
-                "dead_key": "0",
-                "keylabel": "រ"
-            },
-            {
-                "keysym": "0x74",
-                "rawcode": "20",
-                "sw_keycode": "3632",
-                "hw_keycode": "3632",
-                "index": "17",
-                "dead_key": "0",
-                "keylabel": "ត"
-            },
-            {
-                "keysym": "0x79",
-                "rawcode": "21",
-                "sw_keycode": "3633",
-                "hw_keycode": "3633",
-                "index": "18",
-                "dead_key": "0",
-                "keylabel": "យ"
-            },
-            {
-                "keysym": "0x75",
-                "rawcode": "22",
-                "sw_keycode": "3637",
-                "hw_keycode": "3637",
-                "index": "19",
-                "dead_key": "0",
-                "keylabel": "ុ"
-            },
-            {
-                "keysym": "0x69",
-                "rawcode": "23",
-                "sw_keycode": "3619",
-                "hw_keycode": "3619",
-                "index": "20",
-                "dead_key": "0",
-                "keylabel": "ិ"
-            },
-            {
-                "keysym": "0x6F",
-                "rawcode": "24",
-                "sw_keycode": "3609",
-                "hw_keycode": "3609",
-                "index": "21",
-                "dead_key": "0",
-                "keylabel": "ោ"
-            },
-            {
-                "keysym": "0x70",
-                "rawcode": "25",
-                "sw_keycode": "3618",
-                "hw_keycode": "3618",
-                "index": "22",
-                "dead_key": "0",
-                "keylabel": "ផ"
-            },
-            {
-                "keysym": "0x5B",
-                "rawcode": "26",
-                "sw_keycode": "3610",
-                "hw_keycode": "3610",
-                "index": "23",
-                "dead_key": "0",
-                "keylabel": "ៀ"
-            },
-            {
-                "keysym": "0x5D",
-                "rawcode": "27",
-                "sw_keycode": "3621",
-                "hw_keycode": "3621",
-                "index": "24",
-                "dead_key": "0",
-                "keylabel": "ឪ"
-            },
-            {
-                "keysym": "0X61",
-                "rawcode": "30",
-                "sw_keycode": "3615",
-                "hw_keycode": "3615",
-                "index": "26",
-                "dead_key": "0",
-                "keylabel": "ា"
-            },
-            {
-                "keysym": "0x73",
-                "rawcode": "31",
-                "sw_keycode": "3627",
-                "hw_keycode": "3627",
-                "index": "27",
-                "dead_key": "0",
-                "keylabel": "ស"
-            },
-            {
-                "keysym": "0x64",
-                "rawcode": "32",
-                "sw_keycode": "3585",
-                "hw_keycode": "3585",
-                "index": "28",
-                "dead_key": "0",
-                "keylabel": "ដ"
-            },
-            {
-                "keysym": "0x66",
-                "rawcode": "33",
-                "sw_keycode": "3604",
-                "hw_keycode": "3604",
-                "index": "29",
-                "dead_key": "0",
-                "keylabel": "ថ"
-            },
-            {
-                "keysym": "0x67",
-                "rawcode": "34",
-                "sw_keycode": "3648",
-                "hw_keycode": "3648",
-                "index": "30",
-                "dead_key": "0",
-                "keylabel": "ង"
-            },
-            {
-                "keysym": "0x68",
-                "rawcode": "35",
-                "sw_keycode": "3657",
-                "hw_keycode": "3657",
-                "index": "31",
-                "dead_key": "0",
-                "keylabel": "ហ"
-            },
-            {
-                "keysym": "0x6A",
-                "rawcode": "36",
-                "sw_keycode": "3656",
-                "hw_keycode": "3656",
-                "index": "32",
-                "dead_key": "0",
-                "keylabel": "\u25CC\u17D2"
-            },
-            {
-                "keysym": "0x6B",
-                "rawcode": "37",
-                "sw_keycode": "3634",
-                "hw_keycode": "3634",
-                "index": "33",
-                "dead_key": "0",
-                "keylabel": "ក"
-            },
-            {
-                "keysym": "0x6C",
-                "rawcode": "38",
-                "sw_keycode": "3626",
-                "hw_keycode": "3626",
-                "index": "34",
-                "dead_key": "0",
-                "keylabel": "ល"
-            },
-            {
-                "keysym": "0x3B",
-                "rawcode": "39",
-                "sw_keycode": "3623",
-                "hw_keycode": "3623",
-                "index": "35",
-                "dead_key": "0",
-                "keylabel": "ើ"
-            },
-            {
-                "keysym": "0x27",
-                "rawcode": "40",
-                "sw_keycode": "3591",
-                "hw_keycode": "3591",
-                "index": "36",
-                "dead_key": "0",
-                "keylabel": "់"
-            },
-	    {
-                "keysym": "0x5C",
-                "rawcode": "256",
-                "sw_keycode": "63",
-                "hw_keycode": "46",
-                "index": "37",
-                "dead_key": "0",
-                "keylabel": "ឮ"
-            },
-            {
-                "keysym": "0x7A",
-                "rawcode": "258",
-                "sw_keycode": "64",
-                "hw_keycode": "64",
-                "index": "39",
-                "dead_key": "0",
-                "keylabel": "ឋ"
-            },
-            {
-                "keysym": "0x78",
-                "rawcode": "44",
-                "sw_keycode": "3612",
-                "hw_keycode": "3612",
-                "index": "40",
-                "dead_key": "0",
-                "keylabel": "ខ"
-            },
-            {
-                "keysym": "0x63",
-                "rawcode": "45",
-                "sw_keycode": "3611",
-                "hw_keycode": "3611",
-                "index": "41",
-                "dead_key": "0",
-                "keylabel": "ច"
-            },
-            {
-                "keysym": "0x76",
-                "rawcode": "46",
-                "sw_keycode": "3649",
-                "hw_keycode": "3649",
-                "index": "42",
-                "dead_key": "0",
-                "keylabel": "វ"
-            },
-            {
-                "keysym": "0x62",
-                "rawcode": "47",
-                "sw_keycode": "3629",
-                "hw_keycode": "3629",
-                "index": "43",
-                "dead_key": "0",
-                "keylabel": "ប"
-            },
-            {
-                "keysym": "0x6E",
-                "rawcode": "48",
-                "sw_keycode": "3636",
-                "hw_keycode": "3636",
-                "index": "44",
-                "dead_key": "0",
-                "keylabel": "ន"
-            },
-            {
-                "keysym": "0x6D",
-                "rawcode": "49",
-                "sw_keycode": "3639",
-                "hw_keycode": "3639",
-                "index": "45",
-                "dead_key": "0",
-                "keylabel": "ម"
-            },
-            {
-                "keysym": "0x2C",
-                "rawcode": "50",
-                "sw_keycode": "3607",
-                "hw_keycode": "3607",
-                "index": "46",
-                "dead_key": "0",
-                "keylabel": "ុំ"
-            },
-            {
-                "keysym": "0x2E",
-                "rawcode": "51",
-                "sw_keycode": "3617",
-                "hw_keycode": "3617",
-                "index": "47",
-                "dead_key": "0",
-                 "keylabel": "។"
-            },
-            {
-                "keysym": "0x2F",
-                "rawcode": "52",
-                "sw_keycode": "3651",
-                "hw_keycode": "3651",
-                "index": "48",
-                "dead_key": "0",
-                "keylabel": "៊"
-            },
-            {
-                "keysym": "0x60",
+                "keysym": "0x00ba",
                 "rawcode": "41",
                 "sw_keycode": "0",
-                "hw_keycode": "95",
+                "hw_keycode": "186",
+                "index": "-1",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x0031",
+                "rawcode": "2",
+                "sw_keycode": "49",
+                "hw_keycode": "49",
                 "index": "0",
                 "dead_key": "0",
-                "keylabel": "«"
+                "keylabel": "1"
             },
             {
-                "keysym": "0x7E",
-                "rawcode": "53",
-                "sw_keycode": "3613",
-                "hw_keycode": "3613",
-                "index": "49",
+                "keysym": "0x0032",
+                "rawcode": "3",
+                "sw_keycode": "50",
+                "hw_keycode": "50",
+                "index": "1",
+                "dead_key": "0",
+                "keylabel": "2"
+            },
+            {
+                "keysym": "0x0033",
+                "rawcode": "4",
+                "sw_keycode": "51",
+                "hw_keycode": "51",
+                "index": "2",
+                "dead_key": "0",
+                "keylabel": "3"
+            },
+            {
+                "keysym": "0x0034",
+                "rawcode": "5",
+                "sw_keycode": "52",
+                "hw_keycode": "52",
+                "index": "3",
+                "dead_key": "0",
+                "keylabel": "4"
+            },
+            {
+                "keysym": "0x0035",
+                "rawcode": "6",
+                "sw_keycode": "53",
+                "hw_keycode": "53",
+                "index": "4",
+                "dead_key": "0",
+                "keylabel": "5"
+            },
+            {
+                "keysym": "0x0036",
+                "rawcode": "7",
+                "sw_keycode": "54",
+                "hw_keycode": "54",
+                "index": "5",
+                "dead_key": "0",
+                "keylabel": "6"
+            },
+            {
+                "keysym": "0x0037",
+                "rawcode": "8",
+                "sw_keycode": "55",
+                "hw_keycode": "55",
+                "index": "6",
+                "dead_key": "0",
+                "keylabel": "7"
+            },
+            {
+                "keysym": "0x0038",
+                "rawcode": "9",
+                "sw_keycode": "56",
+                "hw_keycode": "56",
+                "index": "7",
+                "dead_key": "0",
+                "keylabel": "8"
+            },
+            {
+                "keysym": "0x0039",
+                "rawcode": "10",
+                "sw_keycode": "57",
+                "hw_keycode": "57",
+                "index": "8",
+                "dead_key": "0",
+                "keylabel": "9"
+            },
+            {
+                "keysym": "0x0030",
+                "rawcode": "11",
+                "sw_keycode": "48",
+                "hw_keycode": "48",
+                "index": "9",
+                "dead_key": "0",
+                "keylabel": "0"
+            },
+            {
+                "keysym": "0x002D",
+                "rawcode": "13",
+                "sw_keycode": "0",
+                "hw_keycode": "161",
+                "index": "10",
+                "dead_key": "0",
+                "keylabel": "-"
+            },
+            {
+                "keysym": "0x003D",
+                "rawcode": "12",
+                "sw_keycode": "161",
+                "hw_keycode": "39",
+                "index": "11",
+                "dead_key": "0",
+                "keylabel": "="
+            },
+            {
+                "keysym": "0x0071",
+                "rawcode": "16",
+                "sw_keycode": "113",
+                "hw_keycode": "113",
+                "index": "12",
+                "dead_key": "0",
+                "keylabel": "q"
+            },
+            {
+                "keysym": "0x0077",
+                "rawcode": "17",
+                "sw_keycode": "119",
+                "hw_keycode": "119",
+                "index": "13",
+                "dead_key": "0",
+                "keylabel": "w"
+            },
+            {
+                "keysym": "0x0065",
+                "rawcode": "18",
+                "sw_keycode": "101",
+                "hw_keycode": "101",
+                "index": "14",
+                "dead_key": "0",
+                "keylabel": "e"
+            },
+            {
+                "keysym": "0x0072",
+                "rawcode": "19",
+                "sw_keycode": "114",
+                "hw_keycode": "114",
+                "index": "15",
+                "dead_key": "0",
+                "keylabel": "r"
+            },
+            {
+                "keysym": "0x0074",
+                "rawcode": "20",
+                "sw_keycode": "116",
+                "hw_keycode": "116",
+                "index": "16",
+                "dead_key": "0",
+                "keylabel": "t"
+            },
+            {
+                "keysym": "0x0079",
+                "rawcode": "21",
+                "sw_keycode": "121",
+                "hw_keycode": "121",
+                "index": "17",
+                "dead_key": "0",
+                "keylabel": "y"
+            },
+            {
+                "keysym": "0x0075",
+                "rawcode": "22",
+                "sw_keycode": "117",
+                "hw_keycode": "117",
+                "index": "18",
+                "dead_key": "0",
+                "keylabel": "u"
+            },
+            {
+                "keysym": "0x0069",
+                "rawcode": "23",
+                "sw_keycode": "105",
+                "hw_keycode": "105",
+                "index": "19",
+                "dead_key": "0",
+                "keylabel": "i"
+            },
+            {
+                "keysym": "0x006f",
+                "rawcode": "24",
+                "sw_keycode": "111",
+                "hw_keycode": "111",
+                "index": "20",
+                "dead_key": "0",
+                "keylabel": "o"
+            },
+            {
+                "keysym": "0x0070",
+                "rawcode": "25",
+                "sw_keycode": "112",
+                "hw_keycode": "112",
+                "index": "21",
+                "dead_key": "0",
+                "keylabel": "p"
+            },
+            {
+                "keysym": "0x005B",
+                "rawcode": "26",
+                "sw_keycode": "231",
+                "hw_keycode": "96",
+                "index": "22",
+                "dead_key": "1",
+                "keylabel": "ġ"
+            },
+            {
+                "keysym": "0x005D",
+                "rawcode": "27",
+                "sw_keycode": "0",
+                "hw_keycode": "43",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "ħ"
+            },
+            {
+                "keysym": "0x00e7",
+                "rawcode": "43",
+                "sw_keycode": "0",
+                "hw_keycode": "231",
+                "index": "-1",
                 "dead_key": "0",
                 "keylabel": ""
             },
             {
-                "keysym": "0x7D",
-                "rawcode": "54",
+                "keysym": "0x0061",
+                "rawcode": "30",
+                "sw_keycode": "97",
+                "hw_keycode": "97",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "a"
+            },
+            {
+                "keysym": "0x0073",
+                "rawcode": "31",
+                "sw_keycode": "115",
+                "hw_keycode": "115",
+                "index": "24",
+                "dead_key": "0",
+                "keylabel": "s"
+            },
+            {
+                "keysym": "0x0064",
+                "rawcode": "32",
+                "sw_keycode": "100",
+                "hw_keycode": "100",
+                "index": "25",
+                "dead_key": "0",
+                "keylabel": "d"
+            },
+            {
+                "keysym": "0x0066",
+                "rawcode": "33",
+                "sw_keycode": "102",
+                "hw_keycode": "102",
+                "index": "26",
+                "dead_key": "0",
+                "keylabel": "f"
+            },
+            {
+                "keysym": "0x0067",
+                "rawcode": "34",
+                "sw_keycode": "103",
+                "hw_keycode": "103",
+                "index": "27",
+                "dead_key": "0",
+                "keylabel": "g"
+            },
+            {
+                "keysym": "0x0068",
+                "rawcode": "35",
+                "sw_keycode": "104",
+                "hw_keycode": "104",
+                "index": "28",
+                "dead_key": "0",
+                "keylabel": "h"
+            },
+            {
+                "keysym": "0x006a",
+                "rawcode": "36",
+                "sw_keycode": "106",
+                "hw_keycode": "106",
+                "index": "29",
+                "dead_key": "0",
+                "keylabel": "j"
+            },
+            {
+                "keysym": "0x006b",
+                "rawcode": "37",
+                "sw_keycode": "107",
+                "hw_keycode": "107",
+                "index": "30",
+                "dead_key": "0",
+                "keylabel": "k"
+            },
+            {
+                "keysym": "0x006c",
+                "rawcode": "38",
+                "sw_keycode": "108",
+                "hw_keycode": "108",
+                "index": "31",
+                "dead_key": "0",
+                "keylabel": "l"
+            },
+            {
+                "keysym": "0x003B",
+                "rawcode": "39",
+                "sw_keycode": "241",
+                "hw_keycode": "241",
+                "index": "32",
+                "dead_key": "0",
+                "keylabel": ";"
+            },
+            {
+                "keysym": "0x0027",
+                "rawcode": "40",
+                "sw_keycode": "0",
+                "hw_keycode": "180",
+                "index": "33",
+                "dead_key": "0",
+                "keylabel": "'"
+            },
+            {
+                "keysym": "0x001A",
+                "rawcode": "86",
+                "sw_keycode": "64",
+                "hw_keycode": "60",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "#"
+            },
+            {
+                "keysym": "0x007a",
+                "rawcode": "44",
+                "sw_keycode": "122",
+                "hw_keycode": "122",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "z"
+            },
+            {
+                "keysym": "0x0078",
+                "rawcode": "45",
+                "sw_keycode": "120",
+                "hw_keycode": "120",
+                "index": "35",
+                "dead_key": "0",
+                "keylabel": "x"
+            },
+            {
+                "keysym": "0x0063",
+                "rawcode": "46",
+                "sw_keycode": "99",
+                "hw_keycode": "99",
+                "index": "36",
+                "dead_key": "0",
+                "keylabel": "c"
+            },
+            {
+                "keysym": "0x0076",
+                "rawcode": "47",
+                "sw_keycode": "118",
+                "hw_keycode": "118",
+                "index": "37",
+                "dead_key": "0",
+                "keylabel": "v"
+            },
+            {
+                "keysym": "0x0062",
+                "rawcode": "48",
+                "sw_keycode": "98",
+                "hw_keycode": "98",
+                "index": "38",
+                "dead_key": "0",
+                "keylabel": "b"
+            },
+            {
+                "keysym": "0x006e",
+                "rawcode": "49",
+                "sw_keycode": "110",
+                "hw_keycode": "110",
+                "index": "39",
+                "dead_key": "0",
+                "keylabel": "n"
+            },
+            {
+                "keysym": "0x006d",
+                "rawcode": "50",
+                "sw_keycode": "109",
+                "hw_keycode": "109",
+                "index": "40",
+                "dead_key": "0",
+                "keylabel": "m"
+            },
+            {
+                "keysym": "0x002C",
+                "rawcode": "51",
                 "sw_keycode": "44",
-                "hw_keycode": "0",
-                "index": "50",
+                "hw_keycode": "44",
+                "index": "41",
                 "dead_key": "0",
-                "keylabel": ""
+                "keylabel": ","
+            },
+            {
+                "keysym": "0x002e",
+                "rawcode": "52",
+                "sw_keycode": "46",
+                "hw_keycode": "46",
+                "index": "42",
+                "dead_key": "0",
+                "keylabel": "."
+            },
+            {
+                "keysym": "0x002F",
+                "rawcode": "53",
+                "sw_keycode": "63",
+                "hw_keycode": "45",
+                "index": "43",
+                "dead_key": "0",
+                "keylabel": "/"
             }
         ]
     },
     "Shift_keys": {
         "Row": "4",
-        "Col": "12",
+        "Col": "11",
         "Key": [
             {
-                "keysym": "0x21",
+                "keysym": "0x00aa",
+                "rawcode": "41",
+                "sw_keycode": "0",
+                "hw_keycode": "170",
+                "index": "-1",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x0021",
                 "rawcode": "2",
-                "sw_keycode": "48",
-                "hw_keycode": "43",
-                "index": "1",
+                "sw_keycode": "49",
+                "hw_keycode": "33",
+                "index": "0",
                 "dead_key": "0",
                 "keylabel": "!"
             },
             {
-                "keysym": "0x40",
+                "keysym": "0x0040",
                 "rawcode": "3",
-                "sw_keycode": "49",
-                "hw_keycode": "3665",
-                "index": "2",
-                "dead_key": "0",
-                "keylabel": "ៗ"
-            },
-            {
-                "keysym": "0x23",
-                "rawcode": "4",
                 "sw_keycode": "50",
-                "hw_keycode": "3666",
-                "index": "3",
+                "hw_keycode": "34",
+                "index": "1",
                 "dead_key": "0",
                 "keylabel": "\""
             },
             {
-                "keysym": "0x24",
-                "rawcode": "5",
+                "keysym": "0x0023",
+                "rawcode": "4",
                 "sw_keycode": "51",
-                "hw_keycode": "3667",
-                "index": "4",
+                "hw_keycode": "183",
+                "index": "2",
                 "dead_key": "0",
-                "keylabel": "៛"
+                "keylabel": "€"
             },
             {
-                "keysym": "0x25",
-                "rawcode": "6",
+                "keysym": "0x0024",
+                "rawcode": "5",
                 "sw_keycode": "52",
-                "hw_keycode": "3668",
-                "index": "5",
+                "hw_keycode": "36",
+                "index": "3",
+                "dead_key": "0",
+                "keylabel": "$"
+            },
+            {
+                "keysym": "0x0025",
+                "rawcode": "6",
+                "sw_keycode": "53",
+                "hw_keycode": "37",
+                "index": "4",
                 "dead_key": "0",
                 "keylabel": "%"
             },
             {
-                "keysym": "0x5E",
+                "keysym": "0x005E",
                 "rawcode": "7",
-                "sw_keycode": "3641",
-                "hw_keycode": "3641",
+                "sw_keycode": "54",
+                "hw_keycode": "38",
+                "index": "5",
+                "dead_key": "0",
+                "keylabel": "^"
+            },
+            {
+                "keysym": "0x0026",
+                "rawcode": "8",
+                "sw_keycode": "55",
+                "hw_keycode": "47",
                 "index": "6",
                 "dead_key": "0",
-                "keylabel": "៍"
+                "keylabel": "&"
             },
             {
-                "keysym": "0x26",
-                "rawcode": "8",
-                "sw_keycode": "3647",
-                "hw_keycode": "3647",
+                "keysym": "0x002A",
+                "rawcode": "9",
+                "sw_keycode": "56",
+                "hw_keycode": "40",
                 "index": "7",
                 "dead_key": "0",
-                "keylabel": "័"
+                "keylabel": "*"
             },
             {
-                "keysym": "0x2A",
-                "rawcode": "9",
-                "sw_keycode": "53",
-                "hw_keycode": "3669",
-                "index": "8",
-                "dead_key": "0",
-                "keylabel": "៏"
-            },
-            {
-                "keysym": "0x28",
+                "keysym": "0x0028",
                 "rawcode": "10",
-                "sw_keycode": "54",
-                "hw_keycode": "3670",
-                "index": "9",
+                "sw_keycode": "57",
+                "hw_keycode": "41",
+                "index": "8",
                 "dead_key": "0",
                 "keylabel": "("
             },
             {
-                "keysym": "0x29",
+                "keysym": "0x0029",
                 "rawcode": "11",
-                "sw_keycode": "55",
-                "hw_keycode": "3671",
-                "index": "10",
+                "sw_keycode": "48",
+                "hw_keycode": "61",
+                "index": "9",
                 "dead_key": "0",
                 "keylabel": ")"
             },
             {
-                "keysym": "0x5F",
+                "keysym": "0x005f",
                 "rawcode": "12",
-                "sw_keycode": "56",
-                "hw_keycode": "3672",
+                "sw_keycode": "191",
+                "hw_keycode": "63",
+                "index": "10",
+                "dead_key": "0",
+                "keylabel": "_"
+            },
+            {
+                "keysym": "0x002b",
+                "rawcode": "13",
+                "sw_keycode": "0",
+                "hw_keycode": "191",
                 "index": "11",
                 "dead_key": "0",
-                "keylabel": "៌"
+                "keylabel": "+"
             },
             {
-                "keysym": "0x2B",
-                "rawcode": "13",
-                "sw_keycode": "57",
-                "hw_keycode": "3673",
+                "keysym": "0x0051",
+                "rawcode": "16",
+                "sw_keycode": "81",
+                "hw_keycode": "81",
                 "index": "12",
                 "dead_key": "0",
-                "keylabel": "="
+                "keylabel": "Q"
             },
             {
-                "keysym": "0x51",
-                "rawcode": "16",
-                "sw_keycode": "0",
-                "hw_keycode": "3664",
+                "keysym": "0x0057",
+                "rawcode": "17",
+                "sw_keycode": "87",
+                "hw_keycode": "87",
                 "index": "13",
                 "dead_key": "0",
-                "keylabel": "ឈ"
+                "keylabel": "W"
             },
             {
-                "keysym": "0x57",
-                "rawcode": "17",
-                "sw_keycode": "34",
-                "hw_keycode": "34",
+                "keysym": "0x0045",
+                "rawcode": "18",
+                "sw_keycode": "69",
+                "hw_keycode": "69",
                 "index": "14",
                 "dead_key": "0",
-                "keylabel": "ឺ"
+                "keylabel": "E"
             },
             {
-                "keysym": "0x45",
-                "rawcode": "18",
-                "sw_keycode": "3598",
-                "hw_keycode": "3598",
+                "keysym": "0x0052",
+                "rawcode": "19",
+                "sw_keycode": "82",
+                "hw_keycode": "82",
                 "index": "15",
                 "dead_key": "0",
-                "keylabel": "ែ"
+                "keylabel": "R"
             },
             {
-                "keysym": "0x52",
-                "rawcode": "19",
-                "sw_keycode": "3601",
-                "hw_keycode": "3601",
+                "keysym": "0x0054",
+                "rawcode": "20",
+                "sw_keycode": "84",
+                "hw_keycode": "84",
                 "index": "16",
                 "dead_key": "0",
-                "keylabel": "ឬ"
+                "keylabel": "T"
             },
             {
-                "keysym": "0x54",
-                "rawcode": "20",
-                "sw_keycode": "3608",
-                "hw_keycode": "3608",
+                "keysym": "0x0059",
+                "rawcode": "21",
+                "sw_keycode": "89",
+                "hw_keycode": "89",
                 "index": "17",
                 "dead_key": "0",
-                "keylabel": "ទ"
+                "keylabel": "Y"
             },
             {
-                "keysym": "0x59",
-                "rawcode": "21",
-                "sw_keycode": "3661",
-                "hw_keycode": "3661",
+                "keysym": "0x0055",
+                "rawcode": "22",
+                "sw_keycode": "85",
+                "hw_keycode": "85",
                 "index": "18",
                 "dead_key": "0",
-                "keylabel": "ួ"
+                "keylabel": "U"
             },
             {
-                "keysym": "0x55",
-                "rawcode": "22",
-                "sw_keycode": "3658",
-                "hw_keycode": "3658",
+                "keysym": "0x0049",
+                "rawcode": "23",
+                "sw_keycode": "73",
+                "hw_keycode": "73",
                 "index": "19",
                 "dead_key": "0",
-                "keylabel": "ូ"
+                "keylabel": "I"
             },
             {
-                "keysym": "0x49",
-                "rawcode": "23",
-                "sw_keycode": "3603",
-                "hw_keycode": "3603",
+                "keysym": "0x004f",
+                "rawcode": "24",
+                "sw_keycode": "79",
+                "hw_keycode": "79",
                 "index": "20",
                 "dead_key": "0",
-                "keylabel": "ី"
+                "keylabel": "O"
             },
             {
-                "keysym": "0x4F",
-                "rawcode": "24",
-                "sw_keycode": "3631",
-                "hw_keycode": "3631",
+                "keysym": "0x0050",
+                "rawcode": "25",
+                "sw_keycode": "80",
+                "hw_keycode": "80",
                 "index": "21",
                 "dead_key": "0",
-                "keylabel": "ៅ"
+                "keylabel": "P"
             },
             {
-                "keysym": "0x50",
-                "rawcode": "25",
-                "sw_keycode": "3597",
-                "hw_keycode": "3597",
-                "index": "22",
-                "dead_key": "0",
-                "keylabel": "ភ"
-            },
-            {
-                "keysym": "0x7B",
+                "keysym": "0x007B",
                 "rawcode": "26",
-                "sw_keycode": "3600",
-                "hw_keycode": "3600",
-                "index": "23",
-                "dead_key": "0",
-                "keylabel": "ឿ"
+                "sw_keycode": "199",
+                "hw_keycode": "94",
+                "index": "22",
+                "dead_key": "1",
+                "keylabel": "Ġ"
             },
             {
-                "keysym": "0x7D",
+                "keysym": "0x007D",
                 "rawcode": "27",
                 "sw_keycode": "0",
-                "hw_keycode": "44",
+                "hw_keycode": "42",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "Ħ"
+            },
+            {
+                "keysym": "0x00c7",
+                "rawcode": "43",
+                "sw_keycode": "0",
+                "hw_keycode": "199",
+                "index": "-1",
+                "dead_key": "0",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x0041",
+                "rawcode": "30",
+                "sw_keycode": "65",
+                "hw_keycode": "65",
+                "index": "23",
+                "dead_key": "0",
+                "keylabel": "A"
+            },
+            {
+                "keysym": "0x0053",
+                "rawcode": "31",
+                "sw_keycode": "83",
+                "hw_keycode": "83",
                 "index": "24",
                 "dead_key": "0",
-                "keylabel": "ឧ"
+                "keylabel": "S"
             },
             {
-                "keysym": "0x41",
-                "rawcode": "30",
-                "sw_keycode": "3620",
-                "hw_keycode": "3620",
+                "keysym": "0x0044",
+                "rawcode": "32",
+                "sw_keycode": "68",
+                "hw_keycode": "68",
+                "index": "25",
+                "dead_key": "0",
+                "keylabel": "D"
+            },
+            {
+                "keysym": "0x0046",
+                "rawcode": "33",
+                "sw_keycode": "70",
+                "hw_keycode": "70",
                 "index": "26",
                 "dead_key": "0",
-                "keylabel": "ាំ"
+                "keylabel": "F"
             },
             {
-                "keysym": "0x53",
-                "rawcode": "31",
-                "sw_keycode": "3590",
-                "hw_keycode": "3590",
+                "keysym": "0x0047",
+                "rawcode": "34",
+                "sw_keycode": "71",
+                "hw_keycode": "71",
                 "index": "27",
                 "dead_key": "0",
-                "keylabel": "ៃ"
+                "keylabel": "G"
             },
             {
-                "keysym": "0x44",
-                "rawcode": "32",
-                "sw_keycode": "3599",
-                "hw_keycode": "3599",
+                "keysym": "0x0048",
+                "rawcode": "35",
+                "sw_keycode": "72",
+                "hw_keycode": "72",
                 "index": "28",
                 "dead_key": "0",
-                "keylabel": "ឌ"
+                "keylabel": "H"
             },
             {
-                "keysym": "0x46",
-                "rawcode": "33",
-                "sw_keycode": "3650",
-                "hw_keycode": "3650",
+                "keysym": "0x004a",
+                "rawcode": "36",
+                "sw_keycode": "74",
+                "hw_keycode": "74",
                 "index": "29",
                 "dead_key": "0",
-                "keylabel": "ធ"
+                "keylabel": "J"
             },
             {
-                "keysym": "0x47",
-                "rawcode": "34",
-                "sw_keycode": "3596",
-                "hw_keycode": "3596",
+                "keysym": "0x004b",
+                "rawcode": "37",
+                "sw_keycode": "75",
+                "hw_keycode": "75",
                 "index": "30",
                 "dead_key": "0",
-                "keylabel": "អ"
+                "keylabel": "K"
             },
             {
-                "keysym": "0x48",
-                "rawcode": "35",
-                "sw_keycode": "3655",
-                "hw_keycode": "3655",
+                "keysym": "0x004C",
+                "rawcode": "38",
+                "sw_keycode": "76",
+                "hw_keycode": "76",
                 "index": "31",
                 "dead_key": "0",
-                "keylabel": "ះ"
+                "keylabel": "L"
             },
             {
-                "keysym": "0x4A",
-                "rawcode": "36",
-                "sw_keycode": "3659",
-                "hw_keycode": "3659",
+                "keysym": "0x003A",
+                "rawcode": "39",
+                "sw_keycode": "209",
+                "hw_keycode": "209",
                 "index": "32",
                 "dead_key": "0",
-                "keylabel": "ញ"
+                "keylabel": ":"
             },
             {
-                "keysym": "0x4B",
-                "rawcode": "37",
-                "sw_keycode": "3625",
-                "hw_keycode": "3625",
-                "index": "33",
-                "dead_key": "0",
-                "keylabel": "គ"
-            },
-            {
-                "keysym": "0x4C",
-                "rawcode": "38",
-                "sw_keycode": "3624",
-                "hw_keycode": "3624",
-                "index": "34",
-                "dead_key": "0",
-                "keylabel": "ឡ"
-            },
-            {
-                "keysym": "0x3A",
-                "rawcode": "39",
-                "sw_keycode": "3595",
-                "hw_keycode": "3595",
-                "index": "35",
-                "dead_key": "0",
-                "keylabel": "ោះ"
-            },
-            {
-                "keysym": "0x22",
+                "keysym": "0x0022",
                 "rawcode": "40",
                 "sw_keycode": "0",
-                "hw_keycode": "46",
+                "hw_keycode": "168",
+                "index": "33",
+                "dead_key": "1",
+                "keylabel": "@"
+            },
+            {
+                "keysym": "0x001B",
+                "rawcode": "86",
+                "sw_keycode": "64",
+                "hw_keycode": "62",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "~"
+            },
+            {
+                "keysym": "0x005a",
+                "rawcode": "44",
+                "sw_keycode": "90",
+                "hw_keycode": "90",
+                "index": "34",
+                "dead_key": "0",
+                "keylabel": "Z"
+            },
+            {
+                "keysym": "0x0058",
+                "rawcode": "45",
+                "sw_keycode": "88",
+                "hw_keycode": "88",
+                "index": "35",
+                "dead_key": "0",
+                "keylabel": "X"
+            },
+            {
+                "keysym": "0x0043",
+                "rawcode": "46",
+                "sw_keycode": "67",
+                "hw_keycode": "67",
                 "index": "36",
                 "dead_key": "0",
-                "keylabel": "៉"
+                "keylabel": "C"
             },
             {
-                "keysym": "0x7C",
-                "rawcode": "256",
-                "sw_keycode": "63",
-                "hw_keycode": "46",
+                "keysym": "0x0056",
+                "rawcode": "47",
+                "sw_keycode": "86",
+                "hw_keycode": "86",
                 "index": "37",
                 "dead_key": "0",
-                "keylabel": "ឭ"
+                "keylabel": "V"
             },
             {
-                "keysym": "0x5A",
-                "rawcode": "258",
-                "sw_keycode": "64",
-                "hw_keycode": "64",
+                "keysym": "0x0042",
+                "rawcode": "48",
+                "sw_keycode": "66",
+                "hw_keycode": "66",
+                "index": "38",
+                "dead_key": "0",
+                "keylabel": "B"
+            },
+            {
+                "keysym": "0x004e",
+                "rawcode": "49",
+                "sw_keycode": "78",
+                "hw_keycode": "78",
                 "index": "39",
                 "dead_key": "0",
-                "keylabel": "ឍ"
+                "keylabel": "N"
             },
             {
-                "keysym": "0x58",
-                "rawcode": "44",
-                "sw_keycode": "40",
-                "hw_keycode": "40",
+                "keysym": "0x004d",
+                "rawcode": "50",
+                "sw_keycode": "77",
+                "hw_keycode": "77",
                 "index": "40",
                 "dead_key": "0",
-                "keylabel": "ឃ"
+                "keylabel": "M"
             },
             {
-                "keysym": "0x43",
-                "rawcode": "45",
-                "sw_keycode": "41",
-                "hw_keycode": "41",
+                "keysym": "0x003C",
+                "rawcode": "51",
+                "sw_keycode": "44",
+                "hw_keycode": "59",
                 "index": "41",
                 "dead_key": "0",
-                "keylabel": "ជ"
+                "keylabel": "<"
             },
             {
-                "keysym": "0x56",
-                "rawcode": "46",
-                "sw_keycode": "3593",
-                "hw_keycode": "3593",
+                "keysym": "0x003E",
+                "rawcode": "52",
+                "sw_keycode": "46",
+                "hw_keycode": "58",
                 "index": "42",
                 "dead_key": "0",
-                "keylabel": "េះ"
+                "keylabel": ">"
             },
             {
-                "keysym": "0x42",
-                "rawcode": "47",
-                "sw_keycode": "3630",
-                "hw_keycode": "3630",
+                "keysym": "0x003F",
+                "rawcode": "53",
+                "sw_keycode": "63",
+                "hw_keycode": "95",
                 "index": "43",
                 "dead_key": "0",
-                "keylabel": "ព"
-            },
-            {
-                "keysym": "0x4E",
-                "rawcode": "48",
-                "sw_keycode": "3642",
-                "hw_keycode": "3642",
-                "index": "44",
-                "dead_key": "0",
-                "keylabel": "ណ"
-            },
-            {
-                "keysym": "0x4D",
-                "rawcode": "49",
-                "sw_keycode": "3660",
-                "hw_keycode": "3660",
-                "index": "45",
-                "dead_key": "0",
-                "keylabel": "ំ"
-            },
-            {
-                "keysym": "0x3C",
-                "rawcode": "50",
-                "sw_keycode": "63",
-                "hw_keycode": "63",
-                "index": "46",
-                "dead_key": "0",
-                "keylabel": "ុះ"
-            },
-            {
-                "keysym": "0x3E",
-                "rawcode": "51",
-                "sw_keycode": "3602",
-                "hw_keycode": "3602",
-                "index": "47",
-                "dead_key": "0",
-                "keylabel": "៕"
-            },
-            {
-                "keysym": "0x3F",
-                "rawcode": "52",
-                "sw_keycode": "3628",
-                "hw_keycode": "3628",
-                "index": "48",
-                "dead_key": "0",
                 "keylabel": "?"
-            },
-            {
-                "keysym": "0x7E",
-                "rawcode": "41",
-                "sw_keycode": "0",
-                "hw_keycode": "37",
-                "index": "0",
-                "dead_key": "0",
-                "keylabel": "»"
-            },
-            {
-                "keysym": "0x00",
-                "rawcode": "53",
-                "sw_keycode": "3622",
-                "hw_keycode": "3622",
-                "index": "49",
-                "dead_key": "0",
-                "keylabel": ""
-            },
-            {
-                "keysym": "0x00",
-                "rawcode": "55",
-                "sw_keycode": "46",
-                "hw_keycode": "0",
-                "index": "51",
-                "dead_key": "0",
-                "keylabel": ""
             }
         ]
     },
@@ -997,7 +979,7 @@
                 "keylabel": "`"
             },
             {
-                "keysym": "0x007E",
+                "keysym": "0x007e",
                 "rawcode": "13",
                 "sw_keycode": "126",
                 "hw_keycode": "126",
@@ -1051,7 +1033,7 @@
                 "keylabel": "%"
             },
             {
-                "keysym": "0x005E",
+                "keysym": "0x005e",
                 "rawcode": "21",
                 "sw_keycode": "94",
                 "hw_keycode": "94",
@@ -1069,7 +1051,7 @@
                 "keylabel": "&"
             },
             {
-                "keysym": "0x002A",
+                "keysym": "0x002a",
                 "rawcode": "23",
                 "sw_keycode": "42",
                 "hw_keycode": "42",
@@ -1096,7 +1078,7 @@
                 "keylabel": ")"
             },
             {
-                "keysym": "0x00A7",
+                "keysym": "0x00a7",
                 "rawcode": "26",
                 "sw_keycode": "167",
                 "hw_keycode": "167",
@@ -1105,7 +1087,7 @@
                 "keylabel": "§"
             },
             {
-                "keysym": "0x00BF",
+                "keysym": "0x00bf",
                 "rawcode": "27",
                 "sw_keycode": "191",
                 "hw_keycode": "191",
@@ -1114,7 +1096,7 @@
                 "keylabel": "¿"
             },
             {
-                "keysym": "0x002D",
+                "keysym": "0x002d",
                 "rawcode": "43",
                 "sw_keycode": "45",
                 "hw_keycode": "45",
@@ -1123,7 +1105,7 @@
                 "keylabel": "-"
             },
             {
-                "keysym": "0x005F",
+                "keysym": "0x005f",
                 "rawcode": "30",
                 "sw_keycode": "95",
                 "hw_keycode": "95",
@@ -1132,7 +1114,7 @@
                 "keylabel": "_"
             },
             {
-                "keysym": "0x003D",
+                "keysym": "0x003d",
                 "rawcode": "31",
                 "sw_keycode": "61",
                 "hw_keycode": "61",
@@ -1141,7 +1123,7 @@
                 "keylabel": "="
             },
             {
-                "keysym": "0x002B",
+                "keysym": "0x002b",
                 "rawcode": "32",
                 "sw_keycode": "43",
                 "hw_keycode": "43",
@@ -1150,7 +1132,7 @@
                 "keylabel": "+"
             },
             {
-                "keysym": "0x005C",
+                "keysym": "0x005c",
                 "rawcode": "33",
                 "sw_keycode": "92",
                 "hw_keycode": "92",
@@ -1159,7 +1141,7 @@
                 "keylabel": "\\"
             },
             {
-                "keysym": "0x007C",
+                "keysym": "0x007c",
                 "rawcode": "34",
                 "sw_keycode": "124",
                 "hw_keycode": "124",
@@ -1168,7 +1150,7 @@
                 "keylabel": "|"
             },
             {
-                "keysym": "0x005B",
+                "keysym": "0x005b",
                 "rawcode": "35",
                 "sw_keycode": "91",
                 "hw_keycode": "91",
@@ -1177,7 +1159,7 @@
                 "keylabel": "["
             },
             {
-                "keysym": "0x005D",
+                "keysym": "0x005d",
                 "rawcode": "36",
                 "sw_keycode": "93",
                 "hw_keycode": "93",
@@ -1186,7 +1168,7 @@
                 "keylabel": "]"
             },
             {
-                "keysym": "0x007B",
+                "keysym": "0x007b",
                 "rawcode": "37",
                 "sw_keycode": "123",
                 "hw_keycode": "123",
@@ -1195,7 +1177,7 @@
                 "keylabel": "{"
             },
             {
-                "keysym": "0x007D",
+                "keysym": "0x007d",
                 "rawcode": "38",
                 "sw_keycode": "125",
                 "hw_keycode": "125",
@@ -1213,7 +1195,7 @@
                 "keylabel": "￦"
             },
             {
-                "keysym": "0x20AC",
+                "keysym": "0x20ac",
                 "rawcode": "40",
                 "sw_keycode": "8364",
                 "hw_keycode": "8364",
@@ -1222,7 +1204,7 @@
                 "keylabel": "€"
             },
             {
-                "keysym": "0x003B",
+                "keysym": "0x003b",
                 "rawcode": "44",
                 "sw_keycode": "59",
                 "hw_keycode": "59",
@@ -1231,7 +1213,7 @@
                 "keylabel": ";"
             },
             {
-                "keysym": "0x003A",
+                "keysym": "0x003a",
                 "rawcode": "45",
                 "sw_keycode": "58",
                 "hw_keycode": "58",
@@ -1258,7 +1240,7 @@
                 "keylabel": "\""
             },
             {
-                "keysym": "0x002C",
+                "keysym": "0x002c",
                 "rawcode": "48",
                 "sw_keycode": "44",
                 "hw_keycode": "44",
@@ -1267,7 +1249,7 @@
                 "keylabel": ","
             },
             {
-                "keysym": "0x002E",
+                "keysym": "0x002e",
                 "rawcode": "49",
                 "sw_keycode": "46",
                 "hw_keycode": "46",
@@ -1276,7 +1258,7 @@
                 "keylabel": "."
             },
             {
-                "keysym": "0x003C",
+                "keysym": "0x003c",
                 "rawcode": "50",
                 "sw_keycode": "60",
                 "hw_keycode": "60",
@@ -1285,7 +1267,7 @@
                 "keylabel": "<"
             },
             {
-                "keysym": "0x003E",
+                "keysym": "0x003e",
                 "rawcode": "51",
                 "sw_keycode": "62",
                 "hw_keycode": "62",
@@ -1294,7 +1276,7 @@
                 "keylabel": ">"
             },
             {
-                "keysym": "0x002F",
+                "keysym": "0x002f",
                 "rawcode": "52",
                 "sw_keycode": "47",
                 "hw_keycode": "47",
@@ -1303,7 +1285,7 @@
                 "keylabel": "/"
             },
             {
-                "keysym": "0x003F",
+                "keysym": "0x003f",
                 "rawcode": "53",
                 "sw_keycode": "63",
                 "hw_keycode": "63",
@@ -1312,7 +1294,7 @@
                 "keylabel": "?"
             },
             {
-                "keysym": "0x00A3",
+                "keysym": "0x00a3",
                 "rawcode": "54",
                 "sw_keycode": "163",
                 "hw_keycode": "163",
@@ -1321,7 +1303,7 @@
                 "keylabel": "£"
             },
             {
-                "keysym": "0x00A5",
+                "keysym": "0x00a5",
                 "rawcode": "55",
                 "sw_keycode": "165",
                 "hw_keycode": "165",
@@ -1339,95 +1321,121 @@
     },
     "Expand_keys": {
         "Row": "4",
-        "Col": "12",
+        "Col": "11",
         "Key": [
             {
-                "keysym": "0xA1",
                 "keycode": "",
+                "index": "-1",
+                "keylabel": ""
+            },
+            {
+                "keysym": "0x60",
+                "keycode": "225",
+                "index": "0",
+                "keylabel": "ċ"
+            },
+            {
+                "keysym": "0x017c",
+                "keycode": "233",
+                "index": "1",
+                "keylabel": "ż"
+            },
+            {
+                "keysym": "0xAE",
+                "keycode": "237",
                 "index": "2",
-                "keylabel": "@"
+                "keylabel": "è"
             },
             {
-                "keysym": "0xA2",
-                "keycode": "",
+                "keysym": "0xB2",
+                "keycode": "243",
                 "index": "3",
-                "keylabel": "៑"
+                "keylabel": "ù"
             },
             {
-                "keysym":"0xA3",
-                "keycode": "",
+                "keysym": "0xB3",
+                "keycode": "250",
                 "index": "4",
-                "keylabel": "$"
+                "keylabel": "ì"
             },
             {
-                "keysym":"0xA4",
-                "keycode": "",
+                "keysym": "0xB4",
+                "keycode": "252",
                 "index": "5",
-                "keylabel": "€"
+                "keylabel": "ò"
             },
             {
-                "keysym":"0xA5",
-                "keycode": "",
+                "keysym": "0xB8",
+                "keycode": "253",
                 "index": "6",
-                "keylabel": "៙"
+                "keylabel": "à"
             },
             {
-                "keysym":"0xA6",
                 "keycode": "",
                 "index": "7",
-                "keylabel": "៚"
+                "keylabel": ""
             },
             {
-                "keysym":"0xA7",
                 "keycode": "",
                 "index": "8",
-                "keylabel": "*"
+                "keylabel": ""
             },
             {
-                "keysym":"0xA8",
                 "keycode": "",
                 "index": "9",
-                "keylabel": "{"
+                "keylabel": ""
             },
             {
-                "keysym":"0xA9",
                 "keycode": "",
                 "index": "10",
-                "keylabel": "}"
+                "keylabel": ""
             },
             {
-                "keysym":"0xAA",
                 "keycode": "",
                 "index": "11",
-                "keylabel": "×"
+                "keylabel": ""
             },
             {
-                "keysym":"0xAB",
-                "keycode": "",
+                "keysym": "0x007E",
+                "keycode": "193",
                 "index": "12",
-                "keylabel": "៎"
+                "keylabel": "Ċ"
             },
             {
-                "keysym": "000",
+                "keysym": "0x017b",
+                "keycode": "201",
+                "index": "13",
+                "keylabel": "Ż"
+            },
+            {
+                "keysym": "0xE8",
+                "keycode": "205",
+                "index": "13",
+                "keylabel": "È"
+            },
+            {
+                "keysym": "0xEC",
+                "keycode": "211",
+                "index": "14",
+                "keylabel": "Ù"
+            },
+            {
+                "keysym": "0xED",
+                "keycode": "218",
                 "index": "15",
-                "keylabel": ""
+                "keylabel": "Ì"
             },
             {
-                "keysym": "0xAF",
-                "index": "15",
-                "keylabel": "ឯ"
-            },
-            {
-                "keysym":"0xB0",
-                "keycode": "",
+                "keysym": "0xEE",
+                "keycode": "220",
                 "index": "16",
-                "keylabel": "ឫ"
+                "keylabel": "Ò"
             },
             {
-                "keysym":"",
-                "keycode": "",
+                "keysym": "0xF2",
+                "keycode": "221",
                 "index": "17",
-                "keylabel": ""
+                "keylabel": "À"
             },
             {
                 "keycode": "",
@@ -1440,39 +1448,39 @@
                 "keylabel": ""
             },
             {
-                "keysym":"",
                 "keycode": "",
                 "index": "20",
                 "keylabel": ""
             },
             {
-                "keysym":"0xB3",
                 "keycode": "",
                 "index": "21",
-                "keylabel": "ឦ"
+                "keylabel": ""
             },
             {
-                "keysym":"0xB4",
                 "keycode": "",
                 "index": "22",
-                "keylabel": "ឱ"
+                "keylabel": ""
             },
             {
-                "keysym":"0xB5",
                 "keycode": "",
                 "index": "23",
-                "keylabel": "ឰ"
+                "keylabel": ""
             },
             {
-                "keysym":"0xB6",
                 "keycode": "",
                 "index": "24",
-                "keylabel": "ឩ"
+                "keylabel": ""
             },
             {
-                "keysym": "0xB7",
+                "keycode": "",
                 "index": "25",
-                "keylabel": "ឳ"
+                "keylabel": ""
+            },
+            {
+                "keycode": "",
+                "index": "26",
+                "keylabel": ""
             },
             {
                 "keycode": "",
@@ -1515,27 +1523,24 @@
                 "keylabel": ""
             },
             {
-                "keysym":"",
                 "keycode": "",
                 "index": "35",
                 "keylabel": ""
             },
             {
-                "keysym":"0xC1",
                 "keycode": "",
                 "index": "36",
-                "keylabel": "៖"
+                "keylabel": ""
             },
             {
-                "keysym":"0xC2",
                 "keycode": "",
                 "index": "37",
-                "keylabel": "ៈ"
+                "keylabel": ""
             },
             {
-                "keysym": "0xC4",
+                "keycode": "",
                 "index": "38",
-                "keylabel": "\\"
+                "keylabel": ""
             },
             {
                 "keycode": "",
@@ -1564,50 +1569,12 @@
             },
             {
                 "keycode": "",
-                "index": "43",
-                "keylabel": ""
-            },
-            {
-                "keysym":"",
-                "keycode": "",
-                "index": "46",
-                "keylabel": ""
-            },
-            {
-                "keysym":"0xCC",
-                "keycode": "",
-                "index": "47",
-                "keylabel": ","
-            },
-            {
-                "keysym":"0xCD",
-                "keycode": "",
-                "index": "48",
-                "keylabel": "."
-            },
-            {
-                "keysym": "0xCE",
-                "index": "49",
-                "keylabel": "/"
-            },
-            {
-                "keycode": "",
-                "index": "50",
+                "index": "-1",
                 "keylabel": ""
             },
             {
                 "keycode": "",
-                "index": "51",
-                "keylabel": ""
-            },
-            {
-                "keycode": "",
-                "index": "52",
-                "keylabel": ""
-            },
-            {
-                "keycode": "",
-                "index": "53",
+                "index": "-1",
                 "keylabel": ""
             }
         ]
