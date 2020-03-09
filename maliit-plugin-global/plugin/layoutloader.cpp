@@ -77,7 +77,7 @@ LayoutLoader::~LayoutLoader()
 
 void LayoutLoader::initFileTable()
 {
-    s_hash.reserve(50);
+    s_hash.reserve(100);
     s_hash.insert(QLocale::languageToString(QLocale::English),   ":/jsons/en.json");
     s_hash.insert(QLocale::languageToString(QLocale::Korean),    ":/jsons/ko.json");
     s_hash.insert(QLocale::languageToString(QLocale::Russian),   ":/jsons/ru.json");
@@ -85,7 +85,7 @@ void LayoutLoader::initFileTable()
     s_hash.insert(QLocale::languageToString(QLocale::Croatian),  ":/jsons/hr.json");
     s_hash.insert(QLocale::languageToString(QLocale::Danish),    ":/jsons/dk.json");
     s_hash.insert(QLocale::languageToString(QLocale::Norwegian), ":/jsons/no.json");
-    s_hash.insert(QLocale::languageToString(QLocale::Bosnian),   ":/jsons/ba.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Bosnian),   ":/jsons/bs.json");
     s_hash.insert(QLocale::languageToString(QLocale::Bulgarian), ":/jsons/bg.json");
     s_hash.insert(QLocale::languageToString(QLocale::Greek),     ":/jsons/gr.json");
     s_hash.insert(QLocale::languageToString(QLocale::Hungarian), ":/jsons/hu.json");
@@ -137,7 +137,6 @@ void LayoutLoader::initFileTable()
     s_hash.insert(QLocale::languageToString(QLocale::Hausa),":/jsons/ha.json");
     s_hash.insert(QLocale::languageToString(QLocale::Azerbaijani),":/jsons/az.json");
     s_hash.insert(QLocale::languageToString(QLocale::Afrikaans),":/jsons/af.json");
-    s_hash.insert(QLocale::languageToString(QLocale::Amharic),":/jsons/am.json");
     s_hash.insert(QLocale::languageToString(QLocale::Irish),     ":/jsons/ie.json");
     s_hash.insert(QLocale::languageToString(QLocale::Latvian),   ":/jsons/lv.json");
     s_hash.insert(QLocale::languageToString(QLocale::Maori),     ":/jsons/mi.json");
@@ -145,7 +144,31 @@ void LayoutLoader::initFileTable()
     s_hash.insert(QLocale::languageToString(QLocale::Uzbek)
             + "-" + QLocale::scriptToString(QLocale::CyrillicScript), ":/jsons/uz-cyrl.json");
     s_hash.insert(QLocale::languageToString(QLocale::Indonesian),":/jsons/id.json");
-    s_hash.insert(QLocale::languageToString(QLocale::Malay),     ":/jsons/ms.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Malay),     ":/jsons/ms.json");    
+    s_hash.insert(QLocale::languageToString(QLocale::Armenian),":/jsons/hy.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Bashkir),":/jsons/ba.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Icelandic),   ":/jsons/is.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Belarusian),   ":/jsons/be.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Catalan),   ":/jsons/ca.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Igbo),   ":/jsons/ig.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Kirghiz),   ":/jsons/ky.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Luxembourgish),   ":/jsons/lb.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Maltese),   ":/jsons/mt.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Nepali),   ":/jsons/ne.json");
+    s_hash.insert(QLocale::languageToString(QLocale::NorthernSotho),   ":/jsons/nso.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Tajik),   ":/jsons/tg.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Pashto),   ":/jsons/ps.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Tatar),   ":/jsons/tt.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Turkmen),   ":/jsons/tk.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Uighur),   ":/jsons/ug.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Wolof),   ":/jsons/wo.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Yoruba),   ":/jsons/yo.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Lao),   ":/jsons/lo.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Georgian),   ":/jsons/ka.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Burmese),   ":/jsons/my.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Welsh),   ":/jsons/cy.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Zulu),   ":/jsons/zu.json");
+    s_hash.insert(QLocale::languageToString(QLocale::Somali),   ":/jsons/so.json");
 }
 
 const QString LayoutLoader::getFileName(QString language)

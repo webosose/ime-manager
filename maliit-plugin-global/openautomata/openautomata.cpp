@@ -77,7 +77,30 @@
 #include "hausaautomata.h"
 #include "azerbaijaniautomata.h"
 #include "afrikaansautomata.h"
-#include "amharicautomata.h"
+#include "armenianautomata.h"
+#include "bashkirautomata.h"
+#include "icelandicautomata.h"
+#include "belarusianautomata.h"
+#include "catalanautomata.h"
+#include "igboautomata.h"
+#include "kyrgyzautomata.h"
+#include "luxembourgishautomata.h"
+#include "malteseautomata.h"
+#include "nepaliautomata.h"
+#include "northensothoautomata.h"
+#include "tajikautomata.h"
+#include "pashtoautomata.h"
+#include "tatarautomata.h"
+#include "turkmenautomata.h"
+#include "uyghurautomata.h"
+#include "wolofautomata.h"
+#include "yorubaautomata.h"
+#include "laoautomata.h"
+#include "georgianautomata.h"
+#include "burmeseautomata.h"
+#include "welshautomata.h"
+#include "zuluautomata.h"
+#include "somaliautomata.h"
 #include <QDebug>
 
 OpenAutomata::OpenAutomata()
@@ -145,7 +168,30 @@ OpenAutomata::OpenAutomata()
     m_automataMap[QLocale::languageToString(QLocale::Hausa)] = &HausaAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Azerbaijani)] = &AzerbaijaniAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Afrikaans)] = &AfrikaansAutomata::create;
-    m_automataMap[QLocale::languageToString(QLocale::Amharic)] = &AmharicAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Armenian)] = &ArmenianAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Bashkir)] = &BashkirAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Icelandic)] = &IcelandicAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Belarusian)] = &BelarusianAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Catalan)] = &CatalanAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Igbo)] = &IgboAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Kirghiz)] = &KyrgyzAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Luxembourgish)] = &LuxembourgishAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Maltese)] = &MalteseAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Nepali)] = &NepaliAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::NorthernSotho)] = &NorthernSothoAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Tajik)] = &TajikAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Pashto)] = &PashtoAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Tatar)] = &TatarAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Turkmen)] = &TurkmenAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Uighur)] = &UyghurAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Wolof)] = &WolofAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Yoruba)] = &YorubaAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Lao)] = &LaoAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Georgian)] = &GeorgianAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Burmese)] = &BurmeseAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Welsh)] = &WelshAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Zulu)] = &ZuluAutomata::create;
+    m_automataMap[QLocale::languageToString(QLocale::Somali)] = &SomaliAutomata::create;
     m_automata.reset(m_automataMap[QLocale::languageToString(QLocale::English)]());
 }
 

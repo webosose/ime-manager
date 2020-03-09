@@ -137,7 +137,30 @@ HEADERS += ../openautomata/wordpredict.h \
            ../openautomata/hausaautomata.h \
            ../openautomata/azerbaijaniautomata.h \
            ../openautomata/afrikaansautomata.h \
-           ../openautomata/amharicautomata.h
+           ../openautomata/armenianautomata.h \
+           ../openautomata/bashkirautomata.h \
+           ../openautomata/icelandicautomata.h \
+           ../openautomata/belarusianautomata.h \
+           ../openautomata/catalanautomata.h \
+           ../openautomata/igboautomata.h \
+           ../openautomata/kyrgyzautomata.h \
+           ../openautomata/luxembourgishautomata.h \
+           ../openautomata/malteseautomata.h \
+           ../openautomata/nepaliautomata.h \
+           ../openautomata/northensothoautomata.h \
+           ../openautomata/tajikautomata.h \
+           ../openautomata/pashtoautomata.h \
+           ../openautomata/tatarautomata.h \
+           ../openautomata/turkmenautomata.h \
+           ../openautomata/uyghurautomata.h \
+           ../openautomata/wolofautomata.h \
+           ../openautomata/yorubaautomata.h \
+           ../openautomata/laoautomata.h \
+           ../openautomata/georgianautomata.h \
+           ../openautomata/burmeseautomata.h \
+           ../openautomata/welshautomata.h \
+           ../openautomata/zuluautomata.h \
+           ../openautomata/somaliautomata.h
 
 SOURCES += ../openautomata/wordpredict.cpp \
            ../openautomata/openautomata.cpp \
