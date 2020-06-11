@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff srcLang="en-KR" trgLang="ko-KR" version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+ <file id="imemanager_f1" original="imemanager">
+  <group id="imemanager_g1" name="x-qml">
+     <unit id="imemanager_1">
+    <segment>
+     <source>Search</source>
+     <target>검색</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_2">
+    <segment>
+     <source>off</source>
+     <target>끄기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_3">
+    <segment>
+     <source>EXCLAMATION MARK</source>
+     <target>느낌표</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_4">
+    <segment>
+     <source>Close Brackets</source>
+     <target>대괄호 닫기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_5">
+    <segment>
+     <source>Open Brackets</source>
+     <target>대괄호 열기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_6">
+    <segment>
+     <source>PLUS SIGN</source>
+     <target>더하기</target>
+    </segment>
+   </unit>
+    <unit id="imemanager_7">
+    <segment>
+     <source>QUOTATION MARK</source>
+     <target>따옴표</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_8">
+      <segment>
+       <source>Symbols to Text</source>
+       <target>문자로 바꾸기</target>
+      </segment>
+  </unit>
+  <unit id="imemanager_9">
+      <segment>
+       <source>Text to Symbols</source>
+       <target>심볼로 바꾸기</target>
+      </segment>
+     </unit>
+   <unit id="imemanager_10">
+    <segment>
+     <source>QUESTION MARK</source>
+     <target>물음표</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_11">
+    <segment>
+     <source>Less than</source>
+     <target>미만</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_12">
+    <segment>
+     <source>INVERTED QUESTION MARK</source>
+     <target>반전 물음표</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_13">
+    <segment>
+     <source>Back Space</source>
+     <target>백 스페이스</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_14">
+    <segment>
+     <source>BACKSLASH</source>
+     <target>백 슬래쉬</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_15">
+    <segment>
+     <source>button</source>
+     <target>버튼</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_16">
+    <notes>
+     <note>unselected</note>
+    </notes>
+    <segment>
+     <source>unchecked</source>
+     <target>선택 해제됨</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_17">
+    <segment>
+     <source>checked</source>
+     <target>선택됨</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_18">
+    <segment>
+     <source>SEMICOLON</source>
+     <target>세미콜론</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_19">
+    <segment>
+     <source>Caps Lock</source>
+     <target>캡스 락</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_20">
+    <segment>
+     <source>COLON</source>
+     <target>콜론</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_21">
+    <segment>
+     <source>COMMA</source>
+     <target>콤마</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_22">
+    <segment>
+     <source>GO BACK TO KEYBOARD</source>
+     <target>키보드로 돌아가기</target>
+    </segment>
+   </unit>
+    <unit id="imemanager_23">
+    <segment>
+     <source>OK</source>
+     <target>확인</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_24">
+    <segment>
+     <source>Space</source>
+     <target>스페이스</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_25">
+    <segment>
+     <source>Symbols to Numbers</source>
+     <target>숫자로 바꾸기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_26">
+    <segment>
+     <source>Numbers to Symbols</source>
+     <target>심볼로 바꾸기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_27">
+    <segment>
+     <source>NO</source>
+     <target>아니요</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_28">
+    <notes>
+     <note>button name down</note>
+    </notes>
+    <segment>
+     <source>down</source>
+     <target>아래로</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_29">
+    <segment>
+     <source>Caps</source>
+     <target>캡스</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_30">
+    <segment>
+     <source>Change Language</source>
+     <target>언어 변경하기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_31">
+    <segment>
+     <source>None</source>
+     <target>없음</target>
+    </segment>
+    </unit>
+      <unit id="imemanager_32">
+    <segment>
+     <source>YES</source>
+     <target>예</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_33">
+    <segment>
+     <source>Right</source>
+     <target>오른쪽</target>
+    </segment>
+   </unit>
+     <unit id="imemanager_34">
+    <segment>
+     <source>Left</source>
+     <target>왼쪽</target>
+    </segment>
+   </unit>
+      <unit id="imemanager_35">
+    <notes>
+     <note>button name up</note>
+    </notes>
+    <segment>
+     <source>up</source>
+     <target>위로</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_36">
+    <segment>
+     <source>Back</source>
+     <target>이전</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_37">
+    <segment>
+     <source>CANCEL</source>
+     <target>취소</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_38">
+    <segment>
+     <source>Enter</source>
+     <target>입력</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_39">
+    <segment>
+     <source>Open Curly Brackets</source>
+     <target>중괄호 열기</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_40">
+    <segment>
+     <source>RETRY</source>
+     <target>재시도</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_41">
+    <segment>
+     <source>Clear all</source>
+     <target>전체 삭제</target>
+    </segment>
+   </unit>
+   <unit id="imemanager_42">
+    <segment>
+     <source>Close Curly Brackets</source>
+     <target>중괄호 닫기</target>
+    </segment>
+   </unit>
+   </group>
+ </file>
+</xliff>
