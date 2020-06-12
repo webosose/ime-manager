@@ -263,6 +263,12 @@
      <target>중괄호 닫기</target>
     </segment>
    </unit>
+   <unit id="imemanager_43">
+    <segment>
+     <source>ABC</source>
+     <target>가나다</target>
+    </segment>
+   </unit>
    </group>
  </file>
 </xliff>
