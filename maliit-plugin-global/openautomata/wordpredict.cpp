@@ -111,15 +111,17 @@ void WordPredict::storeUserWords()
     if (!userWordList.isEmpty()) {
         QDir().mkpath(UDIC_PATH);
         QFile userWordFile(UDIC_PATH + m_language + "_user.dic");
-        userWordFile.open(QIODevice::ReadWrite | QIODevice::Truncate | QIODevice::Text);
-        QTextStream out (&userWordFile);
-        out.setCodec("UTF-8");
-        QList<WordCount>::iterator it = userWordList.begin();
-        while (it != userWordList.end()) {
-            out << it->word << " " << it->frequncy << endl;
-            ++it;
-        }
-        userWordFile.close();
+        bool openFlag = userWordFile.open(QIODevice::ReadWrite | QIODevice::Truncate | QIODevice::Text);
+	if(openFlag) {
+            QTextStream out (&userWordFile);
+            out.setCodec("UTF-8");
+            QList<WordCount>::iterator it = userWordList.begin();
+            while (it != userWordList.end()) {
+                out << it->word << " " << it->frequncy << endl;
+                ++it;
+            }
+            userWordFile.close();
+	}
     }
 }
 
