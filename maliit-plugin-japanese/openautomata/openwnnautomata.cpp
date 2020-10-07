@@ -33,9 +33,11 @@ OpenWnnAutomata::OpenWnnAutomata()
     openWnn_lib_handle = dlopen (LIB_PATH.toStdString().c_str(),RTLD_LAZY);
     char *error;
     if (!openWnn_lib_handle) {
-       fputs (error = dlerror(), stderr);
-       qWarning() << "@@@@ Unable to load libWnnJpn.so " << error;
-       exit(1);
+        if((error = dlerror()) != NULL){
+            fputs (error = dlerror(), stderr);
+            qWarning() << "@@@@ Unable to load libWnnJpn.so " << error;
+	}
+        exit(1);
     }
 
     _initContext = (INIT_CONTEXT*)dlsym(openWnn_lib_handle,"initOpenwnn");

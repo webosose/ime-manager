@@ -35,9 +35,11 @@ SunpinyinAutomata::SunpinyinAutomata()
     sunpinyin_lib_handle = dlopen (LIB_PATH.toStdString().c_str(),RTLD_LAZY);
     char *error;
     if (!sunpinyin_lib_handle) {
-       fputs (error = dlerror(), stderr);
-       qWarning() << "@@@@ Unable to load libsunpinyin.so " << error;
-       exit(1);
+        if((error = dlerror()) != NULL){
+            fputs (error = dlerror(), stderr);
+            qWarning() << "@@@@ Unable to load libsunpinyin.so " << error;
+	}
+        exit(1);
     }
 
     init_factory = (INIT_FACTORY*)dlsym(sunpinyin_lib_handle,"initFactory");
