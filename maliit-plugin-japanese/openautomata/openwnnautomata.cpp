@@ -34,7 +34,7 @@ OpenWnnAutomata::OpenWnnAutomata()
     char *error;
     if (!openWnn_lib_handle) {
         if((error = dlerror()) != NULL){
-            fputs (error = dlerror(), stderr);
+            fputs (error, stderr);
             qWarning() << "@@@@ Unable to load libWnnJpn.so " << error;
 	}
         exit(1);

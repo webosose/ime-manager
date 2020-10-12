@@ -29,7 +29,7 @@ PyzyAutomata::PyzyAutomata()
     char *error;
     if (!pyzy_lib_handle) {
         if((error = dlerror()) != NULL){
-            fputs (error = dlerror(), stderr);
+            fputs (error, stderr);
             qWarning() << "Unable to load libpyzy.so " << error;
 	}
         exit(1);
