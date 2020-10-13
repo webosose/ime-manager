@@ -36,7 +36,7 @@ SunpinyinAutomata::SunpinyinAutomata()
     char *error;
     if (!sunpinyin_lib_handle) {
         if((error = dlerror()) != NULL){
-            fputs (error = dlerror(), stderr);
+            fputs (error, stderr);
             qWarning() << "@@@@ Unable to load libsunpinyin.so " << error;
 	}
         exit(1);

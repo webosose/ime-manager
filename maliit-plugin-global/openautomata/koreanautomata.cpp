@@ -75,7 +75,7 @@ KoreanAutomata::KoreanAutomata()
     char *error;
     if (!hungle_lib_handle) {
         if((error = dlerror()) != NULL){
-            fputs (error = dlerror(), stderr);
+            fputs (error, stderr);
             qWarning() << "Unable to load libhangul.so " << error;
 	}
         exit(1);
