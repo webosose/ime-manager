@@ -1,14 +1,15 @@
 {
     "com.webos.service.ime*": [
-        "notifications.manage",
-        "notifications",
-        "media",
-        "settings.read",
-        "settings",
-        "services",
-        "applications.launch",
-        "applications.internal",
-        "bluetooth.manage",
+        "notification.operation",
+        "audio.operation",
+        "audio.query",
+        "audio.management",
+        "settings.query",
+        "tts.operation",
+        "configd.query",
+        "application.operation",
+        "application.launcher",
+        "bluetooth.query",
         "all"
     ]
 }
