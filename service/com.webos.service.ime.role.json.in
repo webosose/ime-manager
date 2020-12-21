@@ -1,6 +1,7 @@
 {
     \"exeName\":\"$$WEBOS_INSTALL_BINS/MaliitServer\",
     \"type\":\"privileged\",
+    \"trustLevel\":\"oem\",
     \"allowedNames\":[\"com.webos.service.ime*\"],
     \"permissions\":[
         {
