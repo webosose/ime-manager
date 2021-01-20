@@ -1,0 +1,5 @@
+{
+
+        "allowedNames" : ["com.webos.service.ime"],
+        "ime.operation": ["oem"]
+}

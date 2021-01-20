@@ -1,15 +1,14 @@
 {
-    "com.webos.service.ime*": [
+    "com.webos.service.ime": [
         "notification.operation",
         "audio.operation",
         "audio.query",
         "audio.management",
         "settings.query",
         "tts.operation",
-        "configd.query",
+        "systemconfig.query",
         "application.operation",
         "application.launcher",
-        "bluetooth.query",
-        "all"
+        "bluetooth.query"
     ]
 }

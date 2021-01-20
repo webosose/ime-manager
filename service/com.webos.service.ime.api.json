@@ -1,5 +1,5 @@
 {
-    "devices": [
+    "ime.operation": [
         "com.webos.service.ime/deleteCharacters",
         "com.webos.service.ime/insertText",
         "com.webos.service.ime/registerRemoteKeyboard",
