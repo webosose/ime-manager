@@ -1,5 +1,5 @@
 {
-    "com.webos.service.ime": [
+    "com.webos.service.ime*": [
         "notification.operation",
         "audio.operation",
         "audio.query",
