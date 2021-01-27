@@ -2,10 +2,10 @@
     \"exeName\":\"$$WEBOS_INSTALL_BINS/MaliitServer\",
     \"type\":\"privileged\",
     \"trustLevel\":\"oem\",
-    \"allowedNames\":[\"com.webos.service.ime\"],
+    \"allowedNames\":[\"com.webos.service.ime*\"],
     \"permissions\":[
         {
-            \"service\":\"com.webos.service.ime\",
+            \"service\":\"com.webos.service.ime*\",
             \"outbound\":[\"com.webos.notification\",\"com.webos.service.tts\",\"com.webos.settingsservice\",\"com.webos.service.config\",
             \"com.webos.service.nlp\",\"com.webos.audio\",\"com.webos.service.applicationmanager\",\"com.webos.service.bluetooth\",
             \"com.webos.service.mrcu\"]
