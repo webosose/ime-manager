@@ -29,6 +29,8 @@
 #include <QDebug>
 #include <QTimer>
 
+#include <QtCore/QRegularExpression>
+
 namespace {
     // attribute names for propertiesChanged in updateEvent
     const char * const AnchorPositionAttribute = "anchorPosition";
@@ -1141,8 +1143,8 @@ void GlobalInputMethod::doMoveCursorPosition(int direction)
     int keyCode = (direction == DIRECTION_LEFT) ? 113 : 114;
     Qt::Key key = (direction == DIRECTION_LEFT) ? Qt::Key_Left : Qt::Key_Right;
 
-    MAbstractInputMethod::processKeyEvent(QEvent::KeyPress, key, NULL, "", false, 0, keyCode, 0, 0);
-    MAbstractInputMethod::processKeyEvent(QEvent::KeyRelease, key, NULL, "", false, 0, keyCode, 0, 0);
+    MAbstractInputMethod::processKeyEvent(QEvent::KeyPress, key, Qt::NoModifier, "", false, 0, keyCode, 0, 0);
+    MAbstractInputMethod::processKeyEvent(QEvent::KeyRelease, key, Qt::NoModifier, "", false, 0, keyCode, 0, 0);
 }
 
 void GlobalInputMethod::onTextKeyPressed(QString text)
@@ -1458,7 +1460,7 @@ void GlobalInputMethod::appendPredictionSeed()
         } else if (surroundingText.at(cursor - 1) == ' ') {
             predictString = "";
         } else {
-            int begin = surroundingText.lastIndexOf(QRegExp("\\s"), cursor - 1);
+            qsizetype begin = surroundingText.lastIndexOf(QRegularExpression("\\s"), cursor - 1);
             if (begin < 0)
                 begin = 0;
             else

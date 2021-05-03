@@ -62,7 +62,9 @@ bool WordPredict::init()
     }
 
     QTextStream in (&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
 
     while (!in.atEnd()) {
         QString line = in.readLine();
@@ -74,7 +76,9 @@ bool WordPredict::init()
     QFile userWordFile(UDIC_PATH + m_language + "_user.dic");
     if (userWordFile.open(QIODevice::ReadOnly)) {
         QTextStream in (&userWordFile);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         in.setCodec("UTF-8");
+#endif
 
         while(!in.atEnd()) {
             QString line = in.readLine();
@@ -88,8 +92,8 @@ bool WordPredict::init()
 
 bool WordPredict::contains(const QString &word)
 {
-    return freqWordList.end() != qBinaryFind(freqWordList.begin(), freqWordList.end(),
-                                              WordCount(word,0), caseSensitiveLessThan);
+    return std::binary_search(freqWordList.begin(), freqWordList.end(),
+                              WordCount(word,0), caseSensitiveLessThan);
 }
 
 void WordPredict::addWord(const QString &word)
@@ -97,7 +101,7 @@ void WordPredict::addWord(const QString &word)
     if (word.length() > 2 && !contains(word)) {
         WordCount wCount(word,1);
         QList<WordCount>::iterator it;
-        it = qLowerBound(userWordList.begin(), userWordList.end(), wCount, caseSensitiveLessThan);
+        it = std::lower_bound(userWordList.begin(), userWordList.end(), wCount, caseSensitiveLessThan);
         if (it != userWordList.end() && it->word == word) {
             it->frequncy++;
         } else {
@@ -114,10 +118,13 @@ void WordPredict::storeUserWords()
         bool openFlag = userWordFile.open(QIODevice::ReadWrite | QIODevice::Truncate | QIODevice::Text);
 	if(openFlag) {
             QTextStream out (&userWordFile);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             out.setCodec("UTF-8");
+#endif
             QList<WordCount>::iterator it = userWordList.begin();
             while (it != userWordList.end()) {
-                out << it->word << " " << it->frequncy << endl;
+                out << it->word << " " << it->frequncy << QLatin1Char('\n');
+                out.flush();
                 ++it;
             }
             userWordFile.close();
@@ -149,7 +156,7 @@ QStringList WordPredict::getPredictionList(const QString &prefix)
                           m_language == QLocale::languageToString(QLocale::Korean));
 
     QList<WordCount>::iterator it;
-    it = qLowerBound(freqWordList.begin(), freqWordList.end(), wCount,
+    it = std::lower_bound(freqWordList.begin(), freqWordList.end(), wCount,
                      caseSensitive?caseSensitiveLessThan:caseInsensitiveLessThan);
     while (it != freqWordList.end()) {
         if (!it->word.startsWith(prefix, caseSensitive?Qt::CaseSensitive:Qt::CaseInsensitive)) break;
@@ -159,7 +166,7 @@ QStringList WordPredict::getPredictionList(const QString &prefix)
         ++it;
     }
 
-    it = qLowerBound(userWordList.begin(), userWordList.end(), wCount,
+    it = std::lower_bound(userWordList.begin(), userWordList.end(), wCount,
                      caseSensitive?caseSensitiveLessThan:caseInsensitiveLessThan);
     while (it != userWordList.end()) {
         if (!it->word.startsWith(prefix,caseSensitive?Qt::CaseSensitive:Qt::CaseInsensitive)) {
@@ -171,7 +178,7 @@ QStringList WordPredict::getPredictionList(const QString &prefix)
         ++it;
     }
 
-    QMap<int,QString>::const_iterator i;
+    QMultiMap<int,QString>::const_iterator i;
     for (i = frequencyList.constBegin(); i != frequencyList.constEnd(); ++i) {
         suggestionList.prepend(convertCase(i.value(),prefix));
     }
