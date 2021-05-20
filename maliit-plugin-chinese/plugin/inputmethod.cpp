@@ -345,8 +345,8 @@ void ChineseInputMethod::doMoveCursorPosition(int direction)
     int keyCode = (direction == DIRECTION_LEFT) ? 113 : 114;
     Qt::Key key = (direction == DIRECTION_LEFT) ? Qt::Key_Left : Qt::Key_Right;
 
-    MAbstractInputMethod::processKeyEvent(QEvent::KeyPress, key, NULL, "", false, 0, keyCode, 0, 0);
-    MAbstractInputMethod::processKeyEvent(QEvent::KeyRelease, key, NULL, "", false, 0, keyCode, 0, 0);
+    MAbstractInputMethod::processKeyEvent(QEvent::KeyPress, key, Qt::NoModifier, "", false, 0, keyCode, 0, 0);
+    MAbstractInputMethod::processKeyEvent(QEvent::KeyRelease, key, Qt::NoModifier, "", false, 0, keyCode, 0, 0);
 
 }
 

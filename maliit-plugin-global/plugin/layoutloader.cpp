@@ -84,7 +84,11 @@ void LayoutLoader::initFileTable()
     s_hash.insert(QLocale::languageToString(QLocale::Finnish),   ":/jsons/fi.json");
     s_hash.insert(QLocale::languageToString(QLocale::Croatian),  ":/jsons/hr.json");
     s_hash.insert(QLocale::languageToString(QLocale::Danish),    ":/jsons/dk.json");
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    s_hash.insert(QLocale::languageToString(QLocale::NorwegianBokmal), ":/jsons/no.json");
+#else
     s_hash.insert(QLocale::languageToString(QLocale::Norwegian), ":/jsons/no.json");
+#endif
     s_hash.insert(QLocale::languageToString(QLocale::Bosnian),   ":/jsons/bs.json");
     s_hash.insert(QLocale::languageToString(QLocale::Bulgarian), ":/jsons/bg.json");
     s_hash.insert(QLocale::languageToString(QLocale::Greek),     ":/jsons/gr.json");

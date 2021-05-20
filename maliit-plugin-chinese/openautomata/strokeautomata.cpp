@@ -62,7 +62,9 @@ bool StrokeAutomata::loadStroke()
         return false;
     }
     QTextStream in (&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList fields = line.split(" ");
@@ -81,7 +83,9 @@ bool StrokeAutomata::loadCompoList()
         return false;
     }
     QTextStream in (&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList fields = line.split(" ");
@@ -105,7 +109,9 @@ bool StrokeAutomata::loadCompoSuggestion()
         return false;
     }
     QTextStream in (&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList fields = line.split(" ");
@@ -129,7 +135,9 @@ bool StrokeAutomata::loadCompoAlpha()
         return false;
     }
     QTextStream in (&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList fields = line.split(" ");

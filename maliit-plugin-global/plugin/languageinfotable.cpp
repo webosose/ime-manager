@@ -198,8 +198,13 @@ void LanguageInfoTable::initializeHashTable()
                           LanguageInfoElement(QString("mri"), QString("mi"),   QLocale::LatinScript,   QString("Māori")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Mongolian),
                           LanguageInfoElement(QString("mon"), QString("mn"),   QLocale::CyrillicScript,QString("Монгол хэл")));
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    s_languageHash.insert(QLocale::languageToString(QLocale::NorwegianBokmal),
+                          LanguageInfoElement(QString("nor"), QString("nb"),   QLocale::LatinScript,   QString("norsk")));
+#else
     s_languageHash.insert(QLocale::languageToString(QLocale::Norwegian),
                           LanguageInfoElement(QString("nor"), QString("nb"),   QLocale::LatinScript,   QString("norsk")));
+#endif
     s_languageHash.insert(QLocale::languageToString(QLocale::Persian),
                           LanguageInfoElement(QString("fas"), QString("fa"),   QLocale::ArabicScript,  QString("فارسی")));
     s_languageHash.insert(QLocale::languageToString(QLocale::Polish),

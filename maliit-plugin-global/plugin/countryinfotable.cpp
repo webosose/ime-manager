@@ -525,8 +525,13 @@ void CountryInfoTable::init()
                          CountryInfoElement(QString("th"),  QString("http:// https:// www. .com .co.th /"),   QString(".com .co.th /")));
     s_countryHash.insert(QLocale::countryToString(QLocale::Togo),
                          CountryInfoElement(QString("tg"),  QString("http:// https:// www. .com .tg /"),      QString(".com .tg /")));
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    s_countryHash.insert(QLocale::countryToString(QLocale::TokelauCountry),
+                         CountryInfoElement(QString("tk"),  QString("http:// https:// www. .com .tk /"),      QString(".com .tk /")));
+#else
     s_countryHash.insert(QLocale::countryToString(QLocale::Tokelau),
                          CountryInfoElement(QString("tk"),  QString("http:// https:// www. .com .tk /"),      QString(".com .tk /")));
+#endif
     s_countryHash.insert(QLocale::countryToString(QLocale::Tonga),
                          CountryInfoElement(QString("to"),  QString("http:// https:// www. .com .to /"),      QString(".com .to /")));
     s_countryHash.insert(QLocale::countryToString(QLocale::TrinidadAndTobago),
@@ -539,8 +544,13 @@ void CountryInfoTable::init()
                          CountryInfoElement(QString("tm"),  QString("http:// https:// www. .com .tm /"),      QString(".com .tm /")));
     s_countryHash.insert(QLocale::countryToString(QLocale::TurksAndCaicosIslands),
                          CountryInfoElement(QString("tc"),  QString("http:// https:// www. .com .tc /"),      QString(".com .tc /")));
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    s_countryHash.insert(QLocale::countryToString(QLocale::TuvaluCountry),
+                         CountryInfoElement(QString("tv"),  QString("http:// https:// www. .com .tv /"),      QString(".com .tv /")));
+#else
     s_countryHash.insert(QLocale::countryToString(QLocale::Tuvalu),
                          CountryInfoElement(QString("tv"),  QString("http:// https:// www. .com .tv /"),      QString(".com .tv /")));
+#endif
     s_countryHash.insert(QLocale::countryToString(QLocale::Uganda),
                          CountryInfoElement(QString("ug"),  QString("http:// https:// www. .com .ug /"),      QString(".com .ug /")));
     s_countryHash.insert(QLocale::countryToString(QLocale::Ukraine),

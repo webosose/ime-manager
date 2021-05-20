@@ -120,7 +120,11 @@ OpenAutomata::OpenAutomata()
     m_automataMap[QLocale::languageToString(QLocale::Croatian)] = &CroatianAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Danish)] = &DanishAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Czech)] = &CzechAutomata::create;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    m_automataMap[QLocale::languageToString(QLocale::NorwegianBokmal)] = &NorwegianAutomata::create;
+#else
     m_automataMap[QLocale::languageToString(QLocale::Norwegian)] = &NorwegianAutomata::create;
+#endif
     m_automataMap[QLocale::languageToString(QLocale::Irish)] = &IrishAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Albanian)] = &AlbanianAutomata::create;
     m_automataMap[QLocale::languageToString(QLocale::Bosnian)] = &BosnianAutomata::create;

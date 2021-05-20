@@ -92,7 +92,7 @@ QtObject {
 
     property var componentButton : QtObject {
         property string fontFamily: "Museo"
-        property int fontWeight: 75  // Font.Bold = 75
+        property int fontWeight: Font.Bold
         property var normal : QtObject {
             property color bgColor: "transparent"
             property color fgColor: "#ffffff"
