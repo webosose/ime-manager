@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 LG Electronics, Inc.
+// Copyright (c) 2013-2022 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -1036,6 +1036,9 @@ bool GlobalInputMethod::processRemoteKeyEvent(Qt::Key keyCode, quint32 nativeSca
             accepted = m_keyboard->isVisible();
         } else {
             accepted = m_keyboard->hidKeyPressEvent(keyCode, modifiers);
+            // Sets focus back to last focused item or default key in VKB when navigation keys are used after touch event.
+            // This fixes the issue reported in WRO-10152.
+            m_keyboard->hidNavKeysPressed();
         }
         break;
     case Qt::Key_Cancel:
