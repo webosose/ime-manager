@@ -135,15 +135,15 @@ QJsonObject LayoutLoader::getLayout() const {
 void LayoutLoader::makeLayout(QJsonObject src) {
     int length, row, column;
 
-    row    = src.find("Normal_keys").value().toObject().find("Row").value().toString().toInt();
-    column = src.find("Normal_keys").value().toObject().find("Col").value().toString().toInt();
+    row    = src.value("Normal_keys").toObject().value("Row").toString().toInt();
+    column = src.value("Normal_keys").toObject().value("Col").toString().toInt();
     length = row * column;
 
-    QJsonArray normalKeys = src.find("Normal_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray normalKeys = src.value("Normal_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itNormalKeys = normalKeys.begin();
-    QJsonArray shiftKeys = src.find("Shift_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray shiftKeys = src.value("Shift_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itShiftKeys = shiftKeys.begin();
-    QJsonArray symbolKeys = src.find("Symbol_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray symbolKeys = src.value("Symbol_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itSymbolKeys = symbolKeys.begin();
 
     QJsonArray keys;
@@ -155,40 +155,43 @@ void LayoutLoader::makeLayout(QJsonObject src) {
 
         /* from Normal_keys.Key[] */
         while(itNormalKeys != normalKeys.end()) {
-            val = (*itNormalKeys).toObject().find("index").value();
+            val = (*itNormalKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1") {
                 break;
             }
             else
                 ++itNormalKeys;
         }
-        val = (*itNormalKeys).toObject().find("keylabel").value();
+        auto normalKeysObj = itNormalKeys != normalKeys.end() ? itNormalKeys->toObject() : QJsonObject();
+        val = normalKeysObj.value("keylabel");
         obj.insert("mainChar",  val.isString() ? val : QJsonValue(EMPTY_STRING));
-        val = (*itNormalKeys).toObject().find("rawcode").value();
+        val = normalKeysObj.value("rawcode");
         obj.insert("rawcode", val.isString() ? val : QJsonValue(-1));
 
         /* from Shift_keys.Key[] */
         while(itShiftKeys != shiftKeys.end()) {
-            val = (*itShiftKeys).toObject().find("index").value();
+            val = (*itShiftKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1")
                 break;
             else
                 ++itShiftKeys;
         }
-        val = (*itShiftKeys).toObject().find("keylabel").value();
+        auto shiftKeysObj = itShiftKeys != shiftKeys.end() ? itShiftKeys->toObject() : QJsonObject();
+        val = shiftKeysObj.value("keylabel");
         obj.insert("shiftedChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
-        val = (*itShiftKeys).toObject().find("rawcode").value();
+        val = shiftKeysObj.value("rawcode");
         obj.insert("shiftRawcode", val.isString() ? val : QJsonValue(-1));
 
         /* from Symbol_keys.Key[] */
         while(itSymbolKeys != symbolKeys.end()) {
-            val = (*itSymbolKeys).toObject().find("index").value();
+            val = (*itSymbolKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1")
                 break;
             else
                 ++itSymbolKeys;
         }
-        val = (*itSymbolKeys).toObject().find("keylabel").value();
+        auto symbolKeysObj = itSymbolKeys != symbolKeys.end() ? itSymbolKeys->toObject() : QJsonObject();
+        val = symbolKeysObj.value("keylabel");
         obj.insert("symbolChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
 
         keys.push_back(QJsonValue(obj));

@@ -230,17 +230,17 @@ void LayoutLoader::makeLayout(QJsonObject src)
 {
     int length, row, column;
 
-    row    = src.find("Normal_keys").value().toObject().find("Row").value().toString().toInt();
-    column = src.find("Normal_keys").value().toObject().find("Col").value().toString().toInt();
+    row    = src.value("Normal_keys").toObject().value("Row").toString().toInt();
+    column = src.value("Normal_keys").toObject().value("Col").toString().toInt();
     length = row * column;
 
-    QJsonArray normalKeys = src.find("Normal_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray normalKeys = src.value("Normal_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itNormalKeys = normalKeys.begin();
-    QJsonArray shiftKeys = src.find("Shift_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray shiftKeys = src.value("Shift_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itShiftKeys = shiftKeys.begin();
-    QJsonArray expandKeys = src.find("Expand_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray expandKeys = src.value("Expand_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itExpandKeys = expandKeys.begin();
-    QJsonArray expandShiftKeys = src.find("Expand_shift_keys").value().toObject().find("Key").value().toArray();
+    QJsonArray expandShiftKeys = src.value("Expand_shift_keys").toObject().value("Key").toArray();
     QJsonArray::iterator itExpandShiftKeys = expandShiftKeys.begin();
 
     QJsonArray keys;
@@ -254,52 +254,54 @@ void LayoutLoader::makeLayout(QJsonObject src)
         /* from Normal_keys.Key[] */
         // if (index == -1) ignore
         while(itNormalKeys != normalKeys.end()) {
-            val = (*itNormalKeys).toObject().find("index").value();
+            val = (*itNormalKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1") {
                 break;
             }
             else
                 ++itNormalKeys;
         }
-        val = (*itNormalKeys).toObject().find("keylabel").value();
+        auto normalKeysObj = itNormalKeys != normalKeys.end() ? itNormalKeys->toObject() : QJsonObject();
+        val = normalKeysObj.value("keylabel");
         obj.insert("mainChar",  val.isString() ? val : QJsonValue(EMPTY_STRING));
-        val = (*itNormalKeys).toObject().find("rawcode").value();
+        val = normalKeysObj.value("rawcode");
         obj.insert("rawcode", val.isString() ? val : QJsonValue(-1));
-        val = (*itNormalKeys).toObject().find("forcetext").value();
+        val = normalKeysObj.value("forcetext");
         obj.insert("forceText",     val.isBool() ? val : QJsonValue(false));
-        val = (*itNormalKeys).toObject().find("keysym").value();
+        val = normalKeysObj.value("keysym");
         obj.insert("normalKeysym", val.isString() ? val : QJsonValue(-1));
 
         /* from Shift_keys.Key[] */
         while(itShiftKeys != shiftKeys.end()) {
-            val = (*itShiftKeys).toObject().find("index").value();
+            val = (*itShiftKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1")
                 break;
             else
                 ++itShiftKeys;
         }
-        val = (*itShiftKeys).toObject().find("keylabel").value();
+        auto shiftKeysObj = itShiftKeys != shiftKeys.end() ? itShiftKeys->toObject() : QJsonObject();
+        val = shiftKeysObj.value("keylabel");
         obj.insert("shiftedChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
-        val = (*itShiftKeys).toObject().find("rawcode").value();
+        val = shiftKeysObj.value("rawcode");
         obj.insert("shiftRawcode", val.isString() ? val : QJsonValue(-1));
-        val = (*itShiftKeys).toObject().find("keysym").value();
+        val = shiftKeysObj.value("keysym");
         obj.insert("shiftKeysym", val.isString() ? val : QJsonValue(-1));
 
         /* from Expand_keys.Key[] */
         while(itExpandKeys != expandKeys.end()) {
-            val = (*itExpandKeys).toObject().find("index").value();
+            val = (*itExpandKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1")
                 break;
             else
                 ++itExpandKeys;
         }
         if (itExpandKeys != expandKeys.end()) {
-            val = (*itExpandKeys).toObject().find("keylabel").value();
+            val = (*itExpandKeys).toObject().value("keylabel");
             if (val.isString() && (val.toString() != EMPTY_STRING)) {
                 obj.insert("expandChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
-                val = (*itExpandKeys).toObject().find("keycode").value();
+                val = (*itExpandKeys).toObject().value("keycode");
                 obj.insert("expandRawcode", val.isString() ? val : QJsonValue(-1));
-                val = (*itExpandKeys).toObject().find("keysym").value();
+                val = (*itExpandKeys).toObject().value("keysym");
                 obj.insert("expandKeysym", val.isString() ? val : QJsonValue(-1));
                 ++cntExpandKey;
             }
@@ -307,19 +309,19 @@ void LayoutLoader::makeLayout(QJsonObject src)
 
         /* from Expand_shift_keys.Key[] */
         while(itExpandShiftKeys != expandShiftKeys.end()) {
-            val = (*itExpandShiftKeys).toObject().find("index").value();
+            val = (*itExpandShiftKeys).toObject().value("index");
             if (!val.isNull() && val.toString() != "-1")
                 break;
             else
                 ++itExpandShiftKeys;
         }
         if (itExpandShiftKeys != expandKeys.end()) {
-            val = (*itExpandShiftKeys).toObject().find("keylabel").value();
+            val = (*itExpandShiftKeys).toObject().value("keylabel");
             if (val.isString() && (val.toString() != EMPTY_STRING)) {
                 obj.insert("expandShiftedChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
-                val = (*itExpandShiftKeys).toObject().find("keycode").value();
+                val = (*itExpandShiftKeys).toObject().value("keycode");
                 obj.insert("expandShiftRawcode", (!val.isNull() && val.isString()) ? val : QJsonValue(-1));
-                val = (*itExpandShiftKeys).toObject().find("keysym").value();
+                val = (*itExpandShiftKeys).toObject().value("keysym");
                 obj.insert("expandShiftKeysym", val.isString() ? val : QJsonValue(-1));
                 ++cntExpandShiftKey;
             }
