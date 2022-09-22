@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 LG Electronics, Inc.
+// Copyright (c) 2017-2022 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -110,6 +110,7 @@ Q_SIGNALS:
     void keyReleased(bool isReleased);
     void cursorVisibleChanged(bool cursorVisible);
     void moveCursorPosition(int,int);
+    void hidNavKeysPressed();
 
 public Q_SLOTS:
     void onKeyPressed(QString nativeScanCode, bool shift, int eventType);
