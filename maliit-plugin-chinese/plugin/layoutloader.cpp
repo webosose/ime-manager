@@ -196,9 +196,9 @@ void LayoutLoader::makeLayout(QJsonObject src) {
 
         keys.push_back(QJsonValue(obj));
 
-        ++itNormalKeys;
-        ++itShiftKeys;
-        ++itSymbolKeys;
+        if (itNormalKeys != normalKeys.end()) ++itNormalKeys;
+        if (itShiftKeys != shiftKeys.end()) ++itShiftKeys;
+        if (itSymbolKeys != symbolKeys.end()) ++itSymbolKeys;
     }
 
     /* make json object */

@@ -315,7 +315,7 @@ void LayoutLoader::makeLayout(QJsonObject src)
             else
                 ++itExpandShiftKeys;
         }
-        if (itExpandShiftKeys != expandKeys.end()) {
+        if (itExpandShiftKeys != expandShiftKeys.end()) {
             val = (*itExpandShiftKeys).toObject().value("keylabel");
             if (val.isString() && (val.toString() != EMPTY_STRING)) {
                 obj.insert("expandShiftedChar", val.isString() ? val : QJsonValue(EMPTY_STRING));
@@ -328,11 +328,11 @@ void LayoutLoader::makeLayout(QJsonObject src)
         }
 
         keys.push_back(QJsonValue(obj));
-
-        ++itNormalKeys;
-        ++itShiftKeys;
-        ++itExpandKeys;
-        ++itExpandShiftKeys;
+       
+        if (itNormalKeys != normalKeys.end()) ++itNormalKeys;
+        if (itShiftKeys != shiftKeys.end()) ++itShiftKeys;
+        if (itExpandKeys != expandKeys.end()) ++itExpandKeys;
+        if (itExpandShiftKeys != expandShiftKeys.end()) ++itExpandShiftKeys;
     }
 
     /* make json object */
