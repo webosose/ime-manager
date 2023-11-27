@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2022 LG Electronics, Inc.
+// Copyright (c) 2013-2023 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -404,7 +404,11 @@ void GlobalInputMethod::show()
     Q_D(GlobalInputMethod);
 
 #ifndef UBUNTU_DESKTOP_BUILD
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    QWindowSystemInterface::handleFocusWindowChanged(m_keyboard.data());
+#else
     QWindowSystemInterface::handleWindowActivated(m_keyboard.data());
+#endif
 #endif
 
     if (!INDEX_IS_VALID(currentLanguageIndex, enabledLanguages))

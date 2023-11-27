@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2022 LG Electronics, Inc.
+// Copyright (c) 2019-2023 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -338,7 +338,11 @@ void JapaneseInputMethod::show()
         switchContext(Maliit::SwitchUndefined, false);
     else {
 #ifndef UBUNTU_DESKTOP_BUILD
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+        QWindowSystemInterface::handleFocusWindowChanged(m_keyboard.data());
+#else
         QWindowSystemInterface::handleWindowActivated(m_keyboard.data());
+#endif
 #endif
 
         m_isActive = true;
