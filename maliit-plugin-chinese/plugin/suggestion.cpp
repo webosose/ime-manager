@@ -25,7 +25,7 @@ Suggestion::Suggestion()
 }
 
 void Suggestion::setSuggestionList (QStringList suggestionList) {
-    m_suggestionList = suggestionList;
+    m_suggestionList = std::move(suggestionList);
     Q_EMIT suggestionListChanged();
 }
 

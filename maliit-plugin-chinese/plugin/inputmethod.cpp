@@ -1051,7 +1051,7 @@ void ChineseInputMethod::onSystemLocaleChanged()
         m_keyboard->removeTranslator();
         inputMethodHost()->switchPlugin(Maliit::SwitchForward);
     } else {
-        enabledLanguages = languages;
+        enabledLanguages = std::move(languages);
         enabledLayouts = layouts;
         if (currentLanguageIndex != -1)
             switchContext(Maliit::SwitchUndefined, false);

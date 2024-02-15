@@ -230,7 +230,7 @@ void Keyboard::setLanguage(QString language, QVariant data)
     qDebug() << __PRETTY_FUNCTION__;
 
     m_language = language;
-    Q_EMIT languageChanged(language,data);
+    Q_EMIT languageChanged(std::move(language) ,std::move(data));
     Q_EMIT languageLabelChanged();
     Q_EMIT shiftLabelChanged();
 }

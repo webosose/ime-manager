@@ -23,7 +23,7 @@ StrokeComponent::StrokeComponent()
 
 void StrokeComponent::setStrokeComponentList(QStringList strokeComponentList)
 {
-    m_strokeComponentList = strokeComponentList;
+    m_strokeComponentList = std::move(strokeComponentList);
     Q_EMIT strokeComponentListChanged();
 }
 

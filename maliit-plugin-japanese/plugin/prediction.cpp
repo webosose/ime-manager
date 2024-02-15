@@ -42,7 +42,7 @@ int Prediction::getPredictionIndex()
 void Prediction::setPredictionList(QStringList predictionList)
 {
     qDebug() << __PRETTY_FUNCTION__;
-    m_predictionList = predictionList;
+    m_predictionList = std::move(predictionList);
     setPredictionIndex(0);
     setActive(0 < m_predictionList.length());
     Q_EMIT predictionListChanged();
