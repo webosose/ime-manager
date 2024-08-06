@@ -46,7 +46,7 @@ void Prediction::setPredictionList(QStringList predictionList)
     if (m_contentType == Maliit::UrlContentType || m_contentType == Maliit::EmailContentType)
         return;
 
-    m_predictionList = predictionList;
+    m_predictionList = std::move(predictionList);
     setPredictionIndex(0);
     setActive(0 < m_predictionList.length());
     Q_EMIT predictionListChanged();
