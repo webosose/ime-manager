@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 LG Electronics, Inc.
+// Copyright (c) 2017-2024 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -195,7 +195,7 @@ bool CangjieAutomata::processKeyEvent(Qt::Key keycode, Qt::KeyboardModifiers mod
         m_preAlpha.chop(1);
     } else if (m_preedit.length() < MAX_PRE_EDIT_LENGTH) {
         m_preedit += m_preMap[keycode];
-        m_preAlpha += QChar(keycode);
+        m_preAlpha += QChar((char16_t)keycode);
     }
 
     m_curPage = 0;

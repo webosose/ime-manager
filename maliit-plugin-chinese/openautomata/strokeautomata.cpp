@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 LG Electronics, Inc.
+// Copyright (c) 2017-2024 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -268,7 +268,7 @@ bool StrokeAutomata::processKeyEvent(Qt::Key keycode, Qt::KeyboardModifiers modi
         m_preAlpha = pair.second;
     } else if (m_preedit.length() < MAX_PRE_EDIT_LENGTH) {
         addToStack(m_preedit,m_preAlpha);
-        m_preedit += QChar(keycode);
+        m_preedit += QChar((char16_t)keycode);
         m_preAlpha += m_preMap[keycode];
     }
 

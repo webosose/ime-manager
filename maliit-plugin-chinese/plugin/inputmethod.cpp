@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2023 LG Electronics, Inc.
+// Copyright (c) 2017-2024 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -623,7 +623,7 @@ bool ChineseInputMethod::processKeyEventCommon(Qt::Key keyCode, Qt::KeyboardModi
         if (m_automata->getCandidatesNum() > 0)
             onSuggestionSelected(0);
         else
-            onTextKeyPressed(QString((QChar)CHINESE_SPACE_KEYCODE));
+            onTextKeyPressed(QString((QChar)(char16_t)CHINESE_SPACE_KEYCODE));
         return true;
     }
 
@@ -930,13 +930,13 @@ bool ChineseInputMethod::handleCommitString(Qt::Key keyCode)
         } else {
             quint32 chineseSymbol = m_automata->chineseSymbolKeyMapping(keyCode);
             if (chineseSymbol != 0)
-                onTextKeyPressed(QString((QChar)chineseSymbol));
+                onTextKeyPressed(QString((QChar)(char16_t)chineseSymbol));
             else
-                onTextKeyPressed(QString((QChar)keyCode));
+                onTextKeyPressed(QString((QChar)(char16_t)keyCode));
             return true;
         }
     } else {
-        onTextKeyPressed(QString((QChar)keyCode));
+        onTextKeyPressed(QString((QChar)(char16_t)keyCode));
         return true;
     }
 }
